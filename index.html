@@ -3,7 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aurenox-Global - Desarrollo de Aplicaciones</title>
+    <title>Aurenox-AI - Asesoría y Desarrollo en Inteligencia Artificial</title>
+    <meta name="description" content="Especialistas en implementación de IA para empresas. Auditorías profesionales, desarrollo de chatbots, análisis predictivo y automatización con ROI garantizado.">
+    <meta name="keywords" content="inteligencia artificial, IA empresarial, chatbots, machine learning, automatización, análisis predictivo, consultoría IA">
+    <meta name="author" content="Aurenox-AI">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Aurenox-AI - Especialistas en IA Empresarial">
+    <meta property="og:description" content="Transformamos empresas con IA aplicada. Auditorías profesionales desde $299 USD. ROI comprobado en 8 meses.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aurenox-ai.com">
+    <meta property="og:image" content="https://aurenox-ai.com/assets/og-image.jpg">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aurenox-AI - Especialistas en IA Empresarial">
+    <meta name="twitter:description" content="Implementación de IA con ROI garantizado. Casos de éxito reales con +47% incremento en ventas.">
+    <meta name="twitter:image" content="https://aurenox-ai.com/assets/twitter-image.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Aurenox-AI",
+      "url": "https://aurenox-ai.com",
+      "logo": "https://aurenox-ai.com/assets/logo.png",
+      "description": "Especialistas en asesoría y desarrollo de soluciones de Inteligencia Artificial para empresas",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-123-4567",
+        "contactType": "customer service",
+        "email": "info@aurenox-ai.com"
+      },
+      "sameAs": [
+        "https://linkedin.com/company/aurenox-ai",
+        "https://twitter.com/aurenoxai"
+      ],
+      "service": [
+        {
+          "@type": "Service",
+          "name": "Auditoría IA Empresarial",
+          "description": "Análisis profesional de oportunidades de IA en tu empresa",
+          "offers": {
+            "@type": "Offer",
+            "price": "899",
+            "priceCurrency": "USD"
+          }
+        },
+        {
+          "@type": "Service", 
+          "name": "Desarrollo de Chatbots IA",
+          "description": "Asistentes virtuales inteligentes con procesamiento de lenguaje natural"
+        },
+        {
+          "@type": "Service",
+          "name": "Análisis Predictivo",
+          "description": "Modelos de Machine Learning para predicciones y automatización de decisiones"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID', {
+            page_title: 'Aurenox-AI - IA Empresarial',
+            custom_map: {'custom_parameter_1': 'lead_source'}
+        });
+        
+        // Conversion tracking functions
+        function trackLeadGeneration(source, value) {
+            gtag('event', 'generate_lead', {
+                currency: 'USD',
+                value: value,
+                lead_source: source
+            });
+        }
+        
+        function trackFormSubmission(formType, price) {
+            gtag('event', 'form_submit', {
+                event_category: 'Lead Generation',
+                event_label: formType,
+                value: price,
+                currency: 'USD'
+            });
+        }
+        
+        function trackCTAClick(ctaName, ctaValue) {
+            gtag('event', 'cta_click', {
+                event_category: 'User Engagement',
+                event_label: ctaName,
+                value: ctaValue
+            });
+        }
+    </script>
+    
+    <!-- Advanced Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="geolocation=(), microphone=(), camera=(), payment=(), usb=()">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none';">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+    <meta http-equiv="Feature-Policy" content="accelerometer 'none'; camera 'none'; geolocation 'none'; gyroscope 'none'; magnetometer 'none'; microphone 'none'; payment 'none'; usb 'none'">
+    
+    <!-- PWA Manifest Inline -->
+    <link rel="manifest" href="data:application/json;base64,ewogICJuYW1lIjogIkF1cmVub3gtQUkgLSBFc3BlY2lhbGlzdGFzIGVuIElBIEVtcHJlc2FyaWFsIiwKICAic2hvcnRfbmFtZSI6ICJBDXJ1bm94LUFJIiwKICAiZGVzY3JpcHRpb24iOiAiQXNlc29yw61hIHkgZGVzYXJyb2xsbyBkZSBzb2x1Y2lvbmVzIGRlIEludGVsaWdlbmNpYSBBcnRpZmljaWFsIHBhcmEgZW1wcmVzYXMiLAogICJzdGFydF91cmwiOiAiLyIsCiAgImRpc3BsYXkiOiAic3RhbmRhbG9uZSIsCiAgImJhY2tncm91bmRfY29sb3IiOiAiIzY2N2VlYSIsCiAgInRoZW1lX2NvbG9yIjogIiM2NjdlZWEiLAogICJpY29ucyI6IFsKICAgIHsKICAgICAgInNyYyI6ICJkYXRhOmltYWdlL3BuZztiYXNlNjQsaVZCT1J3MEtHZ29BQUFBTlNVaEVVZ0FBQU1BQUFBREFRQ0FZQUFBQnJnVm5UQUFBQUJHZEJUVUVBQUxHUEMveGhCUUFBQUNCSVJGQkdBRXdBZnBRQ0FGUkNBRlJDQUZSQ0FGUkNBRlJDQUZSQ0FGUkNBRlJDQUZSQ0FGUkNBRlJBU1VsSkFBQUFBRWxGVGtTdVFtQ0MiLAogICAgICAic2l6ZXMiOiAiMTkyeDE5MiIsCiAgICAgICJ0eXBlIjogImltYWdlL3BuZyIKICAgIH0sCiAgICB7CiAgICAgICJzcmMiOiAiZGF0YTppbWFnZS9wbmc7YmFzZTY0LGlWQk9SdzBLR2dvQUFBQU5TVWhFVWdBQUFnQUFBQUlBQ0FZQUFBQ25iZjE1QUFBQUJHZEJUVUVBQUxHUEM5eGhCUUFBQUNCSVJGQkdBRXdBZnBRQ0FGUkNBRlJDQUZSQ0FGUkNBRlJDQUZSQ0FGUkNBRlJDQUZSQ0FGUkNBRlJBU1VsSkFBQUFBRWxGVGtTdVFtQ0MiLAogICAgICAic2l6ZXMiOiAiNTEyeDUxMiIsCiAgICAgICJ0eXBlIjogImltYWdlL3BuZyIKICAgIH0KICBdLAogICJjYXRlZ29yaWVzIjogWyJidXNpbmVzcyIsICJ0ZWNobm9sb2d5IiwgImFpIl0sCiAgImxhbmciOiAiZXMiLAogICJvcmllbnRhdGlvbiI6ICJwb3J0cmFpdC1wcmltYXJ5IiwKICAic2NvcGUiOiAiLyIKfQ=="
+    <meta name="theme-color" content="#667eea">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Aurenox-AI">
+    <link rel="apple-touch-icon" href="/assets/icon-192x192.png">
+    
+    <!-- Calendly Integration -->
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
@@ -619,6 +741,222 @@
             color: #667eea;
         }
 
+        /* PWA Styles */
+        .install-prompt {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            display: none;
+            z-index: 1000;
+            animation: slideInUp 0.5s ease;
+        }
+
+        @keyframes slideInUp {
+            from {
+                transform: translateY(100px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .install-prompt button {
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            margin-left: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .install-prompt button:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* A/B Testing Variants */
+        .cta-variant-a {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+        }
+
+        .cta-variant-b {
+            background: linear-gradient(45deg, #ff6b6b, #ffa500);
+        }
+
+        .price-highlight-a {
+            transform: scale(1.05);
+            border: 3px solid #667eea;
+        }
+
+        .price-highlight-b {
+            transform: scale(1.05);
+            border: 3px solid #ff6b6b;
+        }
+
+        /* Calendly Integration Styles */
+        .calendly-inline-widget {
+            min-width: 320px;
+            height: 630px;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .calendly-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: none;
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .calendly-modal-content {
+            background: white;
+            border-radius: 20px;
+            padding: 0;
+            width: 90%;
+            max-width: 900px;
+            height: 90%;
+            max-height: 700px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calendly-close {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0,0,0,0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            z-index: 10;
+            font-size: 1.2rem;
+        }
+
+        /* Enhanced Chatbot Styles */
+        .chatbot-message {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 15px;
+            max-width: 85%;
+            word-wrap: break-word;
+        }
+
+        .chatbot-message.bot {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            margin-right: auto;
+        }
+
+        .chatbot-message.user {
+            background: #f0f0f0;
+            color: #333;
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .chatbot-typing {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            color: #666;
+        }
+
+        .typing-dots {
+            display: flex;
+            gap: 0.2rem;
+        }
+
+        .typing-dots span {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #667eea;
+            animation: typing 1.4s infinite ease-in-out;
+        }
+
+        .typing-dots span:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dots span:nth-child(2) { animation-delay: -0.16s; }
+
+        @keyframes typing {
+            0%, 80%, 100% {
+                transform: scale(0.8);
+                opacity: 0.5;
+            }
+            40% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .chatbot-input-area {
+            padding: 1rem;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .chatbot-input {
+            flex: 1;
+            padding: 0.8rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 20px;
+            outline: none;
+            font-size: 0.9rem;
+        }
+
+        .chatbot-input:focus {
+            border-color: #667eea;
+        }
+
+        .chatbot-send {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quick-action {
+            background: rgba(102, 126, 234, 0.1);
+            border: 1px solid #667eea;
+            color: #667eea;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .quick-action:hover {
+            background: #667eea;
+            color: white;
+            transform: scale(1.05);
+        }
+
         .dark-theme .news-article {
             border: 1px solid rgba(255, 255, 255, 0.2) !important;
             background: rgba(255, 255, 255, 0.05);
@@ -639,6 +977,306 @@
         .dark-theme p[data-translate="crypto-modal-desc"],
         .dark-theme p[data-translate="news-modal-desc"] {
             color: #e0e0e0 !important;
+        }
+
+        /* Dark theme for new form modals */
+        .dark-theme .modal-content label {
+            color: #e0e0e0 !important;
+        }
+
+        .dark-theme .modal-content input,
+        .dark-theme .modal-content select,
+        .dark-theme .modal-content textarea {
+            background: rgba(255, 255, 255, 0.1) !important;
+            border: 2px solid rgba(255, 255, 255, 0.2) !important;
+            color: #e0e0e0 !important;
+        }
+
+        .dark-theme .modal-content input::placeholder,
+        .dark-theme .modal-content textarea::placeholder {
+            color: #b0b0b0 !important;
+        }
+
+        .dark-theme .modal-content input:focus,
+        .dark-theme .modal-content select:focus,
+        .dark-theme .modal-content textarea:focus {
+            border-color: #667eea !important;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+        }
+
+        /* Payment methods section in dark theme */
+        .dark-theme .modal-content div[style*="background: #f8f9fa"],
+        .dark-theme .modal-content div[style*="background: #f0f4ff"] {
+            background: rgba(102, 126, 234, 0.1) !important;
+            border-color: rgba(102, 126, 234, 0.3) !important;
+        }
+
+        .dark-theme .modal-content div[style*="background: white"] {
+            background: rgba(255, 255, 255, 0.1) !important;
+            border-color: rgba(255, 255, 255, 0.2) !important;
+        }
+
+        .dark-theme .modal-content h4 {
+            color: #e0e0e0 !important;
+        }
+
+        .dark-theme .modal-content p {
+            color: #b0b0b0 !important;
+        }
+
+        /* Payment method icons and text in dark theme */
+        .dark-theme .modal-content div[style*="color: #333"] p {
+            color: #e0e0e0 !important;
+        }
+
+        .dark-theme .modal-content div[style*="color: #666"] p {
+            color: #b0b0b0 !important;
+        }
+
+        /* Specific fixes for payment sections */
+        .dark-theme .modal-content div[style*="background: rgba(255,255,255,0.15)"] {
+            background: rgba(255, 255, 255, 0.2) !important;
+        }
+
+        .dark-theme .modal-content div[style*="background: rgba(255,255,255,0.2)"] {
+            background: rgba(255, 255, 255, 0.15) !important;
+        }
+
+        /* Price headers in dark theme */
+        .dark-theme .modal-content h3 {
+            color: white !important;
+        }
+
+        /* Form elements border and background improvements */
+        .dark-theme .modal-content select option {
+            background: #1a1a2e !important;
+            color: #e0e0e0 !important;
+        }
+
+        /* Quick action buttons in dark theme */
+        .dark-theme .quick-action {
+            background: rgba(102, 126, 234, 0.2) !important;
+            border-color: rgba(102, 126, 234, 0.5) !important;
+            color: #e0e0e0 !important;
+        }
+
+        .dark-theme .quick-action:hover {
+            background: #667eea !important;
+            color: white !important;
+        }
+
+        /* Chatbot improvements for dark theme */
+        .dark-theme .chatbot-input {
+            background: rgba(255, 255, 255, 0.1) !important;
+            border-color: rgba(255, 255, 255, 0.2) !important;
+            color: #e0e0e0 !important;
+        }
+
+        .dark-theme .chatbot-input::placeholder {
+            color: #b0b0b0 !important;
+        }
+
+        .dark-theme .chatbot-input:focus {
+            border-color: #667eea !important;
+        }
+
+        /* Specific overrides for inline styles in dark theme */
+        .dark-theme .modal-content [style*="color: #333"] {
+            color: #e0e0e0 !important;
+        }
+
+        .dark-theme .modal-content [style*="color: #666"] {
+            color: #b0b0b0 !important;
+        }
+
+        .dark-theme .modal-content [style*="color: white"] {
+            color: white !important;
+        }
+
+        /* Price section headers and content in dark theme */
+        .dark-theme .precios {
+            background: rgba(255, 255, 255, 0.03) !important;
+        }
+
+        .dark-theme .precios h2 {
+            color: #e0e0e0 !important;
+        }
+
+        .dark-theme .precios [style*="border: 2px solid #e0e0e0"],
+        .dark-theme .precios [style*="border: 3px solid #667eea"] {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border-color: rgba(255, 255, 255, 0.2) !important;
+        }
+
+        .dark-theme .precios h3 {
+            color: #e0e0e0 !important;
+        }
+
+        .dark-theme .precios [style*="color: #333"] {
+            color: #e0e0e0 !important;
+        }
+
+        .dark-theme .precios [style*="color: #666"] {
+            color: #b0b0b0 !important;
+        }
+
+        /* Audit section improvements */
+        .dark-theme .auditoria-ia {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+        }
+
+        .dark-theme .auditoria-ia h2,
+        .dark-theme .auditoria-ia h3,
+        .dark-theme .auditoria-ia p {
+            color: white !important;
+        }
+
+        /* Case studies section */
+        .dark-theme .casos-estudio {
+            background: rgba(255, 255, 255, 0.03) !important;
+        }
+
+        .dark-theme .casos-estudio h2 {
+            color: #e0e0e0 !important;
+        }
+
+        .dark-theme .casos-estudio [style*="background: white"] {
+            background: rgba(255, 255, 255, 0.08) !important;
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+        }
+
+        .dark-theme .casos-estudio h3 {
+            color: #e0e0e0 !important;
+        }
+
+        .dark-theme .casos-estudio [style*="color: #333"] {
+            color: #e0e0e0 !important;
+        }
+
+        .dark-theme .casos-estudio [style*="color: #666"] {
+            color: #b0b0b0 !important;
+        }
+
+        /* Enterprise section */
+        .dark-theme [style*="background: #f8f9fa"] {
+            background: rgba(255, 255, 255, 0.05) !important;
+        }
+
+        .dark-theme [style*="background: #f8f9fa"] h4 {
+            color: #e0e0e0 !important;
+        }
+
+        .dark-theme [style*="background: #f8f9fa"] p {
+            color: #b0b0b0 !important;
+        }
+
+        /* Specific color overrides for modal elements */
+        .dark-theme .modal-content h2[style*="color: #ff6b6b"] {
+            color: #ff6b6b !important;
+        }
+
+        .dark-theme .modal-content h2[style*="color: #667eea"] {
+            color: #667eea !important;
+        }
+
+        /* Security Styles */
+        .no-copy {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .secure-form {
+            position: relative;
+        }
+
+        .secure-form::before {
+            content: '🔒';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+
+        #security-indicator:hover {
+            transform: scale(1.1);
+            background: rgba(102, 126, 234, 1) !important;
+        }
+
+        .honeypot {
+            position: absolute !important;
+            left: -9999px !important;
+            opacity: 0 !important;
+            pointer-events: none !important;
+        }
+
+        /* Payment section background adjustments */
+        .dark-theme .modal-content div[style*="background: #fff3e0"] {
+            background: rgba(255, 165, 0, 0.1) !important;
+            border-color: rgba(255, 165, 0, 0.3) !important;
+        }
+
+        .dark-theme .modal-content div[style*="background: #f0f4ff"] {
+            background: rgba(102, 126, 234, 0.1) !important;
+            border-color: rgba(102, 126, 234, 0.3) !important;
+        }
+
+        /* Color overrides for specific gradient backgrounds */
+        .dark-theme .modal-content p[style*="color: #ff6b6b"] {
+            color: #ff6b6b !important;
+        }
+
+        .dark-theme .modal-content p[style*="color: #ffa500"] {
+            color: #ffa500 !important;
+        }
+
+        .dark-theme .modal-content p[style*="color: #667eea"] {
+            color: #667eea !important;
+        }
+
+        /* Additional form improvements */
+        .dark-theme .modal-content input[required] {
+            border-left: 3px solid #667eea !important;
+        }
+
+        .dark-theme .modal-content select[required] {
+            border-left: 3px solid #667eea !important;
+        }
+
+        /* Option elements in selects */
+        .dark-theme select {
+            color-scheme: dark;
+        }
+
+        /* Badge and tag improvements */
+        .dark-theme .modal-content div[style*="background: rgba(255,255,255,0.2)"] {
+            background: rgba(255, 255, 255, 0.15) !important;
+            color: white !important;
+        }
+
+        /* Chatbot message improvements */
+        .dark-theme .chatbot-message.bot {
+            background: linear-gradient(135deg, #667eea, #764ba2) !important;
+            color: white !important;
+        }
+
+        .dark-theme .chatbot-message.user {
+            background: rgba(255, 255, 255, 0.1) !important;
+            color: #e0e0e0 !important;
+        }
+
+        /* Button and CTA improvements for dark theme */
+        .dark-theme .cta-button {
+            background: linear-gradient(45deg, #667eea, #764ba2) !important;
+            color: white !important;
+        }
+
+        .dark-theme button[style*="background: linear-gradient"] {
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
         }
 
         /* Additional dark theme improvements */
@@ -860,7 +1498,7 @@
     <!-- Header -->
     <header class="header">
         <nav class="nav">
-            <a href="#" class="logo">Aurenox-Global</a>
+            <a href="#" class="logo">Aurenox-AI</a>
             <div class="nav-controls">
                 <ul class="nav-menu">
                     <li><a href="#" class="nav-link" onclick="openModal('proyectosModal')" data-translate="nav-projects">Proyectos</a></li>
@@ -884,10 +1522,10 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content fade-in">
-            <h1 data-translate="hero-title">Bienvenidos a <span style="color: #ffa500;">Aurenox-Global</span></h1>
-            <p data-translate="hero-description">Nos dedicamos a la creación de aplicaciones y a brindar información de tecnología de vanguardia. Contamos con un equipo altamente capacitado y apasionado por la tecnología.</p>
+            <h1 data-translate="hero-title">Bienvenidos a <span style="color: #ffa500;">Aurenox-AI</span></h1>
+            <p data-translate="hero-description">Expertos en asesoría y desarrollo de soluciones de Inteligencia Artificial. Transformamos tu negocio con IA aplicada, desde consultoría estratégica hasta implementación completa de sistemas inteligentes.</p>
             <button class="cta-button" onclick="openModal('contactosModal')">
-                <i class="fas fa-rocket"></i> <span data-translate="hero-cta">¡Comencemos tu proyecto!</span>
+                <i class="fas fa-brain"></i> <span data-translate="hero-cta">¡Potencia tu negocio con IA!</span>
             </button>
         </div>
     </section>
@@ -899,34 +1537,34 @@
             <div class="services-grid">
                 <div class="service-card fade-in">
                     <div class="service-icon">
-                        <i class="fas fa-code"></i>
+                        <i class="fas fa-brain"></i>
                     </div>
-                    <h3 data-translate="service-projects-title">Proyectos</h3>
-                    <p data-translate="service-projects-desc">Proyectos terminados y en desarrollo con las últimas tecnologías.</p>
+                    <h3 data-translate="service-projects-title">Consultoría en IA</h3>
+                    <p data-translate="service-projects-desc">Asesoría estratégica para implementar IA en tu negocio y optimizar procesos con inteligencia artificial.</p>
                     <button class="service-btn" onclick="openModal('proyectosModal')">
-                        <span data-translate="btn-see-more">Ver Más</span>
+                        <span data-translate="btn-see-more">Ver Soluciones</span>
                     </button>
                 </div>
 
                 <div class="service-card fade-in">
                     <div class="service-icon">
-                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-robot"></i>
                     </div>
-                    <h3 data-translate="service-contact-title">Contactos</h3>
-                    <p data-translate="service-contact-desc">Una forma fácil de contactarnos a través de nuestras redes sociales.</p>
+                    <h3 data-translate="service-contact-title">Desarrollo IA</h3>
+                    <p data-translate="service-contact-desc">Creamos chatbots inteligentes, sistemas de automatización y soluciones personalizadas de Machine Learning.</p>
                     <button class="service-btn" onclick="openModal('contactosModal')">
-                        <span data-translate="btn-contact">Contactar</span>
+                        <span data-translate="btn-contact">Consultar</span>
                     </button>
                 </div>
 
                 <div class="service-card fade-in">
                     <div class="service-icon">
-                        <i class="fas fa-info-circle"></i>
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <h3 data-translate="service-info-title">Información</h3>
-                    <p data-translate="service-info-desc">Conócenos un poco más y descubre nuestra pasión por la tecnología.</p>
+                    <h3 data-translate="service-info-title">Formación IA</h3>
+                    <p data-translate="service-info-desc">Capacitación y mentorías en programación asistida por IA, uso de herramientas como ChatGPT y GitHub Copilot.</p>
                     <button class="service-btn" onclick="openModal('informacionModal')">
-                        <span data-translate="btn-know-more">Conocer Más</span>
+                        <span data-translate="btn-know-more">Ver Cursos</span>
                     </button>
                 </div>
             </div>
@@ -937,32 +1575,42 @@
     <section class="espacio-interesante">
         <div class="container">
             <div class="espacio-content fade-in">
-                <h2 class="section-title" data-translate="interesting-title">Espacio Interesante</h2>
-                <p style="font-size: 1.2rem; opacity: 0.9;" data-translate="interesting-desc">Aprende un poco más sobre tecnología y nuestras últimas innovaciones</p>
+                <h2 class="section-title" data-translate="interesting-title">Especialidades en IA</h2>
+                <p style="font-size: 1.2rem; opacity: 0.9;" data-translate="interesting-desc">Descubre nuestras soluciones avanzadas de Inteligencia Artificial y cómo pueden transformar tu negocio</p>
                 
                 <div class="espacio-grid">
                     <div class="espacio-card fade-in">
                         <div class="espacio-icon">
                             <i class="fab fa-bitcoin"></i>
                         </div>
-                        <h3 data-translate="crypto-title">NEW V4 CRYPTO VIT Pro</h3>
-                        <p data-translate="crypto-desc">Descubre nuestra plataforma de criptomonedas más avanzada con características innovadoras para el trading moderno.</p>
+                        <h3 data-translate="crypto-title">Crypto VIT Pro</h3>
+                        <p data-translate="crypto-desc">Herramienta profesional de análisis de mercados crypto, forex y acciones con datos en tiempo real de Binance y gráficos de TradingView.</p>
                         <button class="espacio-btn" onclick="openModal('cryptoModal')">
-                            <span data-translate="btn-explore">Explorar</span>
+                            <span data-translate="btn-explore">Ver Demo</span>
                         </button>
                     </div>
                     
                     <div class="espacio-card fade-in">
                         <div class="espacio-icon">
-                            <i class="fas fa-newspaper"></i>
+                            <i class="fas fa-chart-line"></i>
                         </div>
-                        <h3 data-translate="news-title">Noticias Tech</h3>
-                        <p data-translate="news-desc">Mantente al día con las últimas tendencias tecnológicas y nuestros artículos especializados.</p>
+                        <h3 data-translate="news-title">Análisis Predictivo</h3>
+                        <p data-translate="news-desc">Implementamos modelos de Machine Learning para análisis de datos, predicciones y automatización de decisiones.</p>
                         <button class="espacio-btn" onclick="openModal('noticiasModal')">
-                            <span data-translate="btn-read-more">Leer Más</span>
+                            <span data-translate="btn-read-more">Saber Más</span>
                         </button>
                     </div>
                     
+                    <div class="espacio-card fade-in">
+                        <div class="espacio-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Programación con IA</h3>
+                        <p>Enseñamos y asesoramos sobre herramientas de programación asistida por IA como GitHub Copilot, ChatGPT Code y más.</p>
+                        <button class="espacio-btn" onclick="openModal('informacionModal')">
+                            <span>Aprender</span>
+                        </button>
+                    </div>
 
                 </div>
             </div>
@@ -973,39 +1621,32 @@
     <div id="proyectosModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('proyectosModal')">&times;</span>
-            <h2><i class="fas fa-code"></i> <span data-translate="projects-modal-title">Nuestros Proyectos</span></h2>
-            <p data-translate="projects-modal-desc">Desarrollamos soluciones innovadoras utilizando las tecnologías más avanzadas del mercado.</p>
+                                <h2 class="no-copy"><i class="fas fa-trophy"></i> <span data-translate="projects-modal-title">Proyectos de IA Terminados</span></h2>
+                    <p class="no-copy" data-translate="projects-modal-desc">Estos son algunos de nuestros proyectos de Inteligencia Artificial completados exitosamente. Cada uno demuestra nuestra capacidad de crear soluciones IA innovadoras y funcionales.</p>
             
             <div class="project-grid">
                 <div class="project-item">
-                    <h4><i class="fab fa-android"></i> <span data-translate="project-mobile">Aplicaciones Móviles</span></h4>
-                    <p data-translate="project-mobile-desc">Apps nativas para Android e iOS</p>
-                    <div class="project-status" data-translate="status-development">En Desarrollo</div>
-                </div>
-                
-                <div class="project-item">
-                    <h4><i class="fas fa-globe"></i> <span data-translate="project-web">Desarrollo Web</span></h4>
-                    <p data-translate="project-web-desc">Sitios web modernos y responsivos</p>
+                    <h4><i class="fab fa-bitcoin"></i> <span data-translate="project-mobile">Crypto VIT Pro</span></h4>
+                    <p data-translate="project-mobile-desc">Plataforma avanzada de criptomonedas para dispositivos móviles con IA integrada</p>
                     <div class="project-status" data-translate="status-completed">Terminado</div>
                 </div>
                 
                 <div class="project-item">
-                    <h4><i class="fab fa-bitcoin"></i> <span data-translate="project-crypto">NEW V4 CRYPTO VIT Pro</span></h4>
-                    <p data-translate="project-crypto-desc">Plataforma de criptomonedas avanzada</p>
-                    <div class="project-status" data-translate="status-development">En Desarrollo</div>
-                </div>
-                
-                <div class="project-item">
-                    <h4><i class="fas fa-newspaper"></i> <span data-translate="project-news">Portal de Noticias</span></h4>
-                    <p data-translate="project-news-desc">Sistema de gestión de contenido</p>
+                    <h4><i class="fas fa-desktop"></i> <span data-translate="project-web">SuitAI</span></h4>
+                    <p data-translate="project-web-desc">Suite completa de IA offline para PC: Chat IA local, análisis de PDFs, generación de documentos, gráficas sin internet, búsqueda inteligente y asistente de código</p>
                     <div class="project-status" data-translate="status-completed">Terminado</div>
                 </div>
             </div>
             
-            <p style="margin-top: 2rem; font-style: italic;">
-                <i class="fas fa-lightbulb"></i> 
-                Cada proyecto es desarrollado con dedicación y utilizando las mejores prácticas de la industria.
-            </p>
+            <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1.5rem; border-radius: 15px; margin-top: 2rem;">
+                <h4 style="margin-bottom: 1rem;"><i class="fas fa-star"></i> Destacado: SuitAI</h4>
+                <p style="margin: 0; line-height: 1.6;">
+                    🔒 <strong>Privacidad Total:</strong> Funciona 100% offline, tus datos nunca salen de tu PC<br>
+                    🧠 <strong>IA Avanzada:</strong> Chat inteligente sin límites ni latencia<br>
+                    📊 <strong>Suite Completa:</strong> Documentos, PDFs, código y gráficas con IA<br>
+                    🌐 <strong>Disponible ahora:</strong> <a href="https://aurenox-global.github.io/suitai/" style="color: #ffa500; text-decoration: underline;" target="_blank">Descargar SuitAI</a>
+                </p>
+            </div>
         </div>
     </div>
 
@@ -1077,41 +1718,41 @@
     <div id="informacionModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('informacionModal')">&times;</span>
-            <h2><i class="fas fa-info-circle"></i> <span data-translate="info-modal-title">Acerca de Aurenox-Global</span></h2>
+            <h2><i class="fas fa-brain"></i> <span data-translate="info-modal-title">Acerca de Aurenox-AI</span></h2>
             
             <p>
-                <strong>Aurenox-Global</strong> es una empresa innovadora especializada en el desarrollo de aplicaciones y soluciones tecnológicas de vanguardia. Fundada con la misión de transformar ideas en realidades digitales.
+                <strong>Aurenox-AI</strong> es una empresa especializada en asesoría y desarrollo de soluciones de Inteligencia Artificial. Transformamos negocios mediante la implementación estratégica de IA, desde consultoría hasta desarrollo completo de sistemas inteligentes.
             </p>
             
             <h3 style="margin-top: 2rem; color: #667eea;">
                 <i class="fas fa-target"></i> Nuestra Misión
             </h3>
             <p>
-                Brindar soluciones tecnológicas personalizadas y de alta calidad que impulsen el crecimiento y éxito de nuestros clientes, utilizando las tecnologías más avanzadas del mercado.
+                Democratizar el acceso a la Inteligencia Artificial, ayudando a empresas y desarrolladores a implementar soluciones IA que optimicen procesos, automaticen tareas y generen valor real en sus negocios.
             </p>
             
             <h3 style="margin-top: 2rem; color: #667eea;">
                 <i class="fas fa-eye"></i> Nuestra Visión
             </h3>
             <p>
-                Ser reconocidos como líderes en desarrollo de aplicaciones, destacando por nuestra innovación, calidad y compromiso con la excelencia tecnológica.
+                Ser la consultoría de referencia en Inteligencia Artificial, reconocidos por nuestra capacidad de transformar ideas en soluciones IA prácticas y rentables.
             </p>
             
             <h3 style="margin-top: 2rem; color: #667eea;">
                 <i class="fas fa-users"></i> Nuestro Equipo
             </h3>
             <p>
-                Contamos con un equipo altamente capacitado y apasionado por la tecnología, formado por desarrolladores, diseñadores y especialistas en diferentes áreas tecnológicas.
+                Contamos con especialistas en Machine Learning, Data Science, MLOps y desarrollo de aplicaciones IA. Nuestro equipo combina experiencia técnica con visión estratégica para entregar soluciones que generen impacto real.
             </p>
             
             <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1.5rem; border-radius: 15px; margin-top: 2rem; text-align: center;">
-                <h4><i class="fas fa-heart"></i> ¿Por qué elegirnos?</h4>
+                <h4><i class="fas fa-star"></i> ¿Por qué elegirnos para IA?</h4>
                 <p style="margin: 1rem 0;">
-                    • Experiencia comprobada en desarrollo<br>
-                    • Tecnologías de vanguardia<br>
-                    • Soporte 24/7<br>
-                    • Soluciones personalizadas<br>
-                    • Precios competitivos
+                    • Especialistas certificados en ML/AI<br>
+                    • Implementación desde MVP hasta producción<br>
+                    • Enfoque práctico y orientado a resultados<br>
+                    • Formación incluida para tu equipo<br>
+                    • ROI medible en cada proyecto
                 </p>
             </div>
         </div>
@@ -1121,39 +1762,178 @@
     <div id="cryptoModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('cryptoModal')">&times;</span>
-            <h2><i class="fab fa-bitcoin"></i> NEW V4 CRYPTO VIT Pro</h2>
+            <h2><i class="fab fa-bitcoin"></i> Crypto VIT Pro</h2>
             
             <p data-translate="crypto-modal-desc" style="font-size: 1.1rem; color: #333; margin-bottom: 2rem;">
-                Nuestra plataforma de criptomonedas más avanzada, diseñada para traders profesionales y principiantes.
+                Herramienta profesional de información y análisis de mercados de criptomonedas. Incluye gráficos en tiempo real, datos de Binance y análisis técnico avanzado para Bitcoin, Ethereum y más.
             </p>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
                 <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1.5rem; border-radius: 15px; text-align: center;">
-                    <h4><i class="fas fa-chart-line"></i> Trading Avanzado</h4>
-                    <p>Herramientas profesionales de análisis técnico</p>
+                    <h4><i class="fas fa-chart-line"></i> Tiempo Real</h4>
+                    <p>Datos en vivo de Binance y TradingView</p>
                 </div>
                 
                 <div style="background: linear-gradient(135deg, #ffa500, #ff6b6b); color: white; padding: 1.5rem; border-radius: 15px; text-align: center;">
-                    <h4><i class="fas fa-shield-alt"></i> Seguridad Total</h4>
-                    <p>Protocolo de seguridad multicapa</p>
+                    <h4><i class="fas fa-coins"></i> Multi-Mercados</h4>
+                    <p>Crypto, Forex y Acciones en una app</p>
                 </div>
                 
                 <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 1.5rem; border-radius: 15px; text-align: center;">
-                    <h4><i class="fas fa-mobile-alt"></i> App Móvil</h4>
-                    <p>Trading desde cualquier lugar</p>
+                    <h4><i class="fas fa-mobile-alt"></i> Móvil Optimizado</h4>
+                    <p>Diseño intuitivo para dispositivos móviles</p>
                 </div>
             </div>
             
             <div class="crypto-features" style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin-top: 2rem;">
                 <h4 style="color: #333; margin-bottom: 1rem;"><i class="fas fa-star"></i> Características Principales:</h4>
                 <ul style="color: #333; line-height: 1.8;">
-                    <li>• Interface intuitiva y personalizable</li>
-                    <li>• Soporte para más de 100 criptomonedas</li>
-                    <li>• Trading automatizado con bots inteligentes</li>
-                    <li>• Análisis en tiempo real del mercado</li>
-                    <li>• Wallet integrado con máxima seguridad</li>
+                    <li>• Gráficos profesionales de TradingView integrados</li>
+                    <li>• Datos en tiempo real de mercados Crypto, Forex y Acciones</li>
+                    <li>• Análisis técnico avanzado con indicadores profesionales</li>
+                    <li>• Optimización de consumo de datos móviles</li>
+                    <li>• Seguridad avanzada y protección de privacidad</li>
                 </ul>
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <a href="https://aurenox-global.github.io/cryptovitpro/" target="_blank" style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; padding: 1rem 2rem; border-radius: 25px; text-decoration: none; font-weight: 600;">
+                        <i class="fas fa-external-link-alt"></i> Ver Crypto VIT Pro
+                    </a>
+                </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Auditoría Modal -->
+    <div id="auditoriaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('auditoriaModal')">&times;</span>
+            <h2><i class="fas fa-search"></i> Solicitar Auditoría IA Profesional</h2>
+            
+            <p style="color: #333; margin-bottom: 2rem;">
+                Completa este formulario y nos pondremos en contacto contigo en menos de 24 horas para programar tu auditoría IA personalizada.
+            </p>
+            
+            <form style="display: grid; gap: 1.5rem;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Nombre *</label>
+                        <input type="text" required style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Email *</label>
+                        <input type="email" required style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                    </div>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Empresa</label>
+                        <input type="text" style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                    </div>
+                    <div>
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Teléfono</label>
+                        <input type="tel" style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                    </div>
+                </div>
+                
+                <div>
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Industria/Sector</label>
+                    <select style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                        <option value="">Selecciona tu industria</option>
+                        <option value="tecnologia">Tecnología</option>
+                        <option value="salud">Salud</option>
+                        <option value="finanzas">Finanzas</option>
+                        <option value="retail">Retail/E-commerce</option>
+                        <option value="manufactura">Manufactura</option>
+                        <option value="educacion">Educación</option>
+                        <option value="logistica">Logística</option>
+                        <option value="inmobiliaria">Inmobiliaria</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Tamaño de la empresa</label>
+                    <select style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                        <option value="">Selecciona el tamaño</option>
+                        <option value="startup">Startup (1-10 empleados)</option>
+                        <option value="pequena">Pequeña (11-50 empleados)</option>
+                        <option value="mediana">Mediana (51-200 empleados)</option>
+                        <option value="grande">Grande (201-1000 empleados)</option>
+                        <option value="enterprise">Enterprise (1000+ empleados)</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">¿Qué procesos te gustaría optimizar con IA? *</label>
+                    <textarea required rows="4" style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; resize: vertical;" placeholder="Ej: Atención al cliente, análisis de datos, automatización de procesos, gestión de inventario, etc."></textarea>
+                </div>
+                
+                <div>
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Presupuesto aproximado para implementación IA</label>
+                    <select style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                        <option value="">Selecciona rango de presupuesto</option>
+                        <option value="3k-10k">$3,000 - $10,000 USD</option>
+                        <option value="10k-25k">$10,000 - $25,000 USD</option>
+                        <option value="25k-50k">$25,000 - $50,000 USD</option>
+                        <option value="50k-100k">$50,000 - $100,000 USD</option>
+                        <option value="100k+">$100,000+ USD</option>
+                        <option value="evaluar">Por evaluar</option>
+                    </select>
+                </div>
+                
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; border-left: 4px solid #667eea;">
+                    <h4 style="color: #333; margin-bottom: 1rem;">🎯 Lo que incluye tu auditoría:</h4>
+                    <ul style="color: #333; margin: 0;">
+                        <li>✅ Análisis detallado de procesos actuales</li>
+                        <li>✅ Identificación de oportunidades IA específicas</li>
+                        <li>✅ Cálculo de ROI proyectado por implementación</li>
+                        <li>✅ Hoja de ruta personalizada por fases</li>
+                        <li>✅ Recomendaciones tecnológicas específicas</li>
+                        <li>✅ Cronograma y presupuesto estimado</li>
+                    </ul>
+                </div>
+                
+                <!-- Métodos de Pago Profesionales -->
+                <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1.5rem; border-radius: 15px; margin: 1.5rem 0;">
+                    <h4 style="color: white; margin-bottom: 1rem; text-align: center;">💳 Métodos de Pago Seguros</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; text-align: center;">
+                        <div style="padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px; backdrop-filter: blur(10px);">
+                            <i class="fas fa-credit-card" style="font-size: 2rem; color: #ffa500; margin-bottom: 0.5rem;"></i>
+                            <h5 style="color: white; margin: 0.5rem 0; font-size: 0.9rem;">Tarjetas</h5>
+                            <p style="color: rgba(255,255,255,0.8); font-size: 0.8rem; margin: 0;">Visa, MasterCard, Amex</p>
+                        </div>
+                        <div style="padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px; backdrop-filter: blur(10px);">
+                            <i class="fas fa-university" style="font-size: 2rem; color: #ffa500; margin-bottom: 0.5rem;"></i>
+                            <h5 style="color: white; margin: 0.5rem 0; font-size: 0.9rem;">Wire Transfer</h5>
+                            <p style="color: rgba(255,255,255,0.8); font-size: 0.8rem; margin: 0;">Bancario Internacional</p>
+                        </div>
+                        <div style="padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px; backdrop-filter: blur(10px);">
+                            <i class="fab fa-paypal" style="font-size: 2rem; color: #ffa500; margin-bottom: 0.5rem;"></i>
+                            <h5 style="color: white; margin: 0.5rem 0; font-size: 0.9rem;">PayPal</h5>
+                            <p style="color: rgba(255,255,255,0.8); font-size: 0.8rem; margin: 0;">Pago seguro online</p>
+                        </div>
+                        <div style="padding: 1rem; background: rgba(255,255,255,0.1); border-radius: 8px; backdrop-filter: blur(10px);">
+                            <i class="fab fa-bitcoin" style="font-size: 2rem; color: #ffa500; margin-bottom: 0.5rem;"></i>
+                            <h5 style="color: white; margin: 0.5rem 0; font-size: 0.9rem;">Crypto</h5>
+                            <p style="color: rgba(255,255,255,0.8); font-size: 0.8rem; margin: 0;">Bitcoin, USDT, ETH</p>
+                        </div>
+                    </div>
+                    <div style="text-align: center; margin-top: 1rem; padding: 1rem; background: rgba(255,171,0,0.2); border-radius: 8px;">
+                        <p style="margin: 0; font-weight: 600; color: #ffa500;">💰 Opciones de Pago Flexibles:</p>
+                        <p style="margin: 0.5rem 0; font-size: 0.9rem; color: white;">✅ Pago único $899 • ✅ 2 pagos: $449 inicial + $450 al entregar • ✅ Sin intereses</p>
+                        <p style="margin: 0; font-size: 0.9rem; color: #ffa500;">🔒 100% Seguro • 📄 Facturación disponible • 🏆 Garantía de satisfacción</p>
+                    </div>
+                </div>
+                
+                <button type="submit" style="background: linear-gradient(45deg, #ffa500, #ff6b6b); color: white; padding: 1.5rem 2rem; border: none; border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer; transition: all 0.3s ease; width: 100%; box-shadow: 0 10px 30px rgba(255,165,0,0.3);">
+                    <i class="fas fa-rocket"></i> Solicitar Auditoría IA - $899 USD
+                </button>
+                
+                <p style="text-align: center; color: #666; font-size: 0.9rem; margin: 0;">
+                    * Nos comprometemos a responder en menos de 24 horas laborales
+                </p>
+            </form>
         </div>
     </div>
 
@@ -1161,35 +1941,35 @@
     <div id="noticiasModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('noticiasModal')">&times;</span>
-            <h2><i class="fas fa-newspaper"></i> Noticias y Artículos</h2>
+            <h2><i class="fas fa-chart-line"></i> Análisis Predictivo con IA</h2>
             
             <p data-translate="news-modal-desc" style="color: #333; margin-bottom: 2rem;">
-                Mantente informado con las últimas tendencias tecnológicas y nuestros análisis especializados.
+                Implementamos modelos de Machine Learning para predecir tendencias, optimizar procesos y automatizar la toma de decisiones en tu negocio.
             </p>
             
             <div>
                 <article class="news-article" style="border: 1px solid #e0e0e0; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem;">
-                    <h4 class="news-title" style="color: #667eea; margin-bottom: 0.5rem;">El Futuro de la Inteligencia Artificial</h4>
-                    <p class="news-date" style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">15 de Noviembre, 2024</p>
-                    <p class="news-content" style="color: #333; line-height: 1.6;">Exploramos las últimas tendencias en IA y cómo están transformando el desarrollo de aplicaciones...</p>
+                    <h4 class="news-title" style="color: #667eea; margin-bottom: 0.5rem;">Predicción de Demanda con Machine Learning</h4>
+                    <p class="news-date" style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Caso de Uso</p>
+                    <p class="news-content" style="color: #333; line-height: 1.6;">Análisis de patrones históricos para predecir demanda futura, optimizar inventarios y reducir costos operativos...</p>
                 </article>
                 
                 <article class="news-article" style="border: 1px solid #e0e0e0; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem;">
-                    <h4 class="news-title" style="color: #667eea; margin-bottom: 0.5rem;">Blockchain: Más Allá de las Criptomonedas</h4>
-                    <p class="news-date" style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">10 de Noviembre, 2024</p>
-                    <p class="news-content" style="color: #333; line-height: 1.6;">Descubre las aplicaciones innovadoras de blockchain en diferentes industrias...</p>
+                    <h4 class="news-title" style="color: #667eea; margin-bottom: 0.5rem;">Automatización de Procesos RPA + IA</h4>
+                    <p class="news-date" style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">Solución Híbrida</p>
+                    <p class="news-content" style="color: #333; line-height: 1.6;">Combinamos RPA tradicional con IA para automatizar procesos complejos que requieren toma de decisiones...</p>
                 </article>
                 
                 <article class="news-article" style="border: 1px solid #e0e0e0; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem;">
-                    <h4 class="news-title" style="color: #667eea; margin-bottom: 0.5rem;">Desarrollo Móvil: Tendencias 2024</h4>
-                    <p class="news-date" style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">5 de Noviembre, 2024</p>
-                    <p class="news-content" style="color: #333; line-height: 1.6;">Las tecnologías que están definiendo el futuro del desarrollo móvil...</p>
+                    <h4 class="news-title" style="color: #667eea; margin-bottom: 0.5rem;">Análisis de Sentimientos en Tiempo Real</h4>
+                    <p class="news-date" style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">NLP Avanzado</p>
+                    <p class="news-content" style="color: #333; line-height: 1.6;">Monitoreo de redes sociales y feedback de clientes para insights inmediatos sobre percepción de marca...</p>
                 </article>
             </div>
             
             <div style="text-align: center; margin-top: 2rem;">
                 <button style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; border: none; padding: 1rem 2rem; border-radius: 25px; cursor: pointer; font-weight: 600;">
-                    <i class="fas fa-plus"></i> Ver Todos los Artículos
+                    <i class="fas fa-chart-bar"></i> Ver Más Casos de Uso
                 </button>
             </div>
         </div>
@@ -1203,80 +1983,599 @@
         
         <div class="chatbot-window" id="chatbot-window">
             <div class="chatbot-header">
-                <h3><i class="fas fa-robot"></i> <span data-translate="chatbot-title">Asistente Aurenox</span></h3>
+                <h3><i class="fas fa-robot"></i> <span data-translate="chatbot-title">Asistente IA Aurenox</span></h3>
                 <button class="chatbot-close" onclick="toggleChatbot()">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             
-            <div class="chatbot-content">
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span data-translate="faq-q1">¿Qué servicios ofrecen?</span>
-                        <i class="fas fa-chevron-down"></i>
+            <div class="chatbot-content" id="chatbot-messages">
+                <!-- Welcome Message -->
+                <div class="chatbot-message bot">
+                    <strong>¡Hola! 👋</strong><br>
+                    Soy tu asistente IA de Aurenox-AI. Puedo ayudarte con:
+                    <br><br>
+                    • Información sobre servicios de IA<br>
+                    • Precios y paquetes<br>
+                    • Agendar consultas<br>
+                    • Casos de éxito<br>
+                    <br>
+                    Escribe tu pregunta o selecciona una opción rápida:
                     </div>
-                    <div class="faq-answer" data-translate="faq-a1">
-                        Ofrecemos desarrollo de aplicaciones móviles, desarrollo web, plataformas de criptomonedas, sistemas de gestión y consultoría tecnológica personalizada.
+                
+                <!-- Quick Actions -->
+                <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0 1rem; margin-bottom: 1rem;">
+                    <button class="quick-action" onclick="sendQuickMessage('¿Cuánto cuesta una auditoría IA?')">💰 Precios</button>
+                    <button class="quick-action" onclick="sendQuickMessage('¿Qué servicios ofrecen?')">🛠️ Servicios</button>
+                    <button class="quick-action" onclick="sendQuickMessage('Quiero agendar una consulta')">📅 Agendar</button>
+                    <button class="quick-action" onclick="sendQuickMessage('Casos de éxito')">🏆 Casos</button>
+                </div>
+                
+                <!-- Typing indicator (hidden by default) -->
+                <div class="chatbot-typing" id="typing-indicator" style="display: none;">
+                    <span>Escribiendo</span>
+                    <div class="typing-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
                     </div>
                 </div>
                 
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span data-translate="faq-q2">¿Cuánto tiempo toma desarrollar una app?</span>
-                        <i class="fas fa-chevron-down"></i>
+            <!-- Chat Input -->
+            <div class="chatbot-input-area">
+                <input type="text" class="chatbot-input" id="chat-input" placeholder="Escribe tu pregunta aquí..." onkeypress="handleChatKeypress(event)">
+                <button class="chatbot-send" onclick="sendChatMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
                     </div>
-                    <div class="faq-answer" data-translate="faq-a2">
-                        El tiempo depende de la complejidad del proyecto. Una app básica puede tomar 2-3 meses, mientras que aplicaciones más complejas pueden requerir 6-12 meses.
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span data-translate="faq-q3">¿Ofrecen soporte post-desarrollo?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer" data-translate="faq-a3">
-                        Sí, ofrecemos soporte 24/7, mantenimiento, actualizaciones y mejoras continuas para todos nuestros proyectos.
                     </div>
                 </div>
                 
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span data-translate="faq-q4">¿Cuáles son sus precios?</span>
-                        <i class="fas fa-chevron-down"></i>
+    <!-- Auditoría IA Section -->
+    <section class="auditoria-ia" style="padding: 6rem 2rem; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">
+                <i class="fas fa-search"></i> Auditoría IA Profesional
+            </h2>
+            <p style="font-size: 1.2rem; margin-bottom: 3rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Identifica oportunidades reales de IA en tu empresa con nuestro análisis profesional. 
+                Evaluamos tu negocio y te entregamos un reporte detallado con implementaciones viables y ROI proyectado.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0;">
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
+                    <h3 style="margin-bottom: 1rem;"><i class="fas fa-clipboard-check"></i> Análisis Integral</h3>
+                    <p>Evaluación completa de procesos, identificación de oportunidades IA y análisis de viabilidad técnica y económica.</p>
                     </div>
-                    <div class="faq-answer" data-translate="faq-a4">
-                        Nuestros precios son competitivos y dependen del alcance del proyecto. Ofrecemos cotizaciones gratuitas y planes de pago flexibles.
+                
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
+                    <h3 style="margin-bottom: 1rem;"><i class="fas fa-chart-bar"></i> ROI Proyectado</h3>
+                    <p>Cálculo detallado del retorno de inversión esperado, cronograma de implementación y análisis costo-beneficio.</p>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
+                    <h3 style="margin-bottom: 1rem;"><i class="fas fa-road"></i> Hoja de Ruta</h3>
+                    <p>Plan de implementación por fases, tecnologías recomendadas y estrategia de adopción personalizada.</p>
                     </div>
                 </div>
                 
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span data-translate="faq-q5">¿Trabajan con tecnologías específicas?</span>
-                        <i class="fas fa-chevron-down"></i>
+                            <button class="cta-button" onclick="openModal('auditoriaCompletaModal')" style="margin-top: 2rem;">
+                <i class="fas fa-rocket"></i> Solicitar Auditoría IA
+            </button>
                     </div>
-                    <div class="faq-answer" data-translate="faq-a5">
-                        Trabajamos con las últimas tecnologías: React, Node.js, React Native, Flutter, Python, blockchain, IA y más.
+    </section>
+
+    <!-- Casos de Estudio Section -->
+    <section class="casos-estudio" style="padding: 6rem 2rem; background: #f8f9fa;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #333;">
+                <i class="fas fa-trophy"></i> Casos de Éxito Reales
+            </h2>
+            <p style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 4rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Resultados medibles que hemos conseguido para nuestros clientes con implementaciones de IA
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                <!-- Caso 1: E-commerce -->
+                <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-left: 5px solid #667eea;">
+                    <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                        <i class="fas fa-shopping-cart" style="font-size: 2rem; color: #667eea; margin-right: 1rem;"></i>
+                        <div>
+                            <h3 style="color: #333; margin: 0; font-size: 1.3rem;">E-commerce - Recomendaciones IA</h3>
+                            <p style="color: #666; margin: 0.5rem 0 0 0; font-size: 0.9rem;">Retail online - 50 empleados</p>
                     </div>
                 </div>
                 
-                <div class="faq-item">
-                    <div class="faq-question" onclick="toggleFAQ(this)">
-                        <span data-translate="faq-q6">¿Cómo inicio un proyecto?</span>
-                        <i class="fas fa-chevron-down"></i>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+                        <div style="text-align: center; padding: 1rem; background: #f0f7ff; border-radius: 10px;">
+                            <div style="font-size: 1.8rem; font-weight: 700; color: #667eea;">+47%</div>
+                            <div style="font-size: 0.9rem; color: #333;">Aumento en ventas</div>
                     </div>
-                    <div class="faq-answer" data-translate="faq-a6">
-                        Contáctanos a través de cualquiera de nuestros canales. Programaremos una consulta gratuita para discutir tu proyecto y crear una propuesta personalizada.
+                        <div style="text-align: center; padding: 1rem; background: #f0f7ff; border-radius: 10px;">
+                            <div style="font-size: 1.8rem; font-weight: 700; color: #667eea;">340%</div>
+                            <div style="font-size: 0.9rem; color: #333;">ROI en 8 meses</div>
+                    </div>
+                </div>
+                
+                    <p style="color: #333; line-height: 1.6; margin-bottom: 1.5rem;">
+                        <strong>Problema:</strong> Baja tasa de conversión y carritos abandonados.<br>
+                        <strong>Solución:</strong> Sistema de recomendaciones IA personalizado.<br>
+                        <strong>Resultado:</strong> Incremento significativo en ventas cruzadas y retención.
+                    </p>
+                    
+                    <div style="background: #e8f5e8; padding: 1rem; border-radius: 10px; margin-top: 1rem;">
+                        <strong style="color: #28a745;">💰 Inversión recuperada en 8 meses</strong>
+                    </div>
+                    </div>
+                
+                <!-- Caso 2: Manufactura -->
+                <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-left: 5px solid #ffa500;">
+                    <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                        <i class="fas fa-industry" style="font-size: 2rem; color: #ffa500; margin-right: 1rem;"></i>
+                        <div>
+                            <h3 style="color: #333; margin: 0; font-size: 1.3rem;">Manufactura - Mantenimiento Predictivo</h3>
+                            <p style="color: #666; margin: 0.5rem 0 0 0; font-size: 0.9rem;">Industria automotriz - 200 empleados</p>
+                </div>
+            </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+                        <div style="text-align: center; padding: 1rem; background: #fff5e6; border-radius: 10px;">
+                            <div style="font-size: 1.8rem; font-weight: 700; color: #ffa500;">-65%</div>
+                            <div style="font-size: 0.9rem; color: #333;">Paradas no planificadas</div>
+        </div>
+                        <div style="text-align: center; padding: 1rem; background: #fff5e6; border-radius: 10px;">
+                            <div style="font-size: 1.8rem; font-weight: 700; color: #ffa500;">$280K</div>
+                            <div style="font-size: 0.9rem; color: #333;">Ahorro anual</div>
+                        </div>
+                    </div>
+                    
+                    <p style="color: #333; line-height: 1.6; margin-bottom: 1.5rem;">
+                        <strong>Problema:</strong> Paradas imprevistas costosas en línea de producción.<br>
+                        <strong>Solución:</strong> IA predictiva con sensores IoT para anticipar fallos.<br>
+                        <strong>Resultado:</strong> Reducción dramática de tiempos muertos y costos.
+                    </p>
+                    
+                    <div style="background: #e8f5e8; padding: 1rem; border-radius: 10px; margin-top: 1rem;">
+                        <strong style="color: #28a745;">💰 ROI de 420% en el primer año</strong>
+                    </div>
+                </div>
+                
+                <!-- Caso 3: Servicios -->
+                <div style="background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-left: 5px solid #28a745;">
+                    <div style="display: flex; align-items: center; margin-bottom: 1.5rem;">
+                        <i class="fas fa-headset" style="font-size: 2rem; color: #28a745; margin-right: 1rem;"></i>
+                        <div>
+                            <h3 style="color: #333; margin: 0; font-size: 1.3rem;">Servicios - Chatbot Inteligente</h3>
+                            <p style="color: #666; margin: 0.5rem 0 0 0; font-size: 0.9rem;">Fintech - 80 empleados</p>
+                        </div>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0;">
+                        <div style="text-align: center; padding: 1rem; background: #f0f9f0; border-radius: 10px;">
+                            <div style="font-size: 1.8rem; font-weight: 700; color: #28a745;">78%</div>
+                            <div style="font-size: 0.9rem; color: #333;">Consultas automatizadas</div>
+                        </div>
+                        <div style="text-align: center; padding: 1rem; background: #f0f9f0; border-radius: 10px;">
+                            <div style="font-size: 1.8rem; font-weight: 700; color: #28a745;">-60%</div>
+                            <div style="font-size: 0.9rem; color: #333;">Tiempo respuesta</div>
+                        </div>
+                    </div>
+                    
+                    <p style="color: #333; line-height: 1.6; margin-bottom: 1.5rem;">
+                        <strong>Problema:</strong> Alto volumen de consultas repetitivas y tiempos largos.<br>
+                        <strong>Solución:</strong> Chatbot IA con NLP avanzado integrado a su CRM.<br>
+                        <strong>Resultado:</strong> Atención 24/7 y equipo enfocado en casos complejos.
+                    </p>
+                    
+                    <div style="background: #e8f5e8; padding: 1rem; border-radius: 10px; margin-top: 1rem;">
+                        <strong style="color: #28a745;">💰 Ahorro de $120K anuales en personal</strong>
                     </div>
                 </div>
             </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p style="color: #666; margin-bottom: 1.5rem; font-size: 1.1rem;">
+                    <strong>¿Quieres resultados similares en tu empresa?</strong>
+                </p>
+                <button style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; padding: 1.5rem 3rem; border: none; border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer;" onclick="openModal('auditoriaCompletaModal')">
+                    <i class="fas fa-rocket"></i> Comenzar Mi Auditoría IA
+                </button>
+            </div>
         </div>
+    </section>
+
+    <!-- Precios Section -->
+    <section class="precios" style="padding: 6rem 2rem; background: white;">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 2.5rem; margin-bottom: 3rem; color: #333;">
+                <i class="fas fa-tags"></i> Inversión en tu Futuro IA
+            </h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+                <!-- Consultoría Básica -->
+                <div style="border: 2px solid #e0e0e0; border-radius: 20px; padding: 2rem; text-align: center; transition: all 0.3s ease; position: relative;">
+                    <h3 style="color: #667eea; margin-bottom: 1rem; font-size: 1.5rem;">Consultoría Inicial</h3>
+                    <div style="font-size: 2rem; color: #333; margin-bottom: 1rem;">
+                        <span style="font-size: 3rem; font-weight: 700;">$299</span>
+                        <span style="font-size: 1rem; color: #666;">USD</span>
+                    </div>
+                    <ul style="text-align: left; color: #333; margin: 1.5rem 0;">
+                        <li style="margin-bottom: 0.5rem;">✅ Consulta de 2 horas vía videollamada</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Evaluación inicial de oportunidades IA</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Recomendaciones básicas</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Documento resumen (5 páginas)</li>
+                    </ul>
+                    <!-- Métodos de Pago -->
+                    <div style="background: #f8f9fa; padding: 1rem; border-radius: 10px; margin: 1rem 0; font-size: 0.9rem;">
+                        <div style="text-align: center; color: #333;">
+                            <p style="margin: 0; font-weight: 600;">💳 Formas de Pago:</p>
+                            <p style="margin: 0.5rem 0; color: #666;">💳 Tarjetas • 🏦 Transferencia • 📱 PayPal</p>
+                            <p style="margin: 0; color: #667eea; font-weight: 600;">✨ Pago seguro al agendar</p>
+                        </div>
+                    </div>
+                    
+                    <button style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; padding: 1rem 2rem; border: none; border-radius: 25px; width: 100%; font-weight: 600; cursor: pointer;" onclick="openModal('consultoriaModal')">
+                        <i class="fas fa-calendar-alt"></i> Agendar Consultoría
+                    </button>
+                </div>
+
+                <!-- Auditoría Completa -->
+                <div style="border: 3px solid #667eea; border-radius: 20px; padding: 2rem; text-align: center; position: relative; transform: scale(1.05);">
+                    <div style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; padding: 0.5rem 1rem; border-radius: 15px; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); font-weight: 600;">
+                        MÁS POPULAR
+                    </div>
+                    <h3 style="color: #667eea; margin-bottom: 1rem; font-size: 1.5rem; margin-top: 1rem;">Auditoría IA Completa</h3>
+                    <div style="font-size: 2rem; color: #333; margin-bottom: 1rem;">
+                        <span style="font-size: 3rem; font-weight: 700;">$899</span>
+                        <span style="font-size: 1rem; color: #666;">USD</span>
+                    </div>
+                    <ul style="text-align: left; color: #333; margin: 1.5rem 0;">
+                        <li style="margin-bottom: 0.5rem;">✅ Análisis profundo (1-2 semanas)</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Evaluación de todos los procesos</li>
+                        <li style="margin-bottom: 0.5rem;">✅ ROI proyectado detallado</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Hoja de ruta completa</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Reporte ejecutivo (20+ páginas)</li>
+                        <li style="margin-bottom: 0.5rem;">✅ 2 sesiones de seguimiento</li>
+                    </ul>
+                    <!-- Métodos de Pago -->
+                    <div style="background: #fff3e0; padding: 1rem; border-radius: 10px; margin: 1rem 0; font-size: 0.9rem; border: 2px solid #ffa500;">
+                        <div style="text-align: center; color: #333;">
+                            <p style="margin: 0; font-weight: 600; color: #ff6b6b;">💳 Pago Flexible:</p>
+                            <p style="margin: 0.5rem 0; color: #666;">🔥 50% inicial ($449) + 50% al entregar</p>
+                            <p style="margin: 0; color: #ffa500; font-weight: 600;">✅ Garantía de satisfacción 100%</p>
+                        </div>
+                    </div>
+                    
+                    <button style="background: linear-gradient(45deg, #ffa500, #ff6b6b); color: white; padding: 1rem 2rem; border: none; border-radius: 25px; width: 100%; font-weight: 600; cursor: pointer;" onclick="openModal('auditoriaCompletaModal')">
+                        <i class="fas fa-star"></i> Agendar Auditoría
+                    </button>
+                </div>
+
+                <!-- Implementación -->
+                <div style="border: 2px solid #e0e0e0; border-radius: 20px; padding: 2rem; text-align: center;">
+                    <h3 style="color: #667eea; margin-bottom: 1rem; font-size: 1.5rem;">Implementación IA</h3>
+                    <div style="font-size: 2rem; color: #333; margin-bottom: 1rem;">
+                        <span style="font-size: 2rem; font-weight: 700;">Desde $2,999</span>
+                        <span style="font-size: 1rem; color: #666;">USD</span>
+                    </div>
+                    <ul style="text-align: left; color: #333; margin: 1.5rem 0;">
+                        <li style="margin-bottom: 0.5rem;">✅ Desarrollo completo de solución IA</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Integración con sistemas existentes</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Capacitación del equipo</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Soporte 3 meses incluido</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Garantía de resultados</li>
+                    </ul>
+                    <!-- Métodos de Pago -->
+                    <div style="background: #f0f4ff; padding: 1rem; border-radius: 10px; margin: 1rem 0; font-size: 0.9rem; border: 2px solid #667eea;">
+                        <div style="text-align: center; color: #333;">
+                            <p style="margin: 0; font-weight: 600; color: #667eea;">💰 Inversión Escalable:</p>
+                            <p style="margin: 0.5rem 0; color: #666;">🎯 30% inicial + hitos por desarrollo</p>
+                            <p style="margin: 0; color: #667eea; font-weight: 600;">🔒 Contratos con garantías</p>
+                        </div>
+                    </div>
+                    
+                    <button style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; padding: 1rem 2rem; border: none; border-radius: 25px; width: 100%; font-weight: 600; cursor: pointer;" onclick="openModal('implementacionModal')">
+                        <i class="fas fa-handshake"></i> Agendar Reunión
+                    </button>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: #f8f9fa; border-radius: 15px;">
+                <h4 style="color: #333; margin-bottom: 1rem;">💼 ¿Empresa grande o necesidades específicas?</h4>
+                <p style="color: #666; margin-bottom: 1.5rem;">Ofrecemos planes enterprise personalizados con precios competitivos para proyectos de mayor escala.</p>
+                <button style="background: linear-gradient(45deg, #28a745, #20c997); color: white; padding: 1rem 2rem; border: none; border-radius: 25px; font-weight: 600; cursor: pointer;" onclick="openModal('contactosModal')">
+                    <i class="fas fa-handshake"></i> Solicitar Propuesta Enterprise
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal Consultoría Inicial -->
+    <div id="consultoriaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('consultoriaModal')">&times;</span>
+            <h2 style="color: #667eea; text-align: center; margin-bottom: 1rem;">
+                <i class="fas fa-calendar-alt"></i> Consultoría Inicial IA
+            </h2>
+            
+            <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1.5rem; border-radius: 15px; margin-bottom: 2rem; text-align: center;">
+                <h3 style="margin: 0; font-size: 2rem;">$299 USD</h3>
+                <p style="margin: 0.5rem 0;">2 horas de consulta + reporte personalizado</p>
+            </div>
+            
+            <form style="max-width: 500px; margin: 0 auto;">
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Nombre completo *</label>
+                    <input type="text" required style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Email corporativo *</label>
+                    <input type="email" required style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Teléfono *</label>
+                    <input type="tel" required style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Empresa/Organización *</label>
+                    <input type="text" required style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Principal reto empresarial que quieres resolver con IA</label>
+                    <textarea style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; height: 100px; resize: vertical;" placeholder="Ej: Automatizar atención al cliente, optimizar inventarios, análisis predictivo de ventas..."></textarea>
+                </div>
+                
+                <!-- Métodos de Pago -->
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 15px; margin: 1.5rem 0; border: 2px solid #667eea;">
+                    <h4 style="color: #333; margin-bottom: 1rem; text-align: center;">💳 Pago Seguro - $299 USD</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; text-align: center; margin-bottom: 1rem;">
+                        <div style="padding: 0.8rem; background: white; border-radius: 8px; border: 2px solid #e0e0e0;">
+                            <i class="fas fa-credit-card" style="font-size: 1.5rem; color: #667eea; margin-bottom: 0.3rem;"></i>
+                            <p style="margin: 0; font-size: 0.8rem; color: #333; font-weight: 600;">Tarjetas</p>
+                        </div>
+                        <div style="padding: 0.8rem; background: white; border-radius: 8px; border: 2px solid #e0e0e0;">
+                            <i class="fab fa-paypal" style="font-size: 1.5rem; color: #667eea; margin-bottom: 0.3rem;"></i>
+                            <p style="margin: 0; font-size: 0.8rem; color: #333; font-weight: 600;">PayPal</p>
+                        </div>
+                        <div style="padding: 0.8rem; background: white; border-radius: 8px; border: 2px solid #e0e0e0;">
+                            <i class="fas fa-university" style="font-size: 1.5rem; color: #667eea; margin-bottom: 0.3rem;"></i>
+                            <p style="margin: 0; font-size: 0.8rem; color: #333; font-weight: 600;">Transfer</p>
+                        </div>
+                    </div>
+                    <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 8px; color: white;">
+                        <p style="margin: 0; font-weight: 600;">✅ Pago único $299 • 🔒 100% seguro • 📄 Facturación incluida</p>
+                    </div>
+                </div>
+                
+                <button type="submit" style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; padding: 1.5rem 2rem; border: none; border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer; width: 100%; box-shadow: 0 10px 30px rgba(102,126,234,0.3);">
+                    <i class="fas fa-calendar-check"></i> Solicitar Consultoría - $299 USD
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Auditoría Completa -->
+    <div id="auditoriaCompletaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('auditoriaCompletaModal')">&times;</span>
+            <h2 style="color: #ff6b6b; text-align: center; margin-bottom: 1rem;">
+                <i class="fas fa-star"></i> Auditoría IA Completa
+            </h2>
+            
+            <div style="background: linear-gradient(135deg, #ffa500, #ff6b6b); color: white; padding: 1.5rem; border-radius: 15px; margin-bottom: 2rem; text-align: center;">
+                <div style="background: rgba(255,255,255,0.2); padding: 0.3rem 1rem; border-radius: 20px; display: inline-block; margin-bottom: 0.5rem; font-weight: 600;">MÁS POPULAR</div>
+                <h3 style="margin: 0; font-size: 2rem;">$899 USD</h3>
+                <p style="margin: 0.5rem 0;">Análisis profundo + ROI proyectado + Roadmap</p>
+            </div>
+            
+            <form style="max-width: 500px; margin: 0 auto;">
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Nombre completo *</label>
+                    <input type="text" required style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Email corporativo *</label>
+                    <input type="email" required style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Cargo/Posición *</label>
+                    <input type="text" required style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;" placeholder="CEO, CTO, Director de Operaciones...">
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Empresa *</label>
+                    <input type="text" required style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Tamaño de empresa</label>
+                    <select style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                        <option value="">Selecciona tamaño</option>
+                        <option value="startup">Startup (1-10 empleados)</option>
+                        <option value="pequena">Pequeña (11-50 empleados)</option>
+                        <option value="mediana">Mediana (51-200 empleados)</option>
+                        <option value="grande">Grande (201-1000 empleados)</option>
+                        <option value="enterprise">Enterprise (1000+ empleados)</option>
+                    </select>
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Presupuesto estimado para implementación IA</label>
+                    <select style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                        <option value="">Selecciona rango</option>
+                        <option value="5k-15k">$5,000 - $15,000 USD</option>
+                        <option value="15k-50k">$15,000 - $50,000 USD</option>
+                        <option value="50k-100k">$50,000 - $100,000 USD</option>
+                        <option value="100k-250k">$100,000 - $250,000 USD</option>
+                        <option value="250k+">$250,000+ USD</option>
+                        <option value="evaluar">Por evaluar en auditoría</option>
+                    </select>
+                </div>
+                
+                <!-- Métodos de Pago -->
+                <div style="background: linear-gradient(135deg, #ffa500, #ff6b6b); color: white; padding: 1.5rem; border-radius: 15px; margin: 1.5rem 0;">
+                    <h4 style="color: white; margin-bottom: 1rem; text-align: center;">💳 Pago Flexible - $899 USD</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 1rem; text-align: center; margin-bottom: 1rem;">
+                        <div style="padding: 0.8rem; background: rgba(255,255,255,0.15); border-radius: 8px;">
+                            <i class="fas fa-credit-card" style="font-size: 1.3rem; color: white; margin-bottom: 0.3rem;"></i>
+                            <p style="margin: 0; font-size: 0.8rem; color: white; font-weight: 600;">Tarjetas</p>
+                        </div>
+                        <div style="padding: 0.8rem; background: rgba(255,255,255,0.15); border-radius: 8px;">
+                            <i class="fab fa-paypal" style="font-size: 1.3rem; color: white; margin-bottom: 0.3rem;"></i>
+                            <p style="margin: 0; font-size: 0.8rem; color: white; font-weight: 600;">PayPal</p>
+                        </div>
+                        <div style="padding: 0.8rem; background: rgba(255,255,255,0.15); border-radius: 8px;">
+                            <i class="fas fa-university" style="font-size: 1.3rem; color: white; margin-bottom: 0.3rem;"></i>
+                            <p style="margin: 0; font-size: 0.8rem; color: white; font-weight: 600;">Transfer</p>
+                        </div>
+                        <div style="padding: 0.8rem; background: rgba(255,255,255,0.15); border-radius: 8px;">
+                            <i class="fab fa-bitcoin" style="font-size: 1.3rem; color: white; margin-bottom: 0.3rem;"></i>
+                            <p style="margin: 0; font-size: 0.8rem; color: white; font-weight: 600;">Crypto</p>
+                        </div>
+                    </div>
+                    <div style="text-align: center; padding: 1rem; background: rgba(255,255,255,0.2); border-radius: 8px;">
+                        <p style="margin: 0; font-weight: 600; font-size: 0.9rem;">💰 Opciones: Pago único $899 • 2 pagos: $449 + $450 • Sin intereses</p>
+                        <p style="margin: 0.5rem 0 0 0; font-size: 0.8rem;">🔒 100% Seguro • 📄 Facturación • 🎯 Garantía de satisfacción</p>
+                    </div>
+                </div>
+                
+                <button type="submit" style="background: linear-gradient(45deg, #ffa500, #ff6b6b); color: white; padding: 1.5rem 2rem; border: none; border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer; width: 100%; box-shadow: 0 10px 30px rgba(255,165,0,0.3);">
+                    <i class="fas fa-rocket"></i> Solicitar Auditoría Completa - $899 USD
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal Implementación IA -->
+    <div id="implementacionModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('implementacionModal')">&times;</span>
+            <h2 style="color: #667eea; text-align: center; margin-bottom: 1rem;">
+                <i class="fas fa-handshake"></i> Implementación IA Enterprise
+            </h2>
+            
+            <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1.5rem; border-radius: 15px; margin-bottom: 2rem; text-align: center;">
+                <h3 style="margin: 0; font-size: 2rem;">Desde $2,999 USD</h3>
+                <p style="margin: 0.5rem 0;">Desarrollo completo + Integración + Soporte</p>
+            </div>
+            
+            <form style="max-width: 500px; margin: 0 auto;">
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Nombre del responsable del proyecto *</label>
+                    <input type="text" required style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Email corporativo *</label>
+                    <input type="email" required style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Cargo/Posición *</label>
+                    <input type="text" required style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;" placeholder="CTO, Director de Innovación, Gerente de Proyectos...">
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Empresa *</label>
+                    <input type="text" required style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Tipo de solución IA requerida *</label>
+                    <select required style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                        <option value="">Selecciona tipo de solución</option>
+                        <option value="chatbot">Chatbot / Asistente Virtual</option>
+                        <option value="automatizacion">Automatización de Procesos (RPA + IA)</option>
+                        <option value="analisis">Análisis Predictivo / Machine Learning</option>
+                        <option value="vision">Computer Vision / Análisis de Imágenes</option>
+                        <option value="nlp">Procesamiento de Lenguaje Natural (NLP)</option>
+                        <option value="recomendacion">Sistema de Recomendaciones</option>
+                        <option value="custom">Solución personalizada</option>
+                        <option value="multiple">Múltiples soluciones</option>
+                    </select>
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Presupuesto del proyecto</label>
+                    <select style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                        <option value="">Selecciona rango de presupuesto</option>
+                        <option value="3k-10k">$3,000 - $10,000 USD</option>
+                        <option value="10k-25k">$10,000 - $25,000 USD</option>
+                        <option value="25k-50k">$25,000 - $50,000 USD</option>
+                        <option value="50k-100k">$50,000 - $100,000 USD</option>
+                        <option value="100k-250k">$100,000 - $250,000 USD</option>
+                        <option value="250k+">$250,000+ USD</option>
+                        <option value="evaluar">Por evaluar en reunión</option>
+                    </select>
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Timeline esperado</label>
+                    <select style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                        <option value="">Selecciona timeline</option>
+                        <option value="urgente">Urgente (1-2 meses)</option>
+                        <option value="rapido">Rápido (2-4 meses)</option>
+                        <option value="normal">Normal (4-6 meses)</option>
+                        <option value="flexible">Flexible (6+ meses)</option>
+                    </select>
+                </div>
+                
+                <div style="margin-bottom: 1rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: #333;">Descripción del proyecto y objetivos</label>
+                    <textarea style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; height: 120px; resize: vertical;" placeholder="Describe qué quieres lograr con IA, problema específico a resolver, métricas de éxito esperadas..."></textarea>
+                </div>
+                
+                <!-- Métodos de Pago -->
+                <div style="background: #f0f4ff; padding: 1.5rem; border-radius: 15px; margin: 1.5rem 0; border: 2px solid #667eea;">
+                    <h4 style="color: #333; margin-bottom: 1rem; text-align: center;">💰 Inversión Escalable por Hitos</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem; text-align: center; margin-bottom: 1rem;">
+                        <div style="padding: 1rem; background: white; border-radius: 8px; border: 2px solid #e0e0e0;">
+                            <i class="fas fa-credit-card" style="font-size: 1.5rem; color: #667eea; margin-bottom: 0.3rem;"></i>
+                            <p style="margin: 0; font-size: 0.8rem; color: #333; font-weight: 600;">Tarjetas</p>
+                        </div>
+                        <div style="padding: 1rem; background: white; border-radius: 8px; border: 2px solid #e0e0e0;">
+                            <i class="fas fa-university" style="font-size: 1.5rem; color: #667eea; margin-bottom: 0.3rem;"></i>
+                            <p style="margin: 0; font-size: 0.8rem; color: #333; font-weight: 600;">Wire Transfer</p>
+                        </div>
+                        <div style="padding: 1rem; background: white; border-radius: 8px; border: 2px solid #e0e0e0;">
+                            <i class="fas fa-file-contract" style="font-size: 1.5rem; color: #667eea; margin-bottom: 0.3rem;"></i>
+                            <p style="margin: 0; font-size: 0.8rem; color: #333; font-weight: 600;">Contratos</p>
+                        </div>
+                    </div>
+                    <div style="text-align: center; padding: 1rem; background: linear-gradient(135deg, #667eea, #764ba2); border-radius: 8px; color: white;">
+                        <p style="margin: 0; font-weight: 600;">🎯 Pago por Hitos: 30% inicial + desarrollo por fases</p>
+                        <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem;">🔒 Contratos con garantías • 📊 Reportes de progreso • ⚡ Soporte incluido</p>
+                    </div>
+                </div>
+                
+                <button type="submit" style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; padding: 1.5rem 2rem; border: none; border-radius: 25px; font-size: 1.1rem; font-weight: 600; cursor: pointer; width: 100%; box-shadow: 0 10px 30px rgba(102,126,234,0.3);">
+                    <i class="fas fa-handshake"></i> Solicitar Reunión de Proyecto
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- PWA Install Prompt -->
+    <div id="install-prompt" class="install-prompt">
+        <div>
+            <strong>📱 Instalar Aurenox-AI</strong><br>
+            <small>Acceso rápido desde tu dispositivo</small>
+        </div>
+        <button id="install-button">Instalar</button>
+        <button onclick="dismissInstallPrompt()" style="background: transparent; border: none; color: white; margin-left: 0.5rem;">✕</button>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
-        <p data-translate="footer-copyright">&copy; 2024 Aurenox-Global. Todos los derechos reservados.</p>
-        <p><span data-translate="footer-developed">Desarrollado con</span> <i class="fas fa-heart" style="color: #ff6b6b;"></i> <span data-translate="footer-tech">y tecnología de vanguardia</span></p>
+        <p data-translate="footer-copyright">&copy; 2024 Aurenox-AI. Todos los derechos reservados.</p>
+        <p><span data-translate="footer-developed">Potenciado por</span> <i class="fas fa-brain" style="color: #ffa500;"></i> <span data-translate="footer-tech">Inteligencia Artificial aplicada</span></p>
     </footer>
 
     <script>
@@ -1450,36 +2749,36 @@
         // Language translations
         const translations = {
             es: {
-                'hero-title': 'Bienvenidos a <span style="color: #ffa500;">Aurenox-Global</span>',
-                'hero-description': 'Nos dedicamos a la creación de aplicaciones y a brindar información de tecnología de vanguardia. Contamos con un equipo altamente capacitado y apasionado por la tecnología.',
-                'hero-cta': '¡Comencemos tu proyecto!',
+                'hero-title': 'Bienvenidos a <span style="color: #ffa500;">Aurenox-AI</span>',
+                'hero-description': 'Expertos en asesoría y desarrollo de soluciones de Inteligencia Artificial. Transformamos tu negocio con IA aplicada, desde consultoría estratégica hasta implementación completa de sistemas inteligentes.',
+                'hero-cta': '¡Potencia tu negocio con IA!',
                 'nav-projects': 'Proyectos',
                 'nav-contact': 'Contactos',
                 'nav-info': 'Información',
                 'services-title': 'Nuestros Servicios',
-                'service-projects-title': 'Proyectos',
-                'service-projects-desc': 'Proyectos terminados y en desarrollo con las últimas tecnologías.',
-                'service-contact-title': 'Contactos',
-                'service-contact-desc': 'Una forma fácil de contactarnos a través de nuestras redes sociales.',
-                'service-info-title': 'Información',
-                'service-info-desc': 'Conócenos un poco más y descubre nuestra pasión por la tecnología.',
-                'interesting-title': 'Espacio Interesante',
-                'interesting-desc': 'Aprende un poco más sobre tecnología y nuestras últimas innovaciones',
-                'crypto-title': 'NEW V4 CRYPTO VIT Pro',
-                'crypto-desc': 'Descubre nuestra plataforma de criptomonedas más avanzada con características innovadoras para el trading moderno.',
-                'news-title': 'Noticias Tech',
-                'news-desc': 'Mantente al día con las últimas tendencias tecnológicas y nuestros artículos especializados.',
-                'btn-see-more': 'Ver Más',
-                'btn-contact': 'Contactar',
-                'btn-know-more': 'Conocer Más',
-                'btn-explore': 'Explorar',
-                'btn-read-more': 'Leer Más',
-                'projects-modal-title': 'Nuestros Proyectos',
-                'projects-modal-desc': 'Desarrollamos soluciones innovadoras utilizando las tecnologías más avanzadas del mercado.',
-                'project-mobile': 'Aplicaciones Móviles',
-                'project-mobile-desc': 'Apps nativas para Android e iOS',
-                'project-web': 'Desarrollo Web',
-                'project-web-desc': 'Sitios web modernos y responsivos',
+                'service-projects-title': 'Consultoría en IA',
+                'service-projects-desc': 'Asesoría estratégica para implementar IA en tu negocio y optimizar procesos con inteligencia artificial.',
+                'service-contact-title': 'Desarrollo IA',
+                'service-contact-desc': 'Creamos chatbots inteligentes, sistemas de automatización y soluciones personalizadas de Machine Learning.',
+                'service-info-title': 'Formación IA',
+                'service-info-desc': 'Capacitación y mentorías en programación asistida por IA, uso de herramientas como ChatGPT y GitHub Copilot.',
+                'interesting-title': 'Especialidades en IA',
+                'interesting-desc': 'Descubre nuestras soluciones avanzadas de Inteligencia Artificial y cómo pueden transformar tu negocio',
+                'crypto-title': 'Crypto VIT Pro',
+                'crypto-desc': 'Herramienta profesional de análisis de mercados crypto, forex y acciones con datos en tiempo real de Binance y gráficos de TradingView.',
+                'news-title': 'Análisis Predictivo',
+                'news-desc': 'Implementamos modelos de Machine Learning para análisis de datos, predicciones y automatización de decisiones.',
+                'btn-see-more': 'Ver Soluciones',
+                'btn-contact': 'Consultar',
+                'btn-know-more': 'Ver Cursos',
+                'btn-explore': 'Ver Demo',
+                'btn-read-more': 'Saber Más',
+                'projects-modal-title': 'Proyectos de IA Terminados',
+                'projects-modal-desc': 'Estos son algunos de nuestros proyectos de Inteligencia Artificial completados exitosamente. Cada uno demuestra nuestra capacidad de crear soluciones IA innovadoras y funcionales.',
+                'project-mobile': 'Crypto VIT Pro',
+                'project-mobile-desc': 'Plataforma avanzada de criptomonedas para dispositivos móviles con IA integrada',
+                'project-web': 'SuitAI',
+                'project-web-desc': 'Suite completa de IA offline para PC: Chat IA local, análisis de PDFs, generación de documentos, gráficas sin internet, búsqueda inteligente y asistente de código',
                 'project-crypto': 'NEW V4 CRYPTO VIT Pro',
                 'project-crypto-desc': 'Plataforma de criptomonedas avanzada',
                 'project-news': 'Portal de Noticias',
@@ -1494,57 +2793,57 @@
                 'contact-linkedin': 'LinkedIn',
                 'contact-instagram': 'Instagram',
                 'contact-twitter': 'Twitter',
-                'info-modal-title': 'Acerca de Aurenox-Global',
-                'chatbot-title': 'Asistente Aurenox',
-                'footer-copyright': '© 2024 Aurenox-Global. Todos los derechos reservados.',
-                'footer-developed': 'Desarrollado con',
-                'footer-tech': 'y tecnología de vanguardia',
-                'crypto-modal-desc': 'Nuestra plataforma de criptomonedas más avanzada, diseñada para traders profesionales y principiantes.',
+                'info-modal-title': 'Acerca de Aurenox-AI',
+                'chatbot-title': 'Asistente IA Aurenox',
+                'footer-copyright': '© 2024 Aurenox-AI. Todos los derechos reservados.',
+                'footer-developed': 'Potenciado por',
+                'footer-tech': 'Inteligencia Artificial aplicada',
+                'crypto-modal-desc': 'Herramienta profesional de información y análisis de mercados de criptomonedas. Incluye gráficos en tiempo real, datos de Binance y análisis técnico avanzado para Bitcoin, Ethereum y más.',
                 'news-modal-desc': 'Mantente informado con las últimas tendencias tecnológicas y nuestros análisis especializados.',
-                'faq-q1': '¿Qué servicios ofrecen?',
-                'faq-a1': 'Ofrecemos desarrollo de aplicaciones móviles, desarrollo web, plataformas de criptomonedas, sistemas de gestión y consultoría tecnológica personalizada.',
-                'faq-q2': '¿Cuánto tiempo toma desarrollar una app?',
-                'faq-a2': 'El tiempo depende de la complejidad del proyecto. Una app básica puede tomar 2-3 meses, mientras que aplicaciones más complejas pueden requerir 6-12 meses.',
+                'faq-q1': '¿Qué servicios de IA ofrecen?',
+                'faq-a1': 'Ofrecemos consultoría en IA, desarrollo de chatbots inteligentes, análisis predictivo, automatización con ML, formación en herramientas IA y auditorías de oportunidades de IA.',
+                'faq-q2': '¿Cuánto tiempo toma implementar una solución IA?',
+                'faq-a2': 'Depende del alcance. Un chatbot básico puede estar listo en 2-4 semanas, mientras que sistemas de análisis predictivo complejos pueden tomar 3-6 meses incluyendo capacitación y despliegue.',
                 'faq-q3': '¿Ofrecen soporte post-desarrollo?',
                 'faq-a3': 'Sí, ofrecemos soporte 24/7, mantenimiento, actualizaciones y mejoras continuas para todos nuestros proyectos.',
                 'faq-q4': '¿Cuáles son sus precios?',
-                'faq-a4': 'Nuestros precios son competitivos y dependen del alcance del proyecto. Ofrecemos cotizaciones gratuitas y planes de pago flexibles.',
-                'faq-q5': '¿Trabajan con tecnologías específicas?',
-                'faq-a5': 'Trabajamos con las últimas tecnologías: React, Node.js, React Native, Flutter, Python, blockchain, IA y más.',
-                'faq-q6': '¿Cómo inicio un proyecto?',
-                'faq-a6': 'Contáctanos a través de cualquiera de nuestros canales. Programaremos una consulta gratuita para discutir tu proyecto y crear una propuesta personalizada.'
+                'faq-a4': 'Nuestros precios son competitivos y dependen del alcance del proyecto. Ofrecemos cotizaciones y planes de pago flexibles.',
+                'faq-q5': '¿Qué tecnologías de IA utilizan?',
+                'faq-a5': 'Utilizamos Python, TensorFlow, PyTorch, OpenAI API, Langchain, Hugging Face, AWS/Azure ML, y herramientas como ChatGPT, Claude y GitHub Copilot para desarrollo.',
+                'faq-q6': '¿Cómo empezar con IA en mi empresa?',
+                'faq-a6': 'Comenzamos con una auditoría para identificar oportunidades de IA en tu negocio. Luego creamos una hoja de ruta personalizada con implementación por fases y ROI medible.'
             },
             en: {
-                'hero-title': 'Welcome to <span style="color: #ffa500;">Aurenox-Global</span>',
-                'hero-description': 'We are dedicated to creating applications and providing cutting-edge technology information. We have a highly trained and passionate team about technology.',
-                'hero-cta': 'Let\'s start your project!',
+                'hero-title': 'Welcome to <span style="color: #ffa500;">Aurenox-AI</span>',
+                'hero-description': 'Experts in AI consulting and development of Artificial Intelligence solutions. We transform your business with applied AI, from strategic consulting to complete implementation of intelligent systems.',
+                'hero-cta': 'Boost your business with AI!',
                 'nav-projects': 'Projects',
                 'nav-contact': 'Contact',
                 'nav-info': 'Information',
                 'services-title': 'Our Services',
-                'service-projects-title': 'Projects',
-                'service-projects-desc': 'Completed and developing projects with the latest technologies.',
-                'service-contact-title': 'Contact',
-                'service-contact-desc': 'An easy way to contact us through our social networks.',
-                'service-info-title': 'Information',
-                'service-info-desc': 'Get to know us a little more and discover our passion for technology.',
-                'interesting-title': 'Interesting Space',
-                'interesting-desc': 'Learn a little more about technology and our latest innovations',
-                'crypto-title': 'NEW V4 CRYPTO VIT Pro',
-                'crypto-desc': 'Discover our most advanced cryptocurrency platform with innovative features for modern trading.',
-                'news-title': 'Tech News',
-                'news-desc': 'Stay up to date with the latest technology trends and our specialized articles.',
-                'btn-see-more': 'See More',
-                'btn-contact': 'Contact',
-                'btn-know-more': 'Know More',
-                'btn-explore': 'Explore',
-                'btn-read-more': 'Read More',
-                'projects-modal-title': 'Our Projects',
-                'projects-modal-desc': 'We develop innovative solutions using the most advanced technologies in the market.',
-                'project-mobile': 'Mobile Applications',
-                'project-mobile-desc': 'Native apps for Android and iOS',
-                'project-web': 'Web Development',
-                'project-web-desc': 'Modern and responsive websites',
+                'service-projects-title': 'AI Consulting',
+                'service-projects-desc': 'Strategic consulting to implement AI in your business and optimize processes with artificial intelligence.',
+                'service-contact-title': 'AI Development',
+                'service-contact-desc': 'We create intelligent chatbots, automation systems and custom Machine Learning solutions.',
+                'service-info-title': 'AI Training',
+                'service-info-desc': 'Training and mentoring in AI-assisted programming, use of tools like ChatGPT and GitHub Copilot.',
+                'interesting-title': 'AI Specialties',
+                'interesting-desc': 'Discover our advanced Artificial Intelligence solutions and how they can transform your business',
+                'crypto-title': 'Crypto VIT Pro',
+                'crypto-desc': 'Professional analysis tool for crypto, forex and stock markets with real-time Binance data and TradingView charts.',
+                'news-title': 'Predictive Analytics',
+                'news-desc': 'We implement Machine Learning models for data analysis, predictions and decision automation.',
+                'btn-see-more': 'View Solutions',
+                'btn-contact': 'Consult',
+                'btn-know-more': 'View Courses',
+                'btn-explore': 'View Demo',
+                'btn-read-more': 'Learn More',
+                'projects-modal-title': 'Completed AI Projects',
+                'projects-modal-desc': 'These are some of our successfully completed Artificial Intelligence projects. Each one demonstrates our ability to create innovative and functional AI solutions.',
+                'project-mobile': 'Crypto VIT Pro',
+                'project-mobile-desc': 'Advanced cryptocurrency platform for mobile devices with integrated AI',
+                'project-web': 'SuitAI',
+                'project-web-desc': 'Complete offline AI suite for PC: Local AI chat, PDF analysis, document generation, internet-free graphics, intelligent search and code assistant',
                 'project-crypto': 'NEW V4 CRYPTO VIT Pro',
                 'project-crypto-desc': 'Advanced cryptocurrency platform',
                 'project-news': 'News Portal',
@@ -1559,57 +2858,57 @@
                 'contact-linkedin': 'LinkedIn',
                 'contact-instagram': 'Instagram',
                 'contact-twitter': 'Twitter',
-                'info-modal-title': 'About Aurenox-Global',
-                'chatbot-title': 'Aurenox Assistant',
-                'footer-copyright': '© 2024 Aurenox-Global. All rights reserved.',
-                'footer-developed': 'Developed with',
-                'footer-tech': 'and cutting-edge technology',
-                'crypto-modal-desc': 'Our most advanced cryptocurrency platform, designed for professional and beginner traders.',
+                'info-modal-title': 'About Aurenox-AI',
+                'chatbot-title': 'Aurenox AI Assistant',
+                'footer-copyright': '© 2024 Aurenox-AI. All rights reserved.',
+                'footer-developed': 'Powered by',
+                'footer-tech': 'Applied Artificial Intelligence',
+                'crypto-modal-desc': 'Professional cryptocurrency market information and analysis tool. Includes real-time charts, Binance data and advanced technical analysis for Bitcoin, Ethereum and more.',
                 'news-modal-desc': 'Stay informed with the latest technology trends and our specialized analysis.',
-                'faq-q1': 'What services do you offer?',
-                'faq-a1': 'We offer mobile app development, web development, cryptocurrency platforms, management systems and personalized technology consulting.',
-                'faq-q2': 'How long does it take to develop an app?',
-                'faq-a2': 'The time depends on the project complexity. A basic app can take 2-3 months, while more complex applications may require 6-12 months.',
+                'faq-q1': 'What AI services do you offer?',
+                'faq-a1': 'We offer AI consulting, intelligent chatbot development, predictive analytics, ML automation, AI tool training and AI opportunity audits.',
+                'faq-q2': 'How long does it take to implement an AI solution?',
+                'faq-a2': 'It depends on scope. A basic chatbot can be ready in 2-4 weeks, while complex predictive analytics systems can take 3-6 months including training and deployment.',
                 'faq-q3': 'Do you offer post-development support?',
                 'faq-a3': 'Yes, we offer 24/7 support, maintenance, updates and continuous improvements for all our projects.',
                 'faq-q4': 'What are your prices?',
-                'faq-a4': 'Our prices are competitive and depend on the project scope. We offer free quotes and flexible payment plans.',
-                'faq-q5': 'Do you work with specific technologies?',
-                'faq-a5': 'We work with the latest technologies: React, Node.js, React Native, Flutter, Python, blockchain, AI and more.',
-                'faq-q6': 'How do I start a project?',
-                'faq-a6': 'Contact us through any of our channels. We will schedule a free consultation to discuss your project and create a personalized proposal.'
+                'faq-a4': 'Our prices are competitive and depend on the project scope. We offer quotes and flexible payment plans.',
+                'faq-q5': 'What AI technologies do you use?',
+                'faq-a5': 'We use Python, TensorFlow, PyTorch, OpenAI API, Langchain, Hugging Face, AWS/Azure ML, and tools like ChatGPT, Claude and GitHub Copilot for development.',
+                'faq-q6': 'How to start with AI in my company?',
+                'faq-a6': 'We start with an audit to identify AI opportunities in your business. Then we create a personalized roadmap with phased implementation and measurable ROI.'
             },
             de: {
-                'hero-title': 'Willkommen bei <span style="color: #ffa500;">Aurenox-Global</span>',
-                'hero-description': 'Wir widmen uns der Entwicklung von Anwendungen und der Bereitstellung von modernster Technologie-Information. Wir haben ein hochqualifiziertes und leidenschaftliches Team für Technologie.',
-                'hero-cta': 'Lassen Sie uns Ihr Projekt starten!',
+                'hero-title': 'Willkommen bei <span style="color: #ffa500;">Aurenox-AI</span>',
+                'hero-description': 'Experten für KI-Beratung und Entwicklung von Künstliche Intelligenz-Lösungen. Wir transformieren Ihr Unternehmen mit angewandter KI, von strategischer Beratung bis zur vollständigen Implementierung intelligenter Systeme.',
+                'hero-cta': 'Stärken Sie Ihr Unternehmen mit KI!',
                 'nav-projects': 'Projekte',
                 'nav-contact': 'Kontakt',
                 'nav-info': 'Information',
                 'services-title': 'Unsere Dienstleistungen',
-                'service-projects-title': 'Projekte',
-                'service-projects-desc': 'Abgeschlossene und in Entwicklung befindliche Projekte mit den neuesten Technologien.',
-                'service-contact-title': 'Kontakt',
-                'service-contact-desc': 'Eine einfache Möglichkeit, uns über unsere sozialen Netzwerke zu kontaktieren.',
-                'service-info-title': 'Information',
-                'service-info-desc': 'Lernen Sie uns etwas besser kennen und entdecken Sie unsere Leidenschaft für Technologie.',
-                'interesting-title': 'Interessanter Bereich',
-                'interesting-desc': 'Erfahren Sie etwas mehr über Technologie und unsere neuesten Innovationen',
-                'crypto-title': 'NEW V4 CRYPTO VIT Pro',
-                'crypto-desc': 'Entdecken Sie unsere fortschrittlichste Kryptowährungs-Plattform mit innovativen Funktionen für modernen Handel.',
-                'news-title': 'Tech-Nachrichten',
-                'news-desc': 'Bleiben Sie auf dem Laufenden mit den neuesten Technologie-Trends und unseren spezialisierten Artikeln.',
-                'btn-see-more': 'Mehr sehen',
-                'btn-contact': 'Kontakt',
-                'btn-know-more': 'Mehr erfahren',
-                'btn-explore': 'Erkunden',
-                'btn-read-more': 'Mehr lesen',
-                'projects-modal-title': 'Unsere Projekte',
-                'projects-modal-desc': 'Wir entwickeln innovative Lösungen mit den fortschrittlichsten Technologien auf dem Markt.',
-                'project-mobile': 'Mobile Anwendungen',
-                'project-mobile-desc': 'Native Apps für Android und iOS',
-                'project-web': 'Web-Entwicklung',
-                'project-web-desc': 'Moderne und responsive Websites',
+                'service-projects-title': 'KI-Beratung',
+                'service-projects-desc': 'Strategische Beratung zur Implementierung von KI in Ihrem Unternehmen und Optimierung von Prozessen mit künstlicher Intelligenz.',
+                'service-contact-title': 'KI-Entwicklung',
+                'service-contact-desc': 'Wir erstellen intelligente Chatbots, Automatisierungssysteme und maßgeschneiderte Machine Learning-Lösungen.',
+                'service-info-title': 'KI-Schulung',
+                'service-info-desc': 'Schulung und Mentoring in KI-unterstützter Programmierung, Verwendung von Tools wie ChatGPT und GitHub Copilot.',
+                'interesting-title': 'KI-Spezialitäten',
+                'interesting-desc': 'Entdecken Sie unsere fortschrittlichen Künstliche Intelligenz-Lösungen und wie sie Ihr Unternehmen transformieren können',
+                'crypto-title': 'Crypto VIT Pro',
+                'crypto-desc': 'Professionelles Analyse-Tool für Krypto-, Forex- und Aktienmärkte mit Echtzeit-Binance-Daten und TradingView-Charts.',
+                'news-title': 'Predictive Analytics',
+                'news-desc': 'Wir implementieren Machine Learning-Modelle für Datenanalyse, Vorhersagen und Entscheidungsautomatisierung.',
+                'btn-see-more': 'Lösungen ansehen',
+                'btn-contact': 'Beratung',
+                'btn-know-more': 'Kurse ansehen',
+                'btn-explore': 'Demo ansehen',
+                'btn-read-more': 'Mehr erfahren',
+                'projects-modal-title': 'Abgeschlossene KI-Projekte',
+                'projects-modal-desc': 'Dies sind einige unserer erfolgreich abgeschlossenen Künstliche Intelligenz-Projekte. Jedes zeigt unsere Fähigkeit, innovative und funktionale KI-Lösungen zu schaffen.',
+                'project-mobile': 'Crypto VIT Pro',
+                'project-mobile-desc': 'Fortschrittliche Kryptowährungs-Plattform für mobile Geräte mit integrierter KI',
+                'project-web': 'SuitAI',
+                'project-web-desc': 'Komplette Offline-KI-Suite für PC: Lokaler KI-Chat, PDF-Analyse, Dokumentenerstellung, Internet-freie Grafiken, intelligente Suche und Code-Assistent',
                 'project-crypto': 'NEW V4 CRYPTO VIT Pro',
                 'project-crypto-desc': 'Fortschrittliche Kryptowährungs-Plattform',
                 'project-news': 'Nachrichten-Portal',
@@ -1624,57 +2923,57 @@
                 'contact-linkedin': 'LinkedIn',
                 'contact-instagram': 'Instagram',
                 'contact-twitter': 'Twitter',
-                'info-modal-title': 'Über Aurenox-Global',
-                'chatbot-title': 'Aurenox Assistent',
-                'footer-copyright': '© 2024 Aurenox-Global. Alle Rechte vorbehalten.',
-                'footer-developed': 'Entwickelt mit',
-                'footer-tech': 'und modernster Technologie',
-                'crypto-modal-desc': 'Unsere fortschrittlichste Kryptowährungs-Plattform, entwickelt für professionelle und anfängliche Trader.',
+                'info-modal-title': 'Über Aurenox-AI',
+                'chatbot-title': 'Aurenox KI-Assistent',
+                'footer-copyright': '© 2024 Aurenox-AI. Alle Rechte vorbehalten.',
+                'footer-developed': 'Betrieben von',
+                'footer-tech': 'Angewandter Künstlicher Intelligenz',
+                'crypto-modal-desc': 'Professionelles Tool für Kryptowährungs-Marktinformationen und -analysen. Enthält Echtzeit-Charts, Binance-Daten und erweiterte technische Analyse für Bitcoin, Ethereum und mehr.',
                 'news-modal-desc': 'Bleiben Sie informiert über die neuesten Technologie-Trends und unsere spezialisierten Analysen.',
-                'faq-q1': 'Welche Dienstleistungen bieten Sie an?',
-                'faq-a1': 'Wir bieten mobile App-Entwicklung, Web-Entwicklung, Kryptowährungs-Plattformen, Management-Systeme und personalisierte Technologie-Beratung.',
-                'faq-q2': 'Wie lange dauert es, eine App zu entwickeln?',
-                'faq-a2': 'Die Zeit hängt von der Projektkomplexity ab. Eine einfache App kann 2-3 Monate dauern, während komplexere Anwendungen 6-12 Monate benötigen können.',
+                'faq-q1': 'Welche KI-Dienstleistungen bieten Sie an?',
+                'faq-a1': 'Wir bieten KI-Beratung, Entwicklung intelligenter Chatbots, Predictive Analytics, ML-Automatisierung, KI-Tool-Training und KI-Opportunity-Audits.',
+                'faq-q2': 'Wie lange dauert die Implementierung einer KI-Lösung?',
+                'faq-a2': 'Das hängt vom Umfang ab. Ein einfacher Chatbot kann in 2-4 Wochen bereit sein, während komplexe Predictive Analytics-Systeme 3-6 Monate einschließlich Training und Deployment dauern können.',
                 'faq-q3': 'Bieten Sie Post-Entwicklungs-Support an?',
                 'faq-a3': 'Ja, wir bieten 24/7 Support, Wartung, Updates und kontinuierliche Verbesserungen für alle unsere Projekte.',
                 'faq-q4': 'Wie sind Ihre Preise?',
-                'faq-a4': 'Unsere Preise sind wettbewerbsfähig und hängen vom Projektumfang ab. Wir bieten kostenlose Angebote und flexible Zahlungspläne.',
-                'faq-q5': 'Arbeiten Sie mit spezifischen Technologien?',
-                'faq-a5': 'Wir arbeiten mit den neuesten Technologien: React, Node.js, React Native, Flutter, Python, Blockchain, KI und mehr.',
-                'faq-q6': 'Wie starte ich ein Projekt?',
-                'faq-a6': 'Kontaktieren Sie uns über einen unserer Kanäle. Wir vereinbaren eine kostenlose Beratung, um Ihr Projekt zu besprechen und ein personalisiertes Angebot zu erstellen.'
+                'faq-a4': 'Unsere Preise sind wettbewerbsfähig und hängen vom Projektumfang ab. Wir bieten Angebote und flexible Zahlungspläne.',
+                'faq-q5': 'Welche KI-Technologien verwenden Sie?',
+                'faq-a5': 'Wir verwenden Python, TensorFlow, PyTorch, OpenAI API, Langchain, Hugging Face, AWS/Azure ML und Tools wie ChatGPT, Claude und GitHub Copilot für die Entwicklung.',
+                'faq-q6': 'Wie beginne ich mit KI in meinem Unternehmen?',
+                'faq-a6': 'Wir beginnen mit einem Audit, um KI-Möglichkeiten in Ihrem Unternehmen zu identifizieren. Dann erstellen wir eine personalisierte Roadmap mit phasenweiser Implementierung und messbarem ROI.'
             },
             pl: {
-                'hero-title': 'Witamy w <span style="color: #ffa500;">Aurenox-Global</span>',
-                'hero-description': 'Specjalizujemy się w tworzeniu aplikacji i dostarczaniu informacji o najnowszych technologiach. Mamy wysoko wykwalifikowany i pasjonujący się technologią zespół.',
-                'hero-cta': 'Rozpocznijmy Twój projekt!',
+                'hero-title': 'Witamy w <span style="color: #ffa500;">Aurenox-AI</span>',
+                'hero-description': 'Eksperci w zakresie doradztwa AI i rozwoju rozwiązań Sztucznej Inteligencji. Transformujemy Twój biznes dzięki zastosowanej AI, od strategicznego doradztwa po pełną implementację inteligentnych systemów.',
+                'hero-cta': 'Wzmocnij swój biznes AI!',
                 'nav-projects': 'Projekty',
                 'nav-contact': 'Kontakt',
                 'nav-info': 'Informacje',
                 'services-title': 'Nasze Usługi',
-                'service-projects-title': 'Projekty',
-                'service-projects-desc': 'Ukończone i rozwijane projekty z najnowszymi technologiami.',
-                'service-contact-title': 'Kontakt',
-                'service-contact-desc': 'Łatwy sposób skontaktowania się z nami przez nasze sieci społecznościowe.',
-                'service-info-title': 'Informacje',
-                'service-info-desc': 'Poznaj nas trochę lepiej i odkryj naszą pasję do technologii.',
-                'interesting-title': 'Ciekawa Przestrzeń',
-                'interesting-desc': 'Dowiedz się więcej o technologii i naszych najnowszych innowacjach',
-                'crypto-title': 'NEW V4 CRYPTO VIT Pro',
-                'crypto-desc': 'Odkryj naszą najbardziej zaawansowaną platformę kryptowalut z innowacyjnymi funkcjami dla nowoczesnego handlu.',
-                'news-title': 'Wiadomości Tech',
-                'news-desc': 'Bądź na bieżąco z najnowszymi trendami technologicznymi i naszymi specjalistycznymi artykułami.',
-                'btn-see-more': 'Zobacz więcej',
-                'btn-contact': 'Kontakt',
-                'btn-know-more': 'Dowiedz się więcej',
-                'btn-explore': 'Eksploruj',
-                'btn-read-more': 'Czytaj więcej',
-                'projects-modal-title': 'Nasze Projekty',
-                'projects-modal-desc': 'Rozwijamy innowacyjne rozwiązania wykorzystując najbardziej zaawansowane technologie na rynku.',
-                'project-mobile': 'Aplikacje Mobilne',
-                'project-mobile-desc': 'Natywne aplikacje dla Android i iOS',
-                'project-web': 'Rozwiązania Webowe',
-                'project-web-desc': 'Nowoczesne i responsywne strony internetowe',
+                'service-projects-title': 'Doradztwo AI',
+                'service-projects-desc': 'Strategiczne doradztwo w zakresie wdrażania AI w Twoim biznesie i optymalizacji procesów za pomocą sztucznej inteligencji.',
+                'service-contact-title': 'Rozwój AI',
+                'service-contact-desc': 'Tworzymy inteligentne chatboty, systemy automatyzacji i niestandardowe rozwiązania Machine Learning.',
+                'service-info-title': 'Szkolenia AI',
+                'service-info-desc': 'Szkolenia i mentoring w programowaniu wspomaganym AI, korzystanie z narzędzi takich jak ChatGPT i GitHub Copilot.',
+                'interesting-title': 'Specjalizacje AI',
+                'interesting-desc': 'Odkryj nasze zaawansowane rozwiązania Sztucznej Inteligencji i jak mogą przekształcić Twój biznes',
+                'crypto-title': 'Crypto VIT Pro',
+                'crypto-desc': 'Profesjonalne narzędzie analityczne dla rynków krypto, forex i akcji z danymi Binance w czasie rzeczywistym i wykresami TradingView.',
+                'news-title': 'Analityka Predykcyjna',
+                'news-desc': 'Wdrażamy modele Machine Learning do analizy danych, prognoz i automatyzacji decyzji.',
+                'btn-see-more': 'Zobacz Rozwiązania',
+                'btn-contact': 'Konsultacja',
+                'btn-know-more': 'Zobacz Kursy',
+                'btn-explore': 'Zobacz Demo',
+                'btn-read-more': 'Dowiedz się więcej',
+                'projects-modal-title': 'Ukończone Projekty AI',
+                'projects-modal-desc': 'To są niektóre z naszych pomyślnie ukończonych projektów Sztucznej Inteligencji. Każdy z nich pokazuje naszą zdolność do tworzenia innowacyjnych i funkcjonalnych rozwiązań AI.',
+                'project-mobile': 'Crypto VIT Pro',
+                'project-mobile-desc': 'Zaawansowana platforma kryptowalut dla urządzeń mobilnych z zintegrowaną AI',
+                'project-web': 'SuitAI',
+                'project-web-desc': 'Kompletny pakiet AI offline dla PC: Lokalny chat AI, analiza PDF, generowanie dokumentów, grafiki bez internetu, inteligentne wyszukiwanie i asystent kodu',
                 'project-crypto': 'NEW V4 CRYPTO VIT Pro',
                 'project-crypto-desc': 'Zaawansowana platforma kryptowalut',
                 'project-news': 'Portal Informacyjny',
@@ -1689,57 +2988,57 @@
                 'contact-linkedin': 'LinkedIn',
                 'contact-instagram': 'Instagram',
                 'contact-twitter': 'Twitter',
-                'info-modal-title': 'O Aurenox-Global',
-                'chatbot-title': 'Asystent Aurenox',
-                'footer-copyright': '© 2024 Aurenox-Global. Wszelkie prawa zastrzeżone.',
-                'footer-developed': 'Opracowane z',
-                'footer-tech': 'i najnowocześniejszą technologią',
-                'crypto-modal-desc': 'Nasza najbardziej zaawansowana platforma kryptowalut, zaprojektowana dla profesjonalnych i początkujących traderów.',
+                'info-modal-title': 'O Aurenox-AI',
+                'chatbot-title': 'Asystent AI Aurenox',
+                'footer-copyright': '© 2024 Aurenox-AI. Wszelkie prawa zastrzeżone.',
+                'footer-developed': 'Napędzane przez',
+                'footer-tech': 'Zastosowaną Sztuczną Inteligencję',
+                'crypto-modal-desc': 'Profesjonalne narzędzie informacyjne i analityczne rynków kryptowalut. Zawiera wykresy w czasie rzeczywistym, dane Binance i zaawansowaną analizę techniczną dla Bitcoin, Ethereum i więcej.',
                 'news-modal-desc': 'Bądź na bieżąco z najnowszymi trendami technologicznymi i naszymi specjalistycznymi analizami.',
-                'faq-q1': 'Jakie usługi oferujecie?',
-                'faq-a1': 'Oferujemy rozwiązania mobilne, rozwiązania webowe, platformy kryptowalut, systemy zarządzania i spersonalizowaną konsultację technologiczną.',
-                'faq-q2': 'Ile czasu zajmuje rozwój aplikacji?',
-                'faq-a2': 'Czas zależy od złożoności projektu. Podstawowa aplikacja może zająć 2-3 miesiące, podczas gdy bardziej złożone aplikacje mogą wymagać 6-12 miesięcy.',
+                'faq-q1': 'Jakie usługi AI oferujecie?',
+                'faq-a1': 'Oferujemy doradztwo AI, rozwój inteligentnych chatbotów, analitykę predykcyjną, automatyzację ML, szkolenia z narzędzi AI i audyty możliwości AI.',
+                'faq-q2': 'Ile czasu zajmuje wdrożenie rozwiązania AI?',
+                'faq-a2': 'Zależy od zakresu. Podstawowy chatbot może być gotowy w 2-4 tygodnie, podczas gdy złożone systemy analityki predykcyjnej mogą zająć 3-6 miesięcy, włączając szkolenie i wdrożenie.',
                 'faq-q3': 'Czy oferujecie wsparcie po rozwoju?',
                 'faq-a3': 'Tak, oferujemy wsparcie 24/7, konserwację, aktualizacje i ciągłe ulepszenia dla wszystkich naszych projektów.',
                 'faq-q4': 'Jakie są wasze ceny?',
-                'faq-a4': 'Nasze ceny są konkurencyjne i zależą od zakresu projektu. Oferujemy darmowe wyceny i elastyczne plany płatności.',
-                'faq-q5': 'Czy pracujecie z konkretnymi technologiami?',
-                'faq-a5': 'Pracujemy z najnowszymi technologiami: React, Node.js, React Native, Flutter, Python, blockchain, AI i więcej.',
-                'faq-q6': 'Jak rozpocząć projekt?',
-                'faq-a6': 'Skontaktuj się z nami przez dowolny z naszych kanałów. Zaplanujemy bezpłatną konsultację, aby przedyskutować Twój projekt i stworzyć spersonalizowaną propozycję.'
+                'faq-a4': 'Nasze ceny są konkurencyjne i zależą od zakresu projektu. Oferujemy wyceny i elastyczne plany płatności.',
+                'faq-q5': 'Jakich technologii AI używacie?',
+                'faq-a5': 'Używamy Python, TensorFlow, PyTorch, OpenAI API, Langchain, Hugging Face, AWS/Azure ML i narzędzi takich jak ChatGPT, Claude i GitHub Copilot do rozwoju.',
+                'faq-q6': 'Jak zacząć z AI w mojej firmie?',
+                'faq-a6': 'Zaczynamy od audytu, aby zidentyfikować możliwości AI w Twoim biznesie. Następnie tworzymy spersonalizowaną mapę drogową z etapowym wdrażaniem i mierzalnym ROI.'
             },
             fr: {
-                'hero-title': 'Bienvenue chez <span style="color: #ffa500;">Aurenox-Global</span>',
-                'hero-description': 'Nous nous consacrons à la création d\'applications et à fournir des informations technologiques de pointe. Nous avons une équipe hautement qualifiée et passionnée par la technologie.',
-                'hero-cta': 'Commençons votre projet!',
+                'hero-title': 'Bienvenue chez <span style="color: #ffa500;">Aurenox-AI</span>',
+                'hero-description': 'Experts en conseil IA et développement de solutions d\'Intelligence Artificielle. Nous transformons votre entreprise avec l\'IA appliquée, du conseil stratégique à l\'implémentation complète de systèmes intelligents.',
+                'hero-cta': 'Boostez votre entreprise avec l\'IA!',
                 'nav-projects': 'Projets',
                 'nav-contact': 'Contact',
                 'nav-info': 'Information',
                 'services-title': 'Nos Services',
-                'service-projects-title': 'Projets',
-                'service-projects-desc': 'Projets terminés et en développement avec les dernières technologies.',
-                'service-contact-title': 'Contact',
-                'service-contact-desc': 'Un moyen facile de nous contacter via nos réseaux sociaux.',
-                'service-info-title': 'Information',
-                'service-info-desc': 'Apprenez à nous connaître un peu plus et découvrez notre passion pour la technologie.',
-                'interesting-title': 'Espace Intéressant',
-                'interesting-desc': 'Apprenez-en un peu plus sur la technologie et nos dernières innovations',
-                'crypto-title': 'NEW V4 CRYPTO VIT Pro',
-                'crypto-desc': 'Découvrez notre plateforme de cryptomonnaies la plus avancée avec des fonctionnalités innovantes pour le trading moderne.',
-                'news-title': 'Actualités Tech',
-                'news-desc': 'Restez à jour avec les dernières tendances technologiques et nos articles spécialisés.',
-                'btn-see-more': 'Voir plus',
-                'btn-contact': 'Contact',
-                'btn-know-more': 'En savoir plus',
-                'btn-explore': 'Explorer',
-                'btn-read-more': 'Lire plus',
-                'projects-modal-title': 'Nos Projets',
-                'projects-modal-desc': 'Nous développons des solutions innovantes en utilisant les technologies les plus avancées du marché.',
-                'project-mobile': 'Applications Mobiles',
-                'project-mobile-desc': 'Applications natives pour Android et iOS',
-                'project-web': 'Développement Web',
-                'project-web-desc': 'Sites web modernes et réactifs',
+                'service-projects-title': 'Conseil IA',
+                'service-projects-desc': 'Conseil stratégique pour implémenter l\'IA dans votre entreprise et optimiser les processus avec l\'intelligence artificielle.',
+                'service-contact-title': 'Développement IA',
+                'service-contact-desc': 'Nous créons des chatbots intelligents, des systèmes d\'automatisation et des solutions Machine Learning personnalisées.',
+                'service-info-title': 'Formation IA',
+                'service-info-desc': 'Formation et mentorat en programmation assistée par IA, utilisation d\'outils comme ChatGPT et GitHub Copilot.',
+                'interesting-title': 'Spécialités IA',
+                'interesting-desc': 'Découvrez nos solutions avancées d\'Intelligence Artificielle et comment elles peuvent transformer votre entreprise',
+                'crypto-title': 'Crypto VIT Pro',
+                'crypto-desc': 'Outil d\'analyse professionnel pour les marchés crypto, forex et actions avec données Binance en temps réel et graphiques TradingView.',
+                'news-title': 'Analytique Prédictive',
+                'news-desc': 'Nous implémentons des modèles de Machine Learning pour l\'analyse de données, les prédictions et l\'automatisation des décisions.',
+                'btn-see-more': 'Voir Solutions',
+                'btn-contact': 'Consulter',
+                'btn-know-more': 'Voir Cours',
+                'btn-explore': 'Voir Démo',
+                'btn-read-more': 'En savoir plus',
+                'projects-modal-title': 'Projets IA Terminés',
+                'projects-modal-desc': 'Voici quelques-uns de nos projets d\'Intelligence Artificielle terminés avec succès. Chacun démontre notre capacité à créer des solutions IA innovantes et fonctionnelles.',
+                'project-mobile': 'Crypto VIT Pro',
+                'project-mobile-desc': 'Plateforme de cryptomonnaies avancée pour appareils mobiles avec IA intégrée',
+                'project-web': 'SuitAI',
+                'project-web-desc': 'Suite IA complète hors ligne pour PC: Chat IA local, analyse PDF, génération de documents, graphiques sans internet, recherche intelligente et assistant de code',
                 'project-crypto': 'NEW V4 CRYPTO VIT Pro',
                 'project-crypto-desc': 'Plateforme de cryptomonnaies avancée',
                 'project-news': 'Portail d\'Actualités',
@@ -1754,25 +3053,25 @@
                 'contact-linkedin': 'LinkedIn',
                 'contact-instagram': 'Instagram',
                 'contact-twitter': 'Twitter',
-                'info-modal-title': 'À propos d\'Aurenox-Global',
-                'chatbot-title': 'Assistant Aurenox',
-                'footer-copyright': '© 2024 Aurenox-Global. Tous droits réservés.',
-                'footer-developed': 'Développé avec',
-                'footer-tech': 'et une technologie de pointe',
-                'crypto-modal-desc': 'Notre plateforme de cryptomonnaies la plus avancée, conçue pour les traders professionnels et débutants.',
+                'info-modal-title': 'À propos d\'Aurenox-AI',
+                'chatbot-title': 'Assistant IA Aurenox',
+                'footer-copyright': '© 2024 Aurenox-AI. Tous droits réservés.',
+                'footer-developed': 'Alimenté par',
+                'footer-tech': 'Intelligence Artificielle Appliquée',
+                'crypto-modal-desc': 'Outil professionnel d\'information et d\'analyse des marchés de cryptomonnaies. Comprend des graphiques en temps réel, des données Binance et une analyse technique avancée pour Bitcoin, Ethereum et plus.',
                 'news-modal-desc': 'Restez informé des dernières tendances technologiques et de nos analyses spécialisées.',
-                'faq-q1': 'Quels services offrez-vous?',
-                'faq-a1': 'Nous offrons le développement d\'applications mobiles, le développement web, les plateformes de cryptomonnaies, les systèmes de gestion et le conseil technologique personnalisé.',
-                'faq-q2': 'Combien de temps faut-il pour développer une app?',
-                'faq-a2': 'Le temps dépend de la complexité du projet. Une app basique peut prendre 2-3 mois, tandis que des applications plus complexes peuvent nécessiter 6-12 mois.',
+                'faq-q1': 'Quels services IA offrez-vous?',
+                'faq-a1': 'Nous offrons le conseil IA, le développement de chatbots intelligents, l\'analytique prédictive, l\'automatisation ML, la formation aux outils IA et les audits d\'opportunités IA.',
+                'faq-q2': 'Combien de temps faut-il pour implémenter une solution IA?',
+                'faq-a2': 'Cela dépend de la portée. Un chatbot basique peut être prêt en 2-4 semaines, tandis que des systèmes d\'analytique prédictive complexes peuvent prendre 3-6 mois incluant formation et déploiement.',
                 'faq-q3': 'Offrez-vous un support post-développement?',
                 'faq-a3': 'Oui, nous offrons un support 24/7, maintenance, mises à jour et améliorations continues pour tous nos projets.',
                 'faq-q4': 'Quels sont vos prix?',
-                'faq-a4': 'Nos prix sont compétitifs et dépendent de la portée du projet. Nous offrons des devis gratuits et des plans de paiement flexibles.',
-                'faq-q5': 'Travaillez-vous avec des technologies spécifiques?',
-                'faq-a5': 'Nous travaillons avec les dernières technologies: React, Node.js, React Native, Flutter, Python, blockchain, IA et plus.',
-                'faq-q6': 'Comment commencer un projet?',
-                'faq-a6': 'Contactez-nous via n\'importe lequel de nos canaux. Nous programmerons une consultation gratuite pour discuter de votre projet et créer une proposition personnalisée.'
+                'faq-a4': 'Nos prix sont compétitifs et dépendent de la portée du projet. Nous offrons des devis et des plans de paiement flexibles.',
+                'faq-q5': 'Quelles technologies IA utilisez-vous?',
+                'faq-a5': 'Nous utilisons Python, TensorFlow, PyTorch, OpenAI API, Langchain, Hugging Face, AWS/Azure ML et des outils comme ChatGPT, Claude et GitHub Copilot pour le développement.',
+                'faq-q6': 'Comment commencer avec l\'IA dans mon entreprise?',
+                'faq-a6': 'Nous commençons par un audit pour identifier les opportunités IA dans votre entreprise. Ensuite nous créons une feuille de route personnalisée avec implémentation par phases et ROI mesurable.'
             }
         };
 
@@ -1794,6 +3093,450 @@
             localStorage.setItem('language', language);
         }
 
+        // ===== AURENOX-AI SECURITY SYSTEM =====
+        
+        // Security Configuration
+        const SECURITY_CONFIG = {
+            maxRequestsPerMinute: 60,
+            maxRequestsPerHour: 300,
+            maxFormSubmissions: 5,
+            botDetectionThreshold: 3,
+            blacklistDuration: 1800000, // 30 minutes
+            honeypotTimeout: 5000
+        };
+
+        // Security Storage
+        const SecurityStore = {
+            requests: JSON.parse(localStorage.getItem('sec_requests') || '{}'),
+            formSubmissions: JSON.parse(localStorage.getItem('sec_forms') || '{}'),
+            botScore: parseInt(localStorage.getItem('sec_bot_score') || '0'),
+            fingerprint: localStorage.getItem('sec_fingerprint') || '',
+            blacklisted: JSON.parse(localStorage.getItem('sec_blacklist') || '[]'),
+            
+            save() {
+                localStorage.setItem('sec_requests', JSON.stringify(this.requests));
+                localStorage.setItem('sec_forms', JSON.stringify(this.formSubmissions));
+                localStorage.setItem('sec_bot_score', this.botScore.toString());
+                localStorage.setItem('sec_fingerprint', this.fingerprint);
+                localStorage.setItem('sec_blacklist', JSON.stringify(this.blacklisted));
+            },
+            
+            clear() {
+                const keys = ['sec_requests', 'sec_forms', 'sec_bot_score', 'sec_fingerprint', 'sec_blacklist'];
+                keys.forEach(key => localStorage.removeItem(key));
+            }
+        };
+
+        // Rate Limiting System
+        class RateLimiter {
+            static check() {
+                const now = Date.now();
+                const minute = Math.floor(now / 60000);
+                const hour = Math.floor(now / 3600000);
+                
+                // Clean old entries
+                Object.keys(SecurityStore.requests).forEach(key => {
+                    if (parseInt(key) < minute - 60) {
+                        delete SecurityStore.requests[key];
+                    }
+                });
+                
+                // Count requests
+                const currentMinute = SecurityStore.requests[minute] || 0;
+                const currentHour = Object.keys(SecurityStore.requests)
+                    .filter(key => parseInt(key) >= hour * 60)
+                    .reduce((sum, key) => sum + SecurityStore.requests[key], 0);
+                
+                if (currentMinute >= SECURITY_CONFIG.maxRequestsPerMinute) {
+                    SecuritySystem.blockUser('Rate limit exceeded (minute)');
+                    return false;
+                }
+                
+                if (currentHour >= SECURITY_CONFIG.maxRequestsPerHour) {
+                    SecuritySystem.blockUser('Rate limit exceeded (hour)');
+                    return false;
+                }
+                
+                // Record request
+                SecurityStore.requests[minute] = currentMinute + 1;
+                SecurityStore.save();
+                return true;
+            }
+        }
+
+        // Bot Detection System
+        class BotDetector {
+            static init() {
+                this.startTime = Date.now();
+                this.mouseMovements = 0;
+                this.keystrokes = 0;
+                this.scrolls = 0;
+                this.clicks = 0;
+                
+                // Event listeners for human behavior
+                document.addEventListener('mousemove', () => this.mouseMovements++);
+                document.addEventListener('keydown', () => this.keystrokes++);
+                document.addEventListener('scroll', () => this.scrolls++);
+                document.addEventListener('click', () => this.clicks++);
+                
+                // Check for suspicious behavior
+                setTimeout(() => this.analyzeBehavior(), 10000);
+            }
+            
+            static analyzeBehavior() {
+                const timeSpent = Date.now() - this.startTime;
+                let suspiciousScore = 0;
+                
+                // Check for bot-like behavior
+                if (this.mouseMovements === 0 && timeSpent > 5000) suspiciousScore += 2;
+                if (this.keystrokes === 0 && this.clicks > 10) suspiciousScore += 1;
+                if (this.scrolls === 0 && timeSpent > 10000) suspiciousScore += 1;
+                if (this.clicks > 50 && timeSpent < 10000) suspiciousScore += 3;
+                
+                // Check user agent
+                const ua = navigator.userAgent.toLowerCase();
+                if (ua.includes('bot') || ua.includes('crawler') || ua.includes('spider')) {
+                    suspiciousScore += 5;
+                }
+                
+                // Check for headless browsers
+                if (navigator.webdriver) suspiciousScore += 3;
+                if (window.navigator.plugins.length === 0) suspiciousScore += 1;
+                if (window.outerHeight === 0) suspiciousScore += 2;
+                
+                SecurityStore.botScore += suspiciousScore;
+                
+                if (SecurityStore.botScore >= SECURITY_CONFIG.botDetectionThreshold) {
+                    SecuritySystem.blockUser('Bot-like behavior detected');
+                }
+                
+                SecurityStore.save();
+            }
+        }
+
+        // Fingerprinting for Security
+        class SecurityFingerprint {
+            static generate() {
+                const canvas = document.createElement('canvas');
+                const ctx = canvas.getContext('2d');
+                ctx.textBaseline = 'top';
+                ctx.font = '14px Arial';
+                ctx.fillText('Security fingerprint', 2, 2);
+                
+                const fingerprint = [
+                    navigator.userAgent,
+                    navigator.language,
+                    screen.width + 'x' + screen.height,
+                    new Date().getTimezoneOffset(),
+                    navigator.hardwareConcurrency,
+                    canvas.toDataURL()
+                ].join('|');
+                
+                const hash = this.simpleHash(fingerprint);
+                SecurityStore.fingerprint = hash;
+                SecurityStore.save();
+                return hash;
+            }
+            
+            static simpleHash(str) {
+                let hash = 0;
+                for (let i = 0; i < str.length; i++) {
+                    const char = str.charCodeAt(i);
+                    hash = ((hash << 5) - hash) + char;
+                    hash = hash & hash;
+                }
+                return hash.toString(36);
+            }
+        }
+
+        // Main Security System
+        class SecuritySystem {
+            static init() {
+                console.log('🛡️ Aurenox-AI Security System Activated');
+                
+                // Check if user is blacklisted
+                if (this.isBlacklisted()) {
+                    this.showBlockedMessage();
+                    return;
+                }
+                
+                // Initialize components
+                BotDetector.init();
+                SecurityFingerprint.generate();
+                this.addHoneypots();
+                this.protectForms();
+                this.addSecurityEventListeners();
+                
+                // Periodic security checks
+                setInterval(() => this.periodicCheck(), 30000);
+            }
+            
+            static isBlacklisted() {
+                const now = Date.now();
+                SecurityStore.blacklisted = SecurityStore.blacklisted.filter(
+                    entry => now - entry.timestamp < SECURITY_CONFIG.blacklistDuration
+                );
+                SecurityStore.save();
+                
+                return SecurityStore.blacklisted.some(entry => 
+                    entry.fingerprint === SecurityStore.fingerprint
+                );
+            }
+            
+            static blockUser(reason) {
+                console.warn('🚨 Security: User blocked -', reason);
+                
+                SecurityStore.blacklisted.push({
+                    fingerprint: SecurityStore.fingerprint,
+                    timestamp: Date.now(),
+                    reason: reason
+                });
+                SecurityStore.save();
+                
+                this.showBlockedMessage();
+                
+                // Track security event
+                if (typeof gtag === 'function') {
+                    gtag('event', 'security_block', {
+                        event_category: 'Security',
+                        event_label: reason,
+                        value: 1
+                    });
+                }
+            }
+            
+            static showBlockedMessage() {
+                document.body.innerHTML = `
+                    <div style="display: flex; justify-content: center; align-items: center; height: 100vh; 
+                                background: linear-gradient(135deg, #667eea, #764ba2); color: white; 
+                                font-family: Arial, sans-serif; text-align: center;">
+                        <div>
+                            <h1>🛡️ Acceso Restringido</h1>
+                            <p>Su sesión ha sido temporalmente suspendida por seguridad.</p>
+                            <p>Si considera que esto es un error, contacte al soporte.</p>
+                            <button onclick="location.reload()" 
+                                    style="padding: 10px 20px; margin-top: 20px; border: none; 
+                                           border-radius: 5px; background: #ffa500; color: white; 
+                                           cursor: pointer; font-size: 16px;">
+                                Reintentar
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            static addHoneypots() {
+                // Create invisible honeypot fields
+                const forms = document.querySelectorAll('form');
+                forms.forEach(form => {
+                    const honeypot = document.createElement('input');
+                    honeypot.type = 'text';
+                    honeypot.name = 'website';
+                    honeypot.style.cssText = 'position: absolute; left: -9999px; opacity: 0;';
+                    honeypot.tabIndex = -1;
+                    honeypot.setAttribute('autocomplete', 'off');
+                    
+                    form.appendChild(honeypot);
+                    
+                    // Check honeypot on submit
+                    form.addEventListener('submit', (e) => {
+                        if (honeypot.value !== '') {
+                            e.preventDefault();
+                            this.blockUser('Honeypot triggered');
+                            return false;
+                        }
+                    });
+                });
+            }
+            
+            static protectForms() {
+                const forms = document.querySelectorAll('form');
+                forms.forEach(form => {
+                    form.addEventListener('submit', (e) => {
+                        if (!RateLimiter.check()) {
+                            e.preventDefault();
+                            return false;
+                        }
+                        
+                        // Count form submissions
+                        const now = Date.now();
+                        const hour = Math.floor(now / 3600000);
+                        const currentSubmissions = SecurityStore.formSubmissions[hour] || 0;
+                        
+                        if (currentSubmissions >= SECURITY_CONFIG.maxFormSubmissions) {
+                            e.preventDefault();
+                            this.blockUser('Too many form submissions');
+                            return false;
+                        }
+                        
+                        SecurityStore.formSubmissions[hour] = currentSubmissions + 1;
+                        SecurityStore.save();
+                        
+                        // Sanitize inputs
+                        this.sanitizeInputs(form);
+                    });
+                });
+            }
+            
+            static sanitizeInputs(form) {
+                const inputs = form.querySelectorAll('input[type="text"], input[type="email"], textarea');
+                inputs.forEach(input => {
+                    // Basic XSS protection
+                    input.value = input.value
+                        .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+                        .replace(/javascript:/gi, '')
+                        .replace(/on\w+\s*=/gi, '');
+                });
+            }
+            
+            static addSecurityEventListeners() {
+                // Detect suspicious console usage
+                let devtools = false;
+                setInterval(() => {
+                    const start = new Date();
+                    debugger;
+                    if (new Date() - start > 100) {
+                        if (!devtools) {
+                            devtools = true;
+                            console.warn('🔍 Developer tools detected');
+                        }
+                    } else {
+                        devtools = false;
+                    }
+                }, 1000);
+                
+                // Detect right-click attempts on sensitive elements
+                document.addEventListener('contextmenu', (e) => {
+                    if (e.target.closest('.no-copy, .modal-content')) {
+                        e.preventDefault();
+                    }
+                });
+                
+                // Detect text selection on sensitive content
+                document.addEventListener('selectstart', (e) => {
+                    if (e.target.closest('.no-copy')) {
+                        e.preventDefault();
+                    }
+                });
+            }
+            
+            static periodicCheck() {
+                // Check for suspicious URL manipulation
+                if (window.location.href.includes('<script>') || 
+                    window.location.href.includes('javascript:')) {
+                    this.blockUser('URL injection attempt');
+                }
+                
+                // Check for excessive DOM manipulation
+                if (document.querySelectorAll('*').length > 10000) {
+                    this.blockUser('Excessive DOM elements');
+                }
+            }
+        }
+
+        // CSRF Protection
+        class CSRFProtection {
+            static init() {
+                this.token = this.generateToken();
+                this.addTokenToForms();
+            }
+            
+            static generateToken() {
+                const array = new Uint8Array(32);
+                crypto.getRandomValues(array);
+                return Array.from(array, byte => byte.toString(16).padStart(2, '0')).join('');
+            }
+            
+            static addTokenToForms() {
+                const forms = document.querySelectorAll('form');
+                forms.forEach(form => {
+                    const tokenInput = document.createElement('input');
+                    tokenInput.type = 'hidden';
+                    tokenInput.name = 'csrf_token';
+                    tokenInput.value = this.token;
+                    form.appendChild(tokenInput);
+                });
+            }
+        }
+
+        // Advanced DDoS Protection
+        class DDoSProtection {
+            static init() {
+                this.requestTimes = [];
+                this.startMonitoring();
+            }
+            
+            static startMonitoring() {
+                // Monitor rapid requests
+                setInterval(() => this.checkRequestPattern(), 1000);
+                
+                // Monitor page events
+                ['click', 'scroll', 'mousemove'].forEach(event => {
+                    document.addEventListener(event, () => this.recordEvent(event));
+                });
+            }
+            
+            static recordEvent(eventType) {
+                const now = Date.now();
+                this.requestTimes.push({ type: eventType, time: now });
+                
+                // Keep only last 10 seconds of events
+                this.requestTimes = this.requestTimes.filter(
+                    event => now - event.time < 10000
+                );
+                
+                // Check for DDoS patterns
+                this.detectDDoSPattern();
+            }
+            
+            static detectDDoSPattern() {
+                const now = Date.now();
+                const recentEvents = this.requestTimes.filter(
+                    event => now - event.time < 5000
+                );
+                
+                // Too many rapid events
+                if (recentEvents.length > 100) {
+                    SecuritySystem.blockUser('DDoS pattern detected - excessive events');
+                    return;
+                }
+                
+                // Check for automated clicking patterns
+                const clicks = recentEvents.filter(e => e.type === 'click');
+                if (clicks.length > 20) {
+                    const intervals = [];
+                    for (let i = 1; i < clicks.length; i++) {
+                        intervals.push(clicks[i].time - clicks[i-1].time);
+                    }
+                    
+                    // Check for too regular intervals (bot behavior)
+                    const avgInterval = intervals.reduce((a, b) => a + b, 0) / intervals.length;
+                    const regularIntervals = intervals.filter(
+                        interval => Math.abs(interval - avgInterval) < 50
+                    ).length;
+                    
+                    if (regularIntervals > intervals.length * 0.8) {
+                        SecuritySystem.blockUser('DDoS pattern detected - automated clicking');
+                    }
+                }
+            }
+            
+            static checkRequestPattern() {
+                // Monitor for rapid form submissions
+                const forms = document.querySelectorAll('form');
+                forms.forEach(form => {
+                    if (!form.dataset.lastSubmit) return;
+                    
+                    const lastSubmit = parseInt(form.dataset.lastSubmit);
+                    const now = Date.now();
+                    
+                    if (now - lastSubmit < 1000) {
+                        SecuritySystem.blockUser('DDoS pattern detected - rapid form submission');
+                    }
+                });
+            }
+        }
+
         // Initialize theme and language from localStorage
         window.addEventListener('load', function() {
             // Theme initialization
@@ -1809,6 +3552,28 @@
             languageSelector.value = savedLanguage;
             changeLanguage(savedLanguage);
             
+            // Initialize Security System
+            SecuritySystem.init();
+            CSRFProtection.init();
+            DDoSProtection.init();
+            
+            // Add security indicator
+            const securityIndicator = document.createElement('div');
+            securityIndicator.id = 'security-indicator';
+            securityIndicator.innerHTML = '🛡️';
+            securityIndicator.style.cssText = `
+                position: fixed; bottom: 20px; right: 20px; z-index: 10000;
+                background: rgba(102, 126, 234, 0.9); color: white; 
+                padding: 8px; border-radius: 50%; font-size: 16px;
+                box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+                cursor: pointer; transition: all 0.3s ease;
+            `;
+            securityIndicator.title = 'Aurenox-AI Security System - ACTIVO';
+            securityIndicator.onclick = () => {
+                alert('🛡️ Sistema de Seguridad Aurenox-AI\\n\\n✅ Protección DDoS activa\\n✅ Detección de bots\\n✅ Protección XSS/CSRF\\n✅ Rate limiting habilitado\\n✅ Honeypots desplegados');
+            };
+            document.body.appendChild(securityIndicator);
+            
             // Existing code
             document.body.style.opacity = '0';
             document.body.style.transition = 'opacity 0.5s ease';
@@ -1816,6 +3581,334 @@
                 document.body.style.opacity = '1';
             }, 100);
         });
+
+        // Calendly Integration
+        function openCalendly(serviceType, price) {
+            trackCTAClick('calendly-' + serviceType, price);
+            
+            const calendlyUrl = 'https://calendly.com/aurenox-ai/' + serviceType; // Replace with your actual Calendly URL
+            const modal = document.getElementById('calendly-modal');
+            const container = document.getElementById('calendly-widget-container');
+            
+            // Clear previous content
+            container.innerHTML = '';
+            
+            // Create Calendly widget
+            if (typeof Calendly !== 'undefined') {
+                Calendly.initInlineWidget({
+                    url: calendlyUrl,
+                    parentElement: container,
+                    prefill: {
+                        name: '',
+                        email: '',
+                        customAnswers: {
+                            a1: serviceType,
+                            a2: price
+                        }
+                    },
+                    utm: {
+                        utmCampaign: 'website',
+                        utmSource: 'aurenox-ai',
+                        utmMedium: 'cta-button'
+                    }
+                });
+            } else {
+                // Fallback to direct link
+                window.open(calendlyUrl, '_blank');
+            }
+            
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCalendly() {
+            const modal = document.getElementById('calendly-modal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Enhanced Chatbot with AI-like responses
+        const chatResponses = {
+            'servicios': [
+                'Ofrecemos 3 servicios principales de IA:\n\n🔍 **Auditoría IA** ($899) - Análisis completo de oportunidades\n🤖 **Desarrollo IA** (desde $2,999) - Chatbots, automatización, ML\n💡 **Consultoría** ($299) - Estrategia y roadmap personalizado\n\n¿Te interesa alguno en particular?'
+            ],
+            'precios': [
+                '💰 **Nuestros precios:**\n\n• Consultoría inicial: **$299** (2 horas + reporte)\n• Auditoría IA completa: **$899** (análisis profundo + ROI)\n• Implementación: **desde $2,999** (desarrollo completo)\n\n💳 **Métodos de pago:** Tarjetas, PayPal, Transferencia, Crypto\n💰 **Planes flexibles:** Pago único o cuotas sin interés\n🎯 ROI promedio: 340% en 8 meses\n\n¿Quieres agendar una consulta?'
+            ],
+            'casos': [
+                '🏆 **Casos de éxito reales:**\n\n📈 E-commerce: +47% ventas, ROI 340%\n🏭 Manufactura: -65% paradas, $280K ahorro\n💬 Fintech: 78% automatización, $120K ahorro\n\n¿Te gustaría conocer detalles de algún caso específico?'
+            ],
+            'agendar': [
+                '📅 **¡Perfecto! Puedes solicitar:**\n\n• **Consultoría Inicial** ($299) - Ideal para empezar\n• **Auditoría Completa** ($899) - Análisis profundo\n• **Reunión de Proyecto** - Para implementaciones\n\n💳 **Pago seguro:** Aceptamos tarjetas, PayPal, transferencias\n🔒 **Garantía:** 100% satisfacción o dinero devuelto\n\n¿Cuál prefieres? Completa el formulario correspondiente 📋'
+            ],
+            'contacto': [
+                '📞 **Formas de contacto:**\n\n📧 Email: info@aurenox-ai.com\n📱 WhatsApp: +1 (555) 987-6543\n🔗 LinkedIn: Aurenox-AI\n\n🕐 Respondemos en menos de 24 horas\n\n¿Prefieres agendar una videollamada directamente?'
+            ],
+            'tecnologias': [
+                '🛠️ **Tecnologías que utilizamos:**\n\n🐍 Python, TensorFlow, PyTorch\n🤖 OpenAI API, LangChain\n☁️ AWS/Azure ML, Hugging Face\n💻 ChatGPT, Claude, GitHub Copilot\n\n¿Tienes alguna tecnología específica en mente?'
+            ],
+            'tiempo': [
+                '⏱️ **Tiempos de implementación:**\n\n• Chatbot básico: 2-4 semanas\n• Sistema ML complejo: 3-6 meses\n• Auditoría IA: 1-2 semanas\n• Consultoría inicial: Inmediata\n\n🚀 Siempre incluimos capacitación del equipo'
+            ],
+            'pago': [
+                '💳 **Métodos de pago disponibles:**\n\n• **Tarjetas:** Visa, MasterCard, American Express\n• **PayPal:** Pago seguro internacional\n• **Transferencia:** Wire transfer bancario\n• **Crypto:** Bitcoin, USDT, Ethereum\n\n💰 **Opciones flexibles:**\n• Pago único\n• Cuotas sin interés (2-3 pagos)\n• Pago por hitos (proyectos grandes)\n\n🔒 100% seguro con garantía de satisfacción'
+            ]
+        };
+
+        function sendQuickMessage(message) {
+            const input = document.getElementById('chat-input');
+            input.value = message;
+            sendChatMessage();
+        }
+
+        function sendChatMessage() {
+            const input = document.getElementById('chat-input');
+            const message = input.value.trim();
+            
+            if (!message) return;
+            
+            // Add user message
+            addChatMessage(message, 'user');
+            input.value = '';
+            
+            // Show typing indicator
+            showTypingIndicator();
+            
+            // Generate response after delay
+            setTimeout(() => {
+                hideTypingIndicator();
+                const response = generateChatResponse(message);
+                addChatMessage(response, 'bot');
+                
+                // Track engagement
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'chatbot_interaction', {
+                        event_category: 'User Engagement',
+                        event_label: 'chat_message'
+                    });
+                }
+            }, 1500);
+        }
+
+        function addChatMessage(message, sender) {
+            const container = document.getElementById('chatbot-messages');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `chatbot-message ${sender}`;
+            
+            if (sender === 'bot') {
+                messageDiv.innerHTML = message.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
+            } else {
+                messageDiv.textContent = message;
+            }
+            
+            container.appendChild(messageDiv);
+            container.scrollTop = container.scrollHeight;
+        }
+
+        function showTypingIndicator() {
+            const indicator = document.getElementById('typing-indicator');
+            if (indicator) {
+                indicator.style.display = 'flex';
+                const container = document.getElementById('chatbot-messages');
+                container.scrollTop = container.scrollHeight;
+            }
+        }
+
+        function hideTypingIndicator() {
+            const indicator = document.getElementById('typing-indicator');
+            if (indicator) {
+                indicator.style.display = 'none';
+            }
+        }
+
+        function generateChatResponse(message) {
+            const lowerMessage = message.toLowerCase();
+            
+            // Intent detection (simple keyword matching)
+            if (lowerMessage.includes('precio') || lowerMessage.includes('costo') || lowerMessage.includes('cuanto')) {
+                return chatResponses.precios[0];
+            } else if (lowerMessage.includes('servicio') || lowerMessage.includes('que hacen') || lowerMessage.includes('ofrecen')) {
+                return chatResponses.servicios[0];
+            } else if (lowerMessage.includes('caso') || lowerMessage.includes('exito') || lowerMessage.includes('ejemplo')) {
+                return chatResponses.casos[0];
+            } else if (lowerMessage.includes('agendar') || lowerMessage.includes('cita') || lowerMessage.includes('reunion')) {
+                return chatResponses.agendar[0];
+            } else if (lowerMessage.includes('contacto') || lowerMessage.includes('telefono') || lowerMessage.includes('email')) {
+                return chatResponses.contacto[0];
+            } else if (lowerMessage.includes('tecnologia') || lowerMessage.includes('herramienta') || lowerMessage.includes('python')) {
+                return chatResponses.tecnologias[0];
+            } else if (lowerMessage.includes('tiempo') || lowerMessage.includes('cuanto toma') || lowerMessage.includes('duracion')) {
+                return chatResponses.tiempo[0];
+            } else if (lowerMessage.includes('pago') || lowerMessage.includes('metodo') || lowerMessage.includes('forma de pagar') || lowerMessage.includes('como pagar')) {
+                return chatResponses.pago[0];
+            } else {
+                // Default response with CTA
+                return '🤖 Gracias por tu pregunta. Para darte la mejor respuesta personalizada, te recomiendo:\n\n📅 **Agendar una consulta** donde podemos hablar específicamente de tu caso\n\n💬 O puedes preguntarme sobre:\n• Precios y servicios\n• Casos de éxito\n• Tecnologías\n• Tiempos de implementación\n\n¿Qué te interesa más?';
+            }
+        }
+
+        function handleChatKeypress(event) {
+            if (event.key === 'Enter') {
+                sendChatMessage();
+            }
+        }
+
+        // PWA functionality
+        let deferredPrompt;
+        
+        window.addEventListener('beforeinstallprompt', (e) => {
+            e.preventDefault();
+            deferredPrompt = e;
+            showInstallPrompt();
+        });
+
+        function showInstallPrompt() {
+            setTimeout(() => {
+                const prompt = document.getElementById('install-prompt');
+                if (prompt) {
+                    prompt.style.display = 'flex';
+                }
+            }, 10000); // Show after 10 seconds
+        }
+
+        function dismissInstallPrompt() {
+            const prompt = document.getElementById('install-prompt');
+            if (prompt) {
+                prompt.style.display = 'none';
+            }
+        }
+
+        // Install button event listener
+        window.addEventListener('load', function() {
+            const installButton = document.getElementById('install-button');
+            if (installButton) {
+                installButton.addEventListener('click', async () => {
+                    if (deferredPrompt) {
+                        deferredPrompt.prompt();
+                        const { outcome } = await deferredPrompt.userChoice;
+                        
+                        if (typeof gtag !== 'undefined') {
+                            gtag('event', 'pwa_install_prompt', {
+                                event_category: 'PWA',
+                                event_label: outcome
+                            });
+                        }
+                        
+                        deferredPrompt = null;
+                        dismissInstallPrompt();
+                    }
+                });
+            }
+        });
+
+        // A/B Testing
+        function initABTesting() {
+            const variant = Math.random() > 0.5 ? 'A' : 'B';
+            sessionStorage.setItem('ab_variant', variant);
+            
+            // Track variant
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'ab_test_variant', {
+                    event_category: 'A/B Testing',
+                    event_label: 'Variant ' + variant
+                });
+            }
+            
+            // Apply variant styles
+            if (variant === 'B') {
+                // Apply variant B styles to CTAs
+                document.querySelectorAll('.cta-button').forEach(btn => {
+                    btn.classList.add('cta-variant-b');
+                });
+                
+                // Highlight different pricing plan
+                const priceCards = document.querySelectorAll('.precios [style*="border: 2px solid"]');
+                if (priceCards[0]) {
+                    priceCards[0].classList.add('price-highlight-b');
+                }
+            }
+        }
+
+        // Enhanced form tracking
+        document.addEventListener('DOMContentLoaded', function() {
+            // Track all form submissions
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    const formType = this.closest('.modal').id || 'unknown';
+                    if (typeof trackFormSubmission !== 'undefined') {
+                        trackFormSubmission(formType, 899);
+                    }
+                });
+            });
+            
+            // Track all CTA clicks
+            document.querySelectorAll('[onclick*="openModal"], [onclick*="openCalendly"]').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const ctaText = this.textContent.trim();
+                    if (typeof trackCTAClick !== 'undefined') {
+                        trackCTAClick(ctaText, 0);
+                    }
+                });
+            });
+            
+            // Initialize A/B testing
+            initABTesting();
+        });
+
+        // Service Worker inline para PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                const swCode = `
+                    const CACHE_NAME = 'aurenox-ai-v1';
+                    const urlsToCache = [
+                        '/',
+                        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css',
+                        'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap'
+                    ];
+
+                    self.addEventListener('install', function(event) {
+                        event.waitUntil(
+                            caches.open(CACHE_NAME).then(function(cache) {
+                                return cache.addAll(urlsToCache);
+                            })
+                        );
+                    });
+
+                    self.addEventListener('fetch', function(event) {
+                        event.respondWith(
+                            caches.match(event.request).then(function(response) {
+                                return response || fetch(event.request);
+                            })
+                        );
+                    });
+
+                    self.addEventListener('activate', function(event) {
+                        event.waitUntil(
+                            caches.keys().then(function(cacheNames) {
+                                return Promise.all(
+                                    cacheNames.map(function(cacheName) {
+                                        if (cacheName !== CACHE_NAME) {
+                                            return caches.delete(cacheName);
+                                        }
+                                    })
+                                );
+                            })
+                        );
+                    });
+                `;
+                
+                const blob = new Blob([swCode], {type: 'application/javascript'});
+                const swUrl = URL.createObjectURL(blob);
+                
+                navigator.serviceWorker.register(swUrl)
+                    .then((registration) => {
+                        console.log('✅ PWA Service Worker registrado');
+                    })
+                    .catch((registrationError) => {
+                        console.log('❌ PWA Service Worker falló:', registrationError);
+                    });
+            });
+        }
     </script>
 </body>
 </html>
