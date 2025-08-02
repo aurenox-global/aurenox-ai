@@ -3095,14 +3095,16 @@
 
         // ===== AURENOX-AI SECURITY SYSTEM =====
         
-        // Security Configuration
+        // Security Configuration - Ajustado para mejor usabilidad
         const SECURITY_CONFIG = {
-            maxRequestsPerMinute: 60,
-            maxRequestsPerHour: 300,
-            maxFormSubmissions: 5,
-            botDetectionThreshold: 3,
-            blacklistDuration: 1800000, // 30 minutes
-            honeypotTimeout: 5000
+            maxRequestsPerMinute: 150,    // Incrementado para uso normal
+            maxRequestsPerHour: 1000,     // Incrementado para navegación normal
+            maxFormSubmissions: 10,       // Más permisivo para pruebas
+            botDetectionThreshold: 8,     // Menos sensible para evitar falsos positivos
+            blacklistDuration: 300000,    // Reducido a 5 minutos
+            honeypotTimeout: 5000,
+            adminBypass: true,            // Permitir bypass administrativo
+            developmentMode: window.location.hostname.includes('github.io') // Modo desarrollo para GitHub Pages
         };
 
         // Security Storage
@@ -3187,24 +3189,38 @@
                 const timeSpent = Date.now() - this.startTime;
                 let suspiciousScore = 0;
                 
-                // Check for bot-like behavior
-                if (this.mouseMovements === 0 && timeSpent > 5000) suspiciousScore += 2;
-                if (this.keystrokes === 0 && this.clicks > 10) suspiciousScore += 1;
-                if (this.scrolls === 0 && timeSpent > 10000) suspiciousScore += 1;
-                if (this.clicks > 50 && timeSpent < 10000) suspiciousScore += 3;
-                
-                // Check user agent
-                const ua = navigator.userAgent.toLowerCase();
-                if (ua.includes('bot') || ua.includes('crawler') || ua.includes('spider')) {
-                    suspiciousScore += 5;
+                // Más permisivo en modo desarrollo
+                if (SECURITY_CONFIG.developmentMode) {
+                    console.log('🔧 Bot detection relaxed in development mode');
+                    return;
                 }
                 
-                // Check for headless browsers
-                if (navigator.webdriver) suspiciousScore += 3;
-                if (window.navigator.plugins.length === 0) suspiciousScore += 1;
-                if (window.outerHeight === 0) suspiciousScore += 2;
+                // Check for bot-like behavior (más permisivo)
+                if (this.mouseMovements === 0 && timeSpent > 10000) suspiciousScore += 1; // Menos agresivo
+                if (this.keystrokes === 0 && this.clicks > 20) suspiciousScore += 1;      // Más permisivo
+                if (this.scrolls === 0 && timeSpent > 20000) suspiciousScore += 1;        // Más tiempo
+                if (this.clicks > 100 && timeSpent < 10000) suspiciousScore += 2;         // Más permisivo
+                
+                // Check user agent (solo bots obvios)
+                const ua = navigator.userAgent.toLowerCase();
+                if (ua.includes('bot') || ua.includes('crawler') || ua.includes('spider')) {
+                    // Solo bloquear bots conocidos, no navegadores legítimos
+                    if (!ua.includes('chrome') && !ua.includes('firefox') && !ua.includes('safari')) {
+                        suspiciousScore += 3; // Reducido de 5 a 3
+                    }
+                }
+                
+                // Check for headless browsers (más permisivo)
+                if (navigator.webdriver) suspiciousScore += 1; // Reducido de 3 a 1
+                // Removido el check de plugins ya que muchos navegadores modernos no los reportan
+                if (window.outerHeight === 0) suspiciousScore += 1; // Reducido de 2 a 1
                 
                 SecurityStore.botScore += suspiciousScore;
+                
+                // Log para debugging
+                if (suspiciousScore > 0) {
+                    console.log(`🔍 Bot detection score: ${SecurityStore.botScore}/${SECURITY_CONFIG.botDetectionThreshold}`);
+                }
                 
                 if (SecurityStore.botScore >= SECURITY_CONFIG.botDetectionThreshold) {
                     SecuritySystem.blockUser('Bot-like behavior detected');
@@ -3254,9 +3270,23 @@
             static init() {
                 console.log('🛡️ Aurenox-AI Security System Activated');
                 
+                // Add admin reset capability
+                this.addAdminControls();
+                
+                // Check if in development mode
+                if (SECURITY_CONFIG.developmentMode) {
+                    console.log('🔧 Development Mode: Security relaxed for testing');
+                    this.clearAllRestrictions();
+                }
+                
                 // Check if user is blacklisted
                 if (this.isBlacklisted()) {
-                    this.showBlockedMessage();
+                    // Give option to reset in development
+                    if (SECURITY_CONFIG.developmentMode) {
+                        this.showBlockedMessageWithReset();
+                    } else {
+                        this.showBlockedMessage();
+                    }
                     return;
                 }
                 
@@ -3267,8 +3297,74 @@
                 this.protectForms();
                 this.addSecurityEventListeners();
                 
-                // Periodic security checks
-                setInterval(() => this.periodicCheck(), 30000);
+                // Periodic security checks (menos frecuentes)
+                setInterval(() => this.periodicCheck(), 60000);
+            }
+            
+            static addAdminControls() {
+                // Add keyboard shortcut for admin reset (Ctrl+Alt+R)
+                document.addEventListener('keydown', (e) => {
+                    if (e.ctrlKey && e.altKey && e.key === 'r') {
+                        this.adminReset();
+                    }
+                });
+                
+                // Add URL parameter check for reset
+                const urlParams = new URLSearchParams(window.location.search);
+                if (urlParams.get('reset_security') === 'true') {
+                    this.adminReset();
+                }
+            }
+            
+            static adminReset() {
+                console.log('🔧 Admin Security Reset Initiated');
+                this.clearAllRestrictions();
+                alert('🛡️ Sistema de Seguridad Reiniciado\\n\\n✅ Todas las restricciones eliminadas\\n✅ Contadores reseteados\\n✅ Blacklist limpiada\\n\\nLa página se recargará automáticamente.');
+                setTimeout(() => {
+                    window.location.href = window.location.href.split('?')[0];
+                }, 2000);
+            }
+            
+            static clearAllRestrictions() {
+                SecurityStore.clear();
+                SecurityStore.blacklisted = [];
+                SecurityStore.botScore = 0;
+                SecurityStore.requests = {};
+                SecurityStore.formSubmissions = {};
+                SecurityStore.save();
+            }
+            
+            static showBlockedMessageWithReset() {
+                document.body.innerHTML = `
+                    <div style="display: flex; justify-content: center; align-items: center; height: 100vh; 
+                                background: linear-gradient(135deg, #667eea, #764ba2); color: white; 
+                                font-family: Arial, sans-serif; text-align: center;">
+                        <div>
+                            <h1>🛡️ Acceso Temporalmente Restringido</h1>
+                            <p>El sistema de seguridad ha detectado actividad inusual.</p>
+                            <p><strong>Modo Desarrollo Activo</strong> - Puedes resetear las restricciones</p>
+                            <div style="margin: 20px 0;">
+                                <button onclick="SecuritySystem.adminReset()" 
+                                        style="padding: 12px 24px; margin: 10px; border: none; 
+                                               border-radius: 8px; background: #ffa500; color: white; 
+                                               cursor: pointer; font-size: 16px; font-weight: bold;">
+                                    🔧 Reset Sistema Seguridad
+                                </button>
+                                <button onclick="location.reload()" 
+                                        style="padding: 12px 24px; margin: 10px; border: none; 
+                                               border-radius: 8px; background: #28a745; color: white; 
+                                               cursor: pointer; font-size: 16px;">
+                                    🔄 Reintentar
+                                </button>
+                            </div>
+                            <div style="margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.1); border-radius: 10px;">
+                                <h3>🔧 Opciones de Desarrollo:</h3>
+                                <p><strong>Teclado:</strong> Ctrl + Alt + R = Reset rápido</p>
+                                <p><strong>URL:</strong> Agrega ?reset_security=true</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
             }
             
             static isBlacklisted() {
@@ -3495,27 +3591,32 @@
                     event => now - event.time < 5000
                 );
                 
-                // Too many rapid events
-                if (recentEvents.length > 100) {
+                // Más permisivo en desarrollo
+                if (SECURITY_CONFIG.developmentMode) {
+                    return; // No aplicar DDoS protection en desarrollo
+                }
+                
+                // Too many rapid events (más permisivo)
+                if (recentEvents.length > 200) { // Incrementado de 100 a 200
                     SecuritySystem.blockUser('DDoS pattern detected - excessive events');
                     return;
                 }
                 
-                // Check for automated clicking patterns
+                // Check for automated clicking patterns (más permisivo)
                 const clicks = recentEvents.filter(e => e.type === 'click');
-                if (clicks.length > 20) {
+                if (clicks.length > 40) { // Incrementado de 20 a 40
                     const intervals = [];
                     for (let i = 1; i < clicks.length; i++) {
                         intervals.push(clicks[i].time - clicks[i-1].time);
                     }
                     
-                    // Check for too regular intervals (bot behavior)
+                    // Check for too regular intervals (más permisivo)
                     const avgInterval = intervals.reduce((a, b) => a + b, 0) / intervals.length;
                     const regularIntervals = intervals.filter(
-                        interval => Math.abs(interval - avgInterval) < 50
+                        interval => Math.abs(interval - avgInterval) < 20 // Más estricto: 20ms en lugar de 50ms
                     ).length;
                     
-                    if (regularIntervals > intervals.length * 0.8) {
+                    if (regularIntervals > intervals.length * 0.9) { // Más estricto: 90% en lugar de 80%
                         SecuritySystem.blockUser('DDoS pattern detected - automated clicking');
                     }
                 }
@@ -3570,7 +3671,9 @@
             `;
             securityIndicator.title = 'Aurenox-AI Security System - ACTIVO';
             securityIndicator.onclick = () => {
-                alert('🛡️ Sistema de Seguridad Aurenox-AI\\n\\n✅ Protección DDoS activa\\n✅ Detección de bots\\n✅ Protección XSS/CSRF\\n✅ Rate limiting habilitado\\n✅ Honeypots desplegados');
+                const devMode = SECURITY_CONFIG.developmentMode ? '🔧 MODO DESARROLLO\\n' : '';
+                const resetInfo = SECURITY_CONFIG.developmentMode ? '\\n\\n🔧 Reset rápido: Ctrl+Alt+R' : '';
+                alert(`🛡️ Sistema de Seguridad Aurenox-AI\\n\\n${devMode}✅ Protección DDoS activa\\n✅ Detección de bots\\n✅ Protección XSS/CSRF\\n✅ Rate limiting habilitado\\n✅ Honeypots desplegados${resetInfo}`);
             };
             document.body.appendChild(securityIndicator);
             
