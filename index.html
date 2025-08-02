@@ -1207,6 +1207,17 @@
             background: rgba(102, 126, 234, 1) !important;
         }
 
+        /* Ensure security indicator doesn't interfere with chatbot */
+        #security-indicator {
+            bottom: 20px !important;
+            left: 20px !important;
+        }
+
+        .chatbot-container {
+            bottom: 30px !important;
+            right: 30px !important;
+        }
+
         .honeypot {
             position: absolute !important;
             left: -9999px !important;
@@ -3104,7 +3115,8 @@
             blacklistDuration: 300000,    // Reducido a 5 minutos
             honeypotTimeout: 5000,
             adminBypass: true,            // Permitir bypass administrativo
-            developmentMode: window.location.hostname.includes('github.io') // Modo desarrollo para GitHub Pages
+            developmentMode: window.location.hostname.includes('github.io') || 
+                           window.location.href.includes('aurenox-global.github.io/aurenox-ai') // URL oficial
         };
 
         // Security Storage
@@ -3663,13 +3675,13 @@
             securityIndicator.id = 'security-indicator';
             securityIndicator.innerHTML = '🛡️';
             securityIndicator.style.cssText = `
-                position: fixed; bottom: 20px; right: 20px; z-index: 10000;
+                position: fixed; bottom: 20px; left: 20px; z-index: 10000;
                 background: rgba(102, 126, 234, 0.9); color: white; 
                 padding: 8px; border-radius: 50%; font-size: 16px;
                 box-shadow: 0 2px 10px rgba(0,0,0,0.2);
                 cursor: pointer; transition: all 0.3s ease;
             `;
-            securityIndicator.title = 'Aurenox-AI Security System - ACTIVO';
+            securityIndicator.title = 'Aurenox-AI Security System - ACTIVO (Esquina izquierda para no interferir con el chat)';
             securityIndicator.onclick = () => {
                 const devMode = SECURITY_CONFIG.developmentMode ? '🔧 MODO DESARROLLO\\n' : '';
                 const resetInfo = SECURITY_CONFIG.developmentMode ? '\\n\\n🔧 Reset rápido: Ctrl+Alt+R' : '';
