@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurenox-Global - Desarrollo de Aplicaciones</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-link:hover {
+            color: #667eea;
+        }
+
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .theme-toggle {
+            background: none;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 0.5rem;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .theme-toggle:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .language-selector {
+            background: none;
+            border: 2px solid #667eea;
+            color: #667eea;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .language-selector:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 6rem 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ffa500);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 6rem 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 3rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-icon {
+            font-size: 3rem;
+            color: #667eea;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-btn {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .service-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 2000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+        }
+
+        .modal-content {
+            background: white;
+            margin: 5% auto;
+            padding: 2rem;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            position: relative;
+            animation: modalSlideIn 0.3s ease;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            overflow-y: auto;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .close:hover {
+            color: #667eea;
+        }
+
+        .modal h2 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .modal p {
+            color: #333;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            color: #333;
+        }
+
+        .contact-item:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .contact-item i {
+            font-size: 1.5rem;
+            color: #667eea;
+        }
+
+        .contact-item:hover i {
+            color: white;
+        }
+
+        .contact-item h4 {
+            color: #333;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .contact-item:hover h4 {
+            color: white;
+        }
+
+        .contact-item p {
+            color: #666;
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        .contact-item:hover p {
+            color: white;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .project-item {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .project-item:hover {
+            transform: scale(1.05);
+        }
+
+        .project-item h4 {
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .project-status {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .nav-controls {
+                gap: 0.5rem;
+            }
+            
+            .language-selector {
+                font-size: 0.8rem;
+                padding: 0.4rem 0.8rem;
+            }
+            
+            .theme-toggle {
+                width: 35px;
+                height: 35px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .modal-content {
+                margin: 5% auto;
+                width: 95%;
+                padding: 1.5rem;
+                max-height: 85vh;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .chatbot-window {
+                width: 90%;
+                right: 5%;
+                left: 5%;
+                bottom: 100px;
+            }
+
+            .espacio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Modal scroll styling */
+        .modal-content::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .modal-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb {
+            background: #667eea;
+            border-radius: 10px;
+        }
+
+        .modal-content::-webkit-scrollbar-thumb:hover {
+            background: #5a6fd8;
+        }
+
+        .dark-theme .modal-content::-webkit-scrollbar-track {
+            background: #2d3748;
+        }
+
+        .dark-theme .modal-content::-webkit-scrollbar-thumb {
+            background: #667eea;
+        }
+
+        .dark-theme .modal-content::-webkit-scrollbar-thumb:hover {
+            background: #5a6fd8;
+        }
+
+        /* Scroll animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Dark Theme Styles */
+        body.dark-theme {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e0e0e0;
+        }
+
+        .dark-theme .header {
+            background: rgba(26, 26, 46, 0.95);
+            color: #e0e0e0;
+        }
+
+        .dark-theme .nav-link {
+            color: #e0e0e0;
+        }
+
+        .dark-theme .nav-link:hover {
+            color: #667eea;
+        }
+
+        .dark-theme .logo {
+            color: #667eea;
+        }
+
+        .dark-theme .theme-toggle,
+        .dark-theme .language-selector {
+            border-color: #667eea;
+            color: #667eea;
+        }
+
+        .dark-theme .theme-toggle:hover,
+        .dark-theme .language-selector:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .dark-theme .service-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .dark-theme .service-card h3,
+        .dark-theme .service-card p {
+            color: #e0e0e0;
+        }
+
+        .dark-theme .modal-content {
+            background: #1a1a2e;
+            color: #e0e0e0;
+        }
+
+        .dark-theme .modal h2 {
+            color: #e0e0e0;
+        }
+
+        .dark-theme .modal p {
+            color: #b0b0b0;
+        }
+
+        .dark-theme .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .dark-theme .contact-item h4 {
+            color: #e0e0e0;
+        }
+
+        .dark-theme .contact-item p {
+            color: #b0b0b0;
+        }
+
+        .dark-theme .faq-question {
+            background: rgba(255, 255, 255, 0.1);
+            color: #e0e0e0;
+        }
+
+        .dark-theme .faq-answer {
+            background: rgba(255, 255, 255, 0.05);
+            color: #b0b0b0;
+        }
+
+        .dark-theme .chatbot-window {
+            background: #1a1a2e;
+        }
+
+        .dark-theme .footer {
+            background: rgba(0, 0, 0, 0.9);
+            color: #e0e0e0;
+        }
+
+        .dark-theme .espacio-interesante {
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .dark-theme .espacio-card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .dark-theme .espacio-card h3 {
+            color: #e0e0e0;
+        }
+
+        .dark-theme .espacio-card p {
+            color: #b0b0b0;
+        }
+
+        .dark-theme .services {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .dark-theme .section-title {
+            color: #e0e0e0;
+        }
+
+        .dark-theme .hero {
+            color: #e0e0e0;
+        }
+
+        .dark-theme .project-item {
+            background: linear-gradient(135deg, #4a5568, #2d3748);
+        }
+
+        .dark-theme .contact-item:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .dark-theme .faq-question:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .dark-theme .close {
+            color: #b0b0b0;
+        }
+
+        .dark-theme .close:hover {
+            color: #667eea;
+        }
+
+        .dark-theme .news-article {
+            border: 1px solid rgba(255, 255, 255, 0.2) !important;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .dark-theme .news-title {
+            color: #7c3aed !important;
+        }
+
+        .dark-theme .news-date {
+            color: #a0a0a0 !important;
+        }
+
+        .dark-theme .news-content {
+            color: #e0e0e0 !important;
+        }
+
+        .dark-theme p[data-translate="crypto-modal-desc"],
+        .dark-theme p[data-translate="news-modal-desc"] {
+            color: #e0e0e0 !important;
+        }
+
+        /* Additional dark theme improvements */
+        .dark-theme .crypto-features {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .dark-theme .crypto-features h4 {
+            color: #e0e0e0;
+        }
+
+        .dark-theme .crypto-features ul,
+        .dark-theme .crypto-features li {
+            color: #e0e0e0;
+        }
+
+        /* Chatbot Styles */
+        .chatbot-container {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1500;
+        }
+
+        .chatbot-button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chatbot-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .chatbot-window {
+            display: none;
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            width: 350px;
+            height: 500px;
+            max-height: 70vh;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            z-index: 1600;
+        }
+
+        .chatbot-header {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .chatbot-header h3 {
+            margin: 0;
+            font-size: 1.1rem;
+        }
+
+        .chatbot-close {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .chatbot-content {
+            height: calc(100% - 60px);
+            overflow-y: auto;
+            padding: 1rem;
+            scrollbar-width: thin;
+            scrollbar-color: #667eea #f1f1f1;
+        }
+
+        .chatbot-content::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .chatbot-content::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        .chatbot-content::-webkit-scrollbar-thumb {
+            background: #667eea;
+            border-radius: 10px;
+        }
+
+        .chatbot-content::-webkit-scrollbar-thumb:hover {
+            background: #5a6fd8;
+        }
+
+        .faq-item {
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .faq-question {
+            background: #f8f9fa;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .faq-question:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 1rem;
+            background: white;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .faq-answer.active {
+            display: block;
+        }
+
+        .espacio-interesante {
+            padding: 4rem 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(5px);
+            text-align: center;
+        }
+
+        .espacio-content {
+            max-width: 800px;
+            margin: 0 auto;
+            color: white;
+        }
+
+        .espacio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .espacio-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .espacio-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .espacio-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ffa500;
+        }
+
+        .espacio-card h3 {
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .espacio-card p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 1.5rem;
+        }
+
+        .espacio-btn {
+            background: linear-gradient(45deg, #ffa500, #ff6b6b);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .espacio-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <a href="#" class="logo">Aurenox-Global</a>
+            <div class="nav-controls">
+                <ul class="nav-menu">
+                    <li><a href="#" class="nav-link" onclick="openModal('proyectosModal')" data-translate="nav-projects">Proyectos</a></li>
+                    <li><a href="#" class="nav-link" onclick="openModal('contactosModal')" data-translate="nav-contact">Contactos</a></li>
+                    <li><a href="#" class="nav-link" onclick="openModal('informacionModal')" data-translate="nav-info">Información</a></li>
+                </ul>
+                <select class="language-selector" onchange="changeLanguage(this.value)">
+                    <option value="es">🇪🇸 ES</option>
+                    <option value="en">🇺🇸 EN</option>
+                    <option value="de">🇩🇪 DE</option>
+                    <option value="pl">🇵🇱 PL</option>
+                    <option value="fr">🇫🇷 FR</option>
+                </select>
+                <button class="theme-toggle" onclick="toggleTheme()" title="Cambiar tema">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content fade-in">
+            <h1 data-translate="hero-title">Bienvenidos a <span style="color: #ffa500;">Aurenox-Global</span></h1>
+            <p data-translate="hero-description">Nos dedicamos a la creación de aplicaciones y a brindar información de tecnología de vanguardia. Contamos con un equipo altamente capacitado y apasionado por la tecnología.</p>
+            <button class="cta-button" onclick="openModal('contactosModal')">
+                <i class="fas fa-rocket"></i> <span data-translate="hero-cta">¡Comencemos tu proyecto!</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title fade-in" data-translate="services-title">Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 data-translate="service-projects-title">Proyectos</h3>
+                    <p data-translate="service-projects-desc">Proyectos terminados y en desarrollo con las últimas tecnologías.</p>
+                    <button class="service-btn" onclick="openModal('proyectosModal')">
+                        <span data-translate="btn-see-more">Ver Más</span>
+                    </button>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 data-translate="service-contact-title">Contactos</h3>
+                    <p data-translate="service-contact-desc">Una forma fácil de contactarnos a través de nuestras redes sociales.</p>
+                    <button class="service-btn" onclick="openModal('contactosModal')">
+                        <span data-translate="btn-contact">Contactar</span>
+                    </button>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h3 data-translate="service-info-title">Información</h3>
+                    <p data-translate="service-info-desc">Conócenos un poco más y descubre nuestra pasión por la tecnología.</p>
+                    <button class="service-btn" onclick="openModal('informacionModal')">
+                        <span data-translate="btn-know-more">Conocer Más</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Espacio Interesante Section -->
+    <section class="espacio-interesante">
+        <div class="container">
+            <div class="espacio-content fade-in">
+                <h2 class="section-title" data-translate="interesting-title">Espacio Interesante</h2>
+                <p style="font-size: 1.2rem; opacity: 0.9;" data-translate="interesting-desc">Aprende un poco más sobre tecnología y nuestras últimas innovaciones</p>
+                
+                <div class="espacio-grid">
+                    <div class="espacio-card fade-in">
+                        <div class="espacio-icon">
+                            <i class="fab fa-bitcoin"></i>
+                        </div>
+                        <h3 data-translate="crypto-title">NEW V4 CRYPTO VIT Pro</h3>
+                        <p data-translate="crypto-desc">Descubre nuestra plataforma de criptomonedas más avanzada con características innovadoras para el trading moderno.</p>
+                        <button class="espacio-btn" onclick="openModal('cryptoModal')">
+                            <span data-translate="btn-explore">Explorar</span>
+                        </button>
+                    </div>
+                    
+                    <div class="espacio-card fade-in">
+                        <div class="espacio-icon">
+                            <i class="fas fa-newspaper"></i>
+                        </div>
+                        <h3 data-translate="news-title">Noticias Tech</h3>
+                        <p data-translate="news-desc">Mantente al día con las últimas tendencias tecnológicas y nuestros artículos especializados.</p>
+                        <button class="espacio-btn" onclick="openModal('noticiasModal')">
+                            <span data-translate="btn-read-more">Leer Más</span>
+                        </button>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos Modal -->
+    <div id="proyectosModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('proyectosModal')">&times;</span>
+            <h2><i class="fas fa-code"></i> <span data-translate="projects-modal-title">Nuestros Proyectos</span></h2>
+            <p data-translate="projects-modal-desc">Desarrollamos soluciones innovadoras utilizando las tecnologías más avanzadas del mercado.</p>
+            
+            <div class="project-grid">
+                <div class="project-item">
+                    <h4><i class="fab fa-android"></i> <span data-translate="project-mobile">Aplicaciones Móviles</span></h4>
+                    <p data-translate="project-mobile-desc">Apps nativas para Android e iOS</p>
+                    <div class="project-status" data-translate="status-development">En Desarrollo</div>
+                </div>
+                
+                <div class="project-item">
+                    <h4><i class="fas fa-globe"></i> <span data-translate="project-web">Desarrollo Web</span></h4>
+                    <p data-translate="project-web-desc">Sitios web modernos y responsivos</p>
+                    <div class="project-status" data-translate="status-completed">Terminado</div>
+                </div>
+                
+                <div class="project-item">
+                    <h4><i class="fab fa-bitcoin"></i> <span data-translate="project-crypto">NEW V4 CRYPTO VIT Pro</span></h4>
+                    <p data-translate="project-crypto-desc">Plataforma de criptomonedas avanzada</p>
+                    <div class="project-status" data-translate="status-development">En Desarrollo</div>
+                </div>
+                
+                <div class="project-item">
+                    <h4><i class="fas fa-newspaper"></i> <span data-translate="project-news">Portal de Noticias</span></h4>
+                    <p data-translate="project-news-desc">Sistema de gestión de contenido</p>
+                    <div class="project-status" data-translate="status-completed">Terminado</div>
+                </div>
+            </div>
+            
+            <p style="margin-top: 2rem; font-style: italic;">
+                <i class="fas fa-lightbulb"></i> 
+                Cada proyecto es desarrollado con dedicación y utilizando las mejores prácticas de la industria.
+            </p>
+        </div>
+    </div>
+
+    <!-- Contactos Modal -->
+    <div id="contactosModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('contactosModal')">&times;</span>
+            <h2><i class="fas fa-envelope"></i> <span data-translate="contact-modal-title">Contáctanos</span></h2>
+            <p data-translate="contact-modal-desc">Estamos aquí para ayudarte a llevar tus ideas a la realidad. No dudes en contactarnos a través de nuestros canales de comunicación.</p>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4 data-translate="contact-email">Email</h4>
+                        <p>info@aurenox-global.com</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h4 data-translate="contact-phone">Teléfono</h4>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h4 data-translate="contact-whatsapp">WhatsApp</h4>
+                        <p>+1 (555) 987-6543</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <div>
+                        <h4 data-translate="contact-linkedin">LinkedIn</h4>
+                        <p>Aurenox-Global</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-instagram"></i>
+                    <div>
+                        <h4 data-translate="contact-instagram">Instagram</h4>
+                        <p>@aurenoxglobal</p>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-twitter"></i>
+                    <div>
+                        <h4 data-translate="contact-twitter">Twitter</h4>
+                        <p>@aurenoxglobal</p>
+                    </div>
+                </div>
+            </div>
+            
+            <p style="margin-top: 2rem; text-align: center; font-weight: 600; color: #667eea;">
+                <i class="fas fa-clock"></i> 
+                Respondemos en menos de 24 horas
+            </p>
+        </div>
+    </div>
+
+    <!-- Información Modal -->
+    <div id="informacionModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('informacionModal')">&times;</span>
+            <h2><i class="fas fa-info-circle"></i> <span data-translate="info-modal-title">Acerca de Aurenox-Global</span></h2>
+            
+            <p>
+                <strong>Aurenox-Global</strong> es una empresa innovadora especializada en el desarrollo de aplicaciones y soluciones tecnológicas de vanguardia. Fundada con la misión de transformar ideas en realidades digitales.
+            </p>
+            
+            <h3 style="margin-top: 2rem; color: #667eea;">
+                <i class="fas fa-target"></i> Nuestra Misión
+            </h3>
+            <p>
+                Brindar soluciones tecnológicas personalizadas y de alta calidad que impulsen el crecimiento y éxito de nuestros clientes, utilizando las tecnologías más avanzadas del mercado.
+            </p>
+            
+            <h3 style="margin-top: 2rem; color: #667eea;">
+                <i class="fas fa-eye"></i> Nuestra Visión
+            </h3>
+            <p>
+                Ser reconocidos como líderes en desarrollo de aplicaciones, destacando por nuestra innovación, calidad y compromiso con la excelencia tecnológica.
+            </p>
+            
+            <h3 style="margin-top: 2rem; color: #667eea;">
+                <i class="fas fa-users"></i> Nuestro Equipo
+            </h3>
+            <p>
+                Contamos con un equipo altamente capacitado y apasionado por la tecnología, formado por desarrolladores, diseñadores y especialistas en diferentes áreas tecnológicas.
+            </p>
+            
+            <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1.5rem; border-radius: 15px; margin-top: 2rem; text-align: center;">
+                <h4><i class="fas fa-heart"></i> ¿Por qué elegirnos?</h4>
+                <p style="margin: 1rem 0;">
+                    • Experiencia comprobada en desarrollo<br>
+                    • Tecnologías de vanguardia<br>
+                    • Soporte 24/7<br>
+                    • Soluciones personalizadas<br>
+                    • Precios competitivos
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Crypto Modal -->
+    <div id="cryptoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('cryptoModal')">&times;</span>
+            <h2><i class="fab fa-bitcoin"></i> NEW V4 CRYPTO VIT Pro</h2>
+            
+            <p data-translate="crypto-modal-desc" style="font-size: 1.1rem; color: #333; margin-bottom: 2rem;">
+                Nuestra plataforma de criptomonedas más avanzada, diseñada para traders profesionales y principiantes.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+                <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 1.5rem; border-radius: 15px; text-align: center;">
+                    <h4><i class="fas fa-chart-line"></i> Trading Avanzado</h4>
+                    <p>Herramientas profesionales de análisis técnico</p>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #ffa500, #ff6b6b); color: white; padding: 1.5rem; border-radius: 15px; text-align: center;">
+                    <h4><i class="fas fa-shield-alt"></i> Seguridad Total</h4>
+                    <p>Protocolo de seguridad multicapa</p>
+                </div>
+                
+                <div style="background: linear-gradient(135deg, #28a745, #20c997); color: white; padding: 1.5rem; border-radius: 15px; text-align: center;">
+                    <h4><i class="fas fa-mobile-alt"></i> App Móvil</h4>
+                    <p>Trading desde cualquier lugar</p>
+                </div>
+            </div>
+            
+            <div class="crypto-features" style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px; margin-top: 2rem;">
+                <h4 style="color: #333; margin-bottom: 1rem;"><i class="fas fa-star"></i> Características Principales:</h4>
+                <ul style="color: #333; line-height: 1.8;">
+                    <li>• Interface intuitiva y personalizable</li>
+                    <li>• Soporte para más de 100 criptomonedas</li>
+                    <li>• Trading automatizado con bots inteligentes</li>
+                    <li>• Análisis en tiempo real del mercado</li>
+                    <li>• Wallet integrado con máxima seguridad</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Noticias Modal -->
+    <div id="noticiasModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('noticiasModal')">&times;</span>
+            <h2><i class="fas fa-newspaper"></i> Noticias y Artículos</h2>
+            
+            <p data-translate="news-modal-desc" style="color: #333; margin-bottom: 2rem;">
+                Mantente informado con las últimas tendencias tecnológicas y nuestros análisis especializados.
+            </p>
+            
+            <div>
+                <article class="news-article" style="border: 1px solid #e0e0e0; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem;">
+                    <h4 class="news-title" style="color: #667eea; margin-bottom: 0.5rem;">El Futuro de la Inteligencia Artificial</h4>
+                    <p class="news-date" style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">15 de Noviembre, 2024</p>
+                    <p class="news-content" style="color: #333; line-height: 1.6;">Exploramos las últimas tendencias en IA y cómo están transformando el desarrollo de aplicaciones...</p>
+                </article>
+                
+                <article class="news-article" style="border: 1px solid #e0e0e0; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem;">
+                    <h4 class="news-title" style="color: #667eea; margin-bottom: 0.5rem;">Blockchain: Más Allá de las Criptomonedas</h4>
+                    <p class="news-date" style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">10 de Noviembre, 2024</p>
+                    <p class="news-content" style="color: #333; line-height: 1.6;">Descubre las aplicaciones innovadoras de blockchain en diferentes industrias...</p>
+                </article>
+                
+                <article class="news-article" style="border: 1px solid #e0e0e0; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem;">
+                    <h4 class="news-title" style="color: #667eea; margin-bottom: 0.5rem;">Desarrollo Móvil: Tendencias 2024</h4>
+                    <p class="news-date" style="color: #666; font-size: 0.9rem; margin-bottom: 1rem;">5 de Noviembre, 2024</p>
+                    <p class="news-content" style="color: #333; line-height: 1.6;">Las tecnologías que están definiendo el futuro del desarrollo móvil...</p>
+                </article>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <button style="background: linear-gradient(45deg, #667eea, #764ba2); color: white; border: none; padding: 1rem 2rem; border-radius: 25px; cursor: pointer; font-weight: 600;">
+                    <i class="fas fa-plus"></i> Ver Todos los Artículos
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <button class="chatbot-button" onclick="toggleChatbot()">
+            <i class="fas fa-comments" id="chatbot-icon"></i>
+        </button>
+        
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <h3><i class="fas fa-robot"></i> <span data-translate="chatbot-title">Asistente Aurenox</span></h3>
+                <button class="chatbot-close" onclick="toggleChatbot()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="chatbot-content">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-translate="faq-q1">¿Qué servicios ofrecen?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer" data-translate="faq-a1">
+                        Ofrecemos desarrollo de aplicaciones móviles, desarrollo web, plataformas de criptomonedas, sistemas de gestión y consultoría tecnológica personalizada.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-translate="faq-q2">¿Cuánto tiempo toma desarrollar una app?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer" data-translate="faq-a2">
+                        El tiempo depende de la complejidad del proyecto. Una app básica puede tomar 2-3 meses, mientras que aplicaciones más complejas pueden requerir 6-12 meses.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-translate="faq-q3">¿Ofrecen soporte post-desarrollo?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer" data-translate="faq-a3">
+                        Sí, ofrecemos soporte 24/7, mantenimiento, actualizaciones y mejoras continuas para todos nuestros proyectos.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-translate="faq-q4">¿Cuáles son sus precios?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer" data-translate="faq-a4">
+                        Nuestros precios son competitivos y dependen del alcance del proyecto. Ofrecemos cotizaciones gratuitas y planes de pago flexibles.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-translate="faq-q5">¿Trabajan con tecnologías específicas?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer" data-translate="faq-a5">
+                        Trabajamos con las últimas tecnologías: React, Node.js, React Native, Flutter, Python, blockchain, IA y más.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span data-translate="faq-q6">¿Cómo inicio un proyecto?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer" data-translate="faq-a6">
+                        Contáctanos a través de cualquiera de nuestros canales. Programaremos una consulta gratuita para discutir tu proyecto y crear una propuesta personalizada.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p data-translate="footer-copyright">&copy; 2024 Aurenox-Global. Todos los derechos reservados.</p>
+        <p><span data-translate="footer-developed">Desarrollado con</span> <i class="fas fa-heart" style="color: #ff6b6b;"></i> <span data-translate="footer-tech">y tecnología de vanguardia</span></p>
+    </footer>
+
+    <script>
+        // Modal functionality
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = 'auto';
+                }
+            });
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const modals = document.querySelectorAll('.modal');
+                modals.forEach(modal => {
+                    if (modal.style.display === 'block') {
+                        modal.style.display = 'none';
+                        document.body.style.overflow = 'auto';
+                    }
+                });
+            }
+        });
+
+        // Scroll animations
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.fade-in');
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        }
+
+        // Header background on scroll
+        function handleHeaderScroll() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        }
+
+        // Mobile menu functionality
+        function toggleMobileMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        // Event listeners
+        window.addEventListener('scroll', () => {
+            animateOnScroll();
+            handleHeaderScroll();
+        });
+
+        // Initialize animations on load
+        window.addEventListener('load', () => {
+            animateOnScroll();
+        });
+
+        // Smooth scrolling for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add some interactive effects
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Chatbot functionality
+        function toggleChatbot() {
+            const chatbotWindow = document.getElementById('chatbot-window');
+            const chatbotIcon = document.getElementById('chatbot-icon');
+            
+            if (chatbotWindow.style.display === 'none' || chatbotWindow.style.display === '') {
+                chatbotWindow.style.display = 'block';
+                chatbotIcon.className = 'fas fa-times';
+            } else {
+                chatbotWindow.style.display = 'none';
+                chatbotIcon.className = 'fas fa-comments';
+            }
+        }
+
+        // FAQ toggle functionality
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            // Close all other FAQ items
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                if (item !== answer) {
+                    item.classList.remove('active');
+                }
+            });
+            
+            document.querySelectorAll('.faq-question i').forEach(item => {
+                if (item !== icon) {
+                    item.className = 'fas fa-chevron-down';
+                }
+            });
+            
+            // Toggle current FAQ
+            answer.classList.toggle('active');
+            
+            if (answer.classList.contains('active')) {
+                icon.className = 'fas fa-chevron-up';
+            } else {
+                icon.className = 'fas fa-chevron-down';
+            }
+        }
+
+        // Theme toggle functionality
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            
+            body.classList.toggle('dark-theme');
+            
+            if (body.classList.contains('dark-theme')) {
+                themeIcon.className = 'fas fa-sun';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                themeIcon.className = 'fas fa-moon';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        // Language translations
+        const translations = {
+            es: {
+                'hero-title': 'Bienvenidos a <span style="color: #ffa500;">Aurenox-Global</span>',
+                'hero-description': 'Nos dedicamos a la creación de aplicaciones y a brindar información de tecnología de vanguardia. Contamos con un equipo altamente capacitado y apasionado por la tecnología.',
+                'hero-cta': '¡Comencemos tu proyecto!',
+                'nav-projects': 'Proyectos',
+                'nav-contact': 'Contactos',
+                'nav-info': 'Información',
+                'services-title': 'Nuestros Servicios',
+                'service-projects-title': 'Proyectos',
+                'service-projects-desc': 'Proyectos terminados y en desarrollo con las últimas tecnologías.',
+                'service-contact-title': 'Contactos',
+                'service-contact-desc': 'Una forma fácil de contactarnos a través de nuestras redes sociales.',
+                'service-info-title': 'Información',
+                'service-info-desc': 'Conócenos un poco más y descubre nuestra pasión por la tecnología.',
+                'interesting-title': 'Espacio Interesante',
+                'interesting-desc': 'Aprende un poco más sobre tecnología y nuestras últimas innovaciones',
+                'crypto-title': 'NEW V4 CRYPTO VIT Pro',
+                'crypto-desc': 'Descubre nuestra plataforma de criptomonedas más avanzada con características innovadoras para el trading moderno.',
+                'news-title': 'Noticias Tech',
+                'news-desc': 'Mantente al día con las últimas tendencias tecnológicas y nuestros artículos especializados.',
+                'btn-see-more': 'Ver Más',
+                'btn-contact': 'Contactar',
+                'btn-know-more': 'Conocer Más',
+                'btn-explore': 'Explorar',
+                'btn-read-more': 'Leer Más',
+                'projects-modal-title': 'Nuestros Proyectos',
+                'projects-modal-desc': 'Desarrollamos soluciones innovadoras utilizando las tecnologías más avanzadas del mercado.',
+                'project-mobile': 'Aplicaciones Móviles',
+                'project-mobile-desc': 'Apps nativas para Android e iOS',
+                'project-web': 'Desarrollo Web',
+                'project-web-desc': 'Sitios web modernos y responsivos',
+                'project-crypto': 'NEW V4 CRYPTO VIT Pro',
+                'project-crypto-desc': 'Plataforma de criptomonedas avanzada',
+                'project-news': 'Portal de Noticias',
+                'project-news-desc': 'Sistema de gestión de contenido',
+                'status-development': 'En Desarrollo',
+                'status-completed': 'Terminado',
+                'contact-modal-title': 'Contáctanos',
+                'contact-modal-desc': 'Estamos aquí para ayudarte a llevar tus ideas a la realidad. No dudes en contactarnos a través de nuestros canales de comunicación.',
+                'contact-email': 'Email',
+                'contact-phone': 'Teléfono',
+                'contact-whatsapp': 'WhatsApp',
+                'contact-linkedin': 'LinkedIn',
+                'contact-instagram': 'Instagram',
+                'contact-twitter': 'Twitter',
+                'info-modal-title': 'Acerca de Aurenox-Global',
+                'chatbot-title': 'Asistente Aurenox',
+                'footer-copyright': '© 2024 Aurenox-Global. Todos los derechos reservados.',
+                'footer-developed': 'Desarrollado con',
+                'footer-tech': 'y tecnología de vanguardia',
+                'crypto-modal-desc': 'Nuestra plataforma de criptomonedas más avanzada, diseñada para traders profesionales y principiantes.',
+                'news-modal-desc': 'Mantente informado con las últimas tendencias tecnológicas y nuestros análisis especializados.',
+                'faq-q1': '¿Qué servicios ofrecen?',
+                'faq-a1': 'Ofrecemos desarrollo de aplicaciones móviles, desarrollo web, plataformas de criptomonedas, sistemas de gestión y consultoría tecnológica personalizada.',
+                'faq-q2': '¿Cuánto tiempo toma desarrollar una app?',
+                'faq-a2': 'El tiempo depende de la complejidad del proyecto. Una app básica puede tomar 2-3 meses, mientras que aplicaciones más complejas pueden requerir 6-12 meses.',
+                'faq-q3': '¿Ofrecen soporte post-desarrollo?',
+                'faq-a3': 'Sí, ofrecemos soporte 24/7, mantenimiento, actualizaciones y mejoras continuas para todos nuestros proyectos.',
+                'faq-q4': '¿Cuáles son sus precios?',
+                'faq-a4': 'Nuestros precios son competitivos y dependen del alcance del proyecto. Ofrecemos cotizaciones gratuitas y planes de pago flexibles.',
+                'faq-q5': '¿Trabajan con tecnologías específicas?',
+                'faq-a5': 'Trabajamos con las últimas tecnologías: React, Node.js, React Native, Flutter, Python, blockchain, IA y más.',
+                'faq-q6': '¿Cómo inicio un proyecto?',
+                'faq-a6': 'Contáctanos a través de cualquiera de nuestros canales. Programaremos una consulta gratuita para discutir tu proyecto y crear una propuesta personalizada.'
+            },
+            en: {
+                'hero-title': 'Welcome to <span style="color: #ffa500;">Aurenox-Global</span>',
+                'hero-description': 'We are dedicated to creating applications and providing cutting-edge technology information. We have a highly trained and passionate team about technology.',
+                'hero-cta': 'Let\'s start your project!',
+                'nav-projects': 'Projects',
+                'nav-contact': 'Contact',
+                'nav-info': 'Information',
+                'services-title': 'Our Services',
+                'service-projects-title': 'Projects',
+                'service-projects-desc': 'Completed and developing projects with the latest technologies.',
+                'service-contact-title': 'Contact',
+                'service-contact-desc': 'An easy way to contact us through our social networks.',
+                'service-info-title': 'Information',
+                'service-info-desc': 'Get to know us a little more and discover our passion for technology.',
+                'interesting-title': 'Interesting Space',
+                'interesting-desc': 'Learn a little more about technology and our latest innovations',
+                'crypto-title': 'NEW V4 CRYPTO VIT Pro',
+                'crypto-desc': 'Discover our most advanced cryptocurrency platform with innovative features for modern trading.',
+                'news-title': 'Tech News',
+                'news-desc': 'Stay up to date with the latest technology trends and our specialized articles.',
+                'btn-see-more': 'See More',
+                'btn-contact': 'Contact',
+                'btn-know-more': 'Know More',
+                'btn-explore': 'Explore',
+                'btn-read-more': 'Read More',
+                'projects-modal-title': 'Our Projects',
+                'projects-modal-desc': 'We develop innovative solutions using the most advanced technologies in the market.',
+                'project-mobile': 'Mobile Applications',
+                'project-mobile-desc': 'Native apps for Android and iOS',
+                'project-web': 'Web Development',
+                'project-web-desc': 'Modern and responsive websites',
+                'project-crypto': 'NEW V4 CRYPTO VIT Pro',
+                'project-crypto-desc': 'Advanced cryptocurrency platform',
+                'project-news': 'News Portal',
+                'project-news-desc': 'Content management system',
+                'status-development': 'In Development',
+                'status-completed': 'Completed',
+                'contact-modal-title': 'Contact Us',
+                'contact-modal-desc': 'We are here to help you bring your ideas to reality. Don\'t hesitate to contact us through our communication channels.',
+                'contact-email': 'Email',
+                'contact-phone': 'Phone',
+                'contact-whatsapp': 'WhatsApp',
+                'contact-linkedin': 'LinkedIn',
+                'contact-instagram': 'Instagram',
+                'contact-twitter': 'Twitter',
+                'info-modal-title': 'About Aurenox-Global',
+                'chatbot-title': 'Aurenox Assistant',
+                'footer-copyright': '© 2024 Aurenox-Global. All rights reserved.',
+                'footer-developed': 'Developed with',
+                'footer-tech': 'and cutting-edge technology',
+                'crypto-modal-desc': 'Our most advanced cryptocurrency platform, designed for professional and beginner traders.',
+                'news-modal-desc': 'Stay informed with the latest technology trends and our specialized analysis.',
+                'faq-q1': 'What services do you offer?',
+                'faq-a1': 'We offer mobile app development, web development, cryptocurrency platforms, management systems and personalized technology consulting.',
+                'faq-q2': 'How long does it take to develop an app?',
+                'faq-a2': 'The time depends on the project complexity. A basic app can take 2-3 months, while more complex applications may require 6-12 months.',
+                'faq-q3': 'Do you offer post-development support?',
+                'faq-a3': 'Yes, we offer 24/7 support, maintenance, updates and continuous improvements for all our projects.',
+                'faq-q4': 'What are your prices?',
+                'faq-a4': 'Our prices are competitive and depend on the project scope. We offer free quotes and flexible payment plans.',
+                'faq-q5': 'Do you work with specific technologies?',
+                'faq-a5': 'We work with the latest technologies: React, Node.js, React Native, Flutter, Python, blockchain, AI and more.',
+                'faq-q6': 'How do I start a project?',
+                'faq-a6': 'Contact us through any of our channels. We will schedule a free consultation to discuss your project and create a personalized proposal.'
+            },
+            de: {
+                'hero-title': 'Willkommen bei <span style="color: #ffa500;">Aurenox-Global</span>',
+                'hero-description': 'Wir widmen uns der Entwicklung von Anwendungen und der Bereitstellung von modernster Technologie-Information. Wir haben ein hochqualifiziertes und leidenschaftliches Team für Technologie.',
+                'hero-cta': 'Lassen Sie uns Ihr Projekt starten!',
+                'nav-projects': 'Projekte',
+                'nav-contact': 'Kontakt',
+                'nav-info': 'Information',
+                'services-title': 'Unsere Dienstleistungen',
+                'service-projects-title': 'Projekte',
+                'service-projects-desc': 'Abgeschlossene und in Entwicklung befindliche Projekte mit den neuesten Technologien.',
+                'service-contact-title': 'Kontakt',
+                'service-contact-desc': 'Eine einfache Möglichkeit, uns über unsere sozialen Netzwerke zu kontaktieren.',
+                'service-info-title': 'Information',
+                'service-info-desc': 'Lernen Sie uns etwas besser kennen und entdecken Sie unsere Leidenschaft für Technologie.',
+                'interesting-title': 'Interessanter Bereich',
+                'interesting-desc': 'Erfahren Sie etwas mehr über Technologie und unsere neuesten Innovationen',
+                'crypto-title': 'NEW V4 CRYPTO VIT Pro',
+                'crypto-desc': 'Entdecken Sie unsere fortschrittlichste Kryptowährungs-Plattform mit innovativen Funktionen für modernen Handel.',
+                'news-title': 'Tech-Nachrichten',
+                'news-desc': 'Bleiben Sie auf dem Laufenden mit den neuesten Technologie-Trends und unseren spezialisierten Artikeln.',
+                'btn-see-more': 'Mehr sehen',
+                'btn-contact': 'Kontakt',
+                'btn-know-more': 'Mehr erfahren',
+                'btn-explore': 'Erkunden',
+                'btn-read-more': 'Mehr lesen',
+                'projects-modal-title': 'Unsere Projekte',
+                'projects-modal-desc': 'Wir entwickeln innovative Lösungen mit den fortschrittlichsten Technologien auf dem Markt.',
+                'project-mobile': 'Mobile Anwendungen',
+                'project-mobile-desc': 'Native Apps für Android und iOS',
+                'project-web': 'Web-Entwicklung',
+                'project-web-desc': 'Moderne und responsive Websites',
+                'project-crypto': 'NEW V4 CRYPTO VIT Pro',
+                'project-crypto-desc': 'Fortschrittliche Kryptowährungs-Plattform',
+                'project-news': 'Nachrichten-Portal',
+                'project-news-desc': 'Content-Management-System',
+                'status-development': 'In Entwicklung',
+                'status-completed': 'Abgeschlossen',
+                'contact-modal-title': 'Kontaktieren Sie uns',
+                'contact-modal-desc': 'Wir sind hier, um Ihnen zu helfen, Ihre Ideen in die Realität umzusetzen. Zögern Sie nicht, uns über unsere Kommunikationskanäle zu kontaktieren.',
+                'contact-email': 'E-Mail',
+                'contact-phone': 'Telefon',
+                'contact-whatsapp': 'WhatsApp',
+                'contact-linkedin': 'LinkedIn',
+                'contact-instagram': 'Instagram',
+                'contact-twitter': 'Twitter',
+                'info-modal-title': 'Über Aurenox-Global',
+                'chatbot-title': 'Aurenox Assistent',
+                'footer-copyright': '© 2024 Aurenox-Global. Alle Rechte vorbehalten.',
+                'footer-developed': 'Entwickelt mit',
+                'footer-tech': 'und modernster Technologie',
+                'crypto-modal-desc': 'Unsere fortschrittlichste Kryptowährungs-Plattform, entwickelt für professionelle und anfängliche Trader.',
+                'news-modal-desc': 'Bleiben Sie informiert über die neuesten Technologie-Trends und unsere spezialisierten Analysen.',
+                'faq-q1': 'Welche Dienstleistungen bieten Sie an?',
+                'faq-a1': 'Wir bieten mobile App-Entwicklung, Web-Entwicklung, Kryptowährungs-Plattformen, Management-Systeme und personalisierte Technologie-Beratung.',
+                'faq-q2': 'Wie lange dauert es, eine App zu entwickeln?',
+                'faq-a2': 'Die Zeit hängt von der Projektkomplexity ab. Eine einfache App kann 2-3 Monate dauern, während komplexere Anwendungen 6-12 Monate benötigen können.',
+                'faq-q3': 'Bieten Sie Post-Entwicklungs-Support an?',
+                'faq-a3': 'Ja, wir bieten 24/7 Support, Wartung, Updates und kontinuierliche Verbesserungen für alle unsere Projekte.',
+                'faq-q4': 'Wie sind Ihre Preise?',
+                'faq-a4': 'Unsere Preise sind wettbewerbsfähig und hängen vom Projektumfang ab. Wir bieten kostenlose Angebote und flexible Zahlungspläne.',
+                'faq-q5': 'Arbeiten Sie mit spezifischen Technologien?',
+                'faq-a5': 'Wir arbeiten mit den neuesten Technologien: React, Node.js, React Native, Flutter, Python, Blockchain, KI und mehr.',
+                'faq-q6': 'Wie starte ich ein Projekt?',
+                'faq-a6': 'Kontaktieren Sie uns über einen unserer Kanäle. Wir vereinbaren eine kostenlose Beratung, um Ihr Projekt zu besprechen und ein personalisiertes Angebot zu erstellen.'
+            },
+            pl: {
+                'hero-title': 'Witamy w <span style="color: #ffa500;">Aurenox-Global</span>',
+                'hero-description': 'Specjalizujemy się w tworzeniu aplikacji i dostarczaniu informacji o najnowszych technologiach. Mamy wysoko wykwalifikowany i pasjonujący się technologią zespół.',
+                'hero-cta': 'Rozpocznijmy Twój projekt!',
+                'nav-projects': 'Projekty',
+                'nav-contact': 'Kontakt',
+                'nav-info': 'Informacje',
+                'services-title': 'Nasze Usługi',
+                'service-projects-title': 'Projekty',
+                'service-projects-desc': 'Ukończone i rozwijane projekty z najnowszymi technologiami.',
+                'service-contact-title': 'Kontakt',
+                'service-contact-desc': 'Łatwy sposób skontaktowania się z nami przez nasze sieci społecznościowe.',
+                'service-info-title': 'Informacje',
+                'service-info-desc': 'Poznaj nas trochę lepiej i odkryj naszą pasję do technologii.',
+                'interesting-title': 'Ciekawa Przestrzeń',
+                'interesting-desc': 'Dowiedz się więcej o technologii i naszych najnowszych innowacjach',
+                'crypto-title': 'NEW V4 CRYPTO VIT Pro',
+                'crypto-desc': 'Odkryj naszą najbardziej zaawansowaną platformę kryptowalut z innowacyjnymi funkcjami dla nowoczesnego handlu.',
+                'news-title': 'Wiadomości Tech',
+                'news-desc': 'Bądź na bieżąco z najnowszymi trendami technologicznymi i naszymi specjalistycznymi artykułami.',
+                'btn-see-more': 'Zobacz więcej',
+                'btn-contact': 'Kontakt',
+                'btn-know-more': 'Dowiedz się więcej',
+                'btn-explore': 'Eksploruj',
+                'btn-read-more': 'Czytaj więcej',
+                'projects-modal-title': 'Nasze Projekty',
+                'projects-modal-desc': 'Rozwijamy innowacyjne rozwiązania wykorzystując najbardziej zaawansowane technologie na rynku.',
+                'project-mobile': 'Aplikacje Mobilne',
+                'project-mobile-desc': 'Natywne aplikacje dla Android i iOS',
+                'project-web': 'Rozwiązania Webowe',
+                'project-web-desc': 'Nowoczesne i responsywne strony internetowe',
+                'project-crypto': 'NEW V4 CRYPTO VIT Pro',
+                'project-crypto-desc': 'Zaawansowana platforma kryptowalut',
+                'project-news': 'Portal Informacyjny',
+                'project-news-desc': 'System zarządzania treścią',
+                'status-development': 'W Rozwoju',
+                'status-completed': 'Ukończono',
+                'contact-modal-title': 'Skontaktuj się z nami',
+                'contact-modal-desc': 'Jesteśmy tutaj, aby pomóc Ci przenieść Twoje pomysły w rzeczywistość. Nie wahaj się skontaktować z nami przez nasze kanały komunikacyjne.',
+                'contact-email': 'Email',
+                'contact-phone': 'Telefon',
+                'contact-whatsapp': 'WhatsApp',
+                'contact-linkedin': 'LinkedIn',
+                'contact-instagram': 'Instagram',
+                'contact-twitter': 'Twitter',
+                'info-modal-title': 'O Aurenox-Global',
+                'chatbot-title': 'Asystent Aurenox',
+                'footer-copyright': '© 2024 Aurenox-Global. Wszelkie prawa zastrzeżone.',
+                'footer-developed': 'Opracowane z',
+                'footer-tech': 'i najnowocześniejszą technologią',
+                'crypto-modal-desc': 'Nasza najbardziej zaawansowana platforma kryptowalut, zaprojektowana dla profesjonalnych i początkujących traderów.',
+                'news-modal-desc': 'Bądź na bieżąco z najnowszymi trendami technologicznymi i naszymi specjalistycznymi analizami.',
+                'faq-q1': 'Jakie usługi oferujecie?',
+                'faq-a1': 'Oferujemy rozwiązania mobilne, rozwiązania webowe, platformy kryptowalut, systemy zarządzania i spersonalizowaną konsultację technologiczną.',
+                'faq-q2': 'Ile czasu zajmuje rozwój aplikacji?',
+                'faq-a2': 'Czas zależy od złożoności projektu. Podstawowa aplikacja może zająć 2-3 miesiące, podczas gdy bardziej złożone aplikacje mogą wymagać 6-12 miesięcy.',
+                'faq-q3': 'Czy oferujecie wsparcie po rozwoju?',
+                'faq-a3': 'Tak, oferujemy wsparcie 24/7, konserwację, aktualizacje i ciągłe ulepszenia dla wszystkich naszych projektów.',
+                'faq-q4': 'Jakie są wasze ceny?',
+                'faq-a4': 'Nasze ceny są konkurencyjne i zależą od zakresu projektu. Oferujemy darmowe wyceny i elastyczne plany płatności.',
+                'faq-q5': 'Czy pracujecie z konkretnymi technologiami?',
+                'faq-a5': 'Pracujemy z najnowszymi technologiami: React, Node.js, React Native, Flutter, Python, blockchain, AI i więcej.',
+                'faq-q6': 'Jak rozpocząć projekt?',
+                'faq-a6': 'Skontaktuj się z nami przez dowolny z naszych kanałów. Zaplanujemy bezpłatną konsultację, aby przedyskutować Twój projekt i stworzyć spersonalizowaną propozycję.'
+            },
+            fr: {
+                'hero-title': 'Bienvenue chez <span style="color: #ffa500;">Aurenox-Global</span>',
+                'hero-description': 'Nous nous consacrons à la création d\'applications et à fournir des informations technologiques de pointe. Nous avons une équipe hautement qualifiée et passionnée par la technologie.',
+                'hero-cta': 'Commençons votre projet!',
+                'nav-projects': 'Projets',
+                'nav-contact': 'Contact',
+                'nav-info': 'Information',
+                'services-title': 'Nos Services',
+                'service-projects-title': 'Projets',
+                'service-projects-desc': 'Projets terminés et en développement avec les dernières technologies.',
+                'service-contact-title': 'Contact',
+                'service-contact-desc': 'Un moyen facile de nous contacter via nos réseaux sociaux.',
+                'service-info-title': 'Information',
+                'service-info-desc': 'Apprenez à nous connaître un peu plus et découvrez notre passion pour la technologie.',
+                'interesting-title': 'Espace Intéressant',
+                'interesting-desc': 'Apprenez-en un peu plus sur la technologie et nos dernières innovations',
+                'crypto-title': 'NEW V4 CRYPTO VIT Pro',
+                'crypto-desc': 'Découvrez notre plateforme de cryptomonnaies la plus avancée avec des fonctionnalités innovantes pour le trading moderne.',
+                'news-title': 'Actualités Tech',
+                'news-desc': 'Restez à jour avec les dernières tendances technologiques et nos articles spécialisés.',
+                'btn-see-more': 'Voir plus',
+                'btn-contact': 'Contact',
+                'btn-know-more': 'En savoir plus',
+                'btn-explore': 'Explorer',
+                'btn-read-more': 'Lire plus',
+                'projects-modal-title': 'Nos Projets',
+                'projects-modal-desc': 'Nous développons des solutions innovantes en utilisant les technologies les plus avancées du marché.',
+                'project-mobile': 'Applications Mobiles',
+                'project-mobile-desc': 'Applications natives pour Android et iOS',
+                'project-web': 'Développement Web',
+                'project-web-desc': 'Sites web modernes et réactifs',
+                'project-crypto': 'NEW V4 CRYPTO VIT Pro',
+                'project-crypto-desc': 'Plateforme de cryptomonnaies avancée',
+                'project-news': 'Portail d\'Actualités',
+                'project-news-desc': 'Système de gestion de contenu',
+                'status-development': 'En Développement',
+                'status-completed': 'Terminé',
+                'contact-modal-title': 'Contactez-nous',
+                'contact-modal-desc': 'Nous sommes là pour vous aider à concrétiser vos idées. N\'hésitez pas à nous contacter via nos canaux de communication.',
+                'contact-email': 'Email',
+                'contact-phone': 'Téléphone',
+                'contact-whatsapp': 'WhatsApp',
+                'contact-linkedin': 'LinkedIn',
+                'contact-instagram': 'Instagram',
+                'contact-twitter': 'Twitter',
+                'info-modal-title': 'À propos d\'Aurenox-Global',
+                'chatbot-title': 'Assistant Aurenox',
+                'footer-copyright': '© 2024 Aurenox-Global. Tous droits réservés.',
+                'footer-developed': 'Développé avec',
+                'footer-tech': 'et une technologie de pointe',
+                'crypto-modal-desc': 'Notre plateforme de cryptomonnaies la plus avancée, conçue pour les traders professionnels et débutants.',
+                'news-modal-desc': 'Restez informé des dernières tendances technologiques et de nos analyses spécialisées.',
+                'faq-q1': 'Quels services offrez-vous?',
+                'faq-a1': 'Nous offrons le développement d\'applications mobiles, le développement web, les plateformes de cryptomonnaies, les systèmes de gestion et le conseil technologique personnalisé.',
+                'faq-q2': 'Combien de temps faut-il pour développer une app?',
+                'faq-a2': 'Le temps dépend de la complexité du projet. Une app basique peut prendre 2-3 mois, tandis que des applications plus complexes peuvent nécessiter 6-12 mois.',
+                'faq-q3': 'Offrez-vous un support post-développement?',
+                'faq-a3': 'Oui, nous offrons un support 24/7, maintenance, mises à jour et améliorations continues pour tous nos projets.',
+                'faq-q4': 'Quels sont vos prix?',
+                'faq-a4': 'Nos prix sont compétitifs et dépendent de la portée du projet. Nous offrons des devis gratuits et des plans de paiement flexibles.',
+                'faq-q5': 'Travaillez-vous avec des technologies spécifiques?',
+                'faq-a5': 'Nous travaillons avec les dernières technologies: React, Node.js, React Native, Flutter, Python, blockchain, IA et plus.',
+                'faq-q6': 'Comment commencer un projet?',
+                'faq-a6': 'Contactez-nous via n\'importe lequel de nos canaux. Nous programmerons une consultation gratuite pour discuter de votre projet et créer une proposition personnalisée.'
+            }
+        };
+
+        // Language change functionality
+        function changeLanguage(language) {
+            const elements = document.querySelectorAll('[data-translate]');
+            
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[language] && translations[language][key]) {
+                    if (element.tagName === 'H1' || element.tagName === 'H2' || key.includes('title')) {
+                        element.innerHTML = translations[language][key];
+                    } else {
+                        element.textContent = translations[language][key];
+                    }
+                }
+            });
+            
+            localStorage.setItem('language', language);
+        }
+
+        // Initialize theme and language from localStorage
+        window.addEventListener('load', function() {
+            // Theme initialization
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-theme');
+                document.getElementById('theme-icon').className = 'fas fa-sun';
+            }
+            
+            // Language initialization
+            const savedLanguage = localStorage.getItem('language') || 'es';
+            const languageSelector = document.querySelector('.language-selector');
+            languageSelector.value = savedLanguage;
+            changeLanguage(savedLanguage);
+            
+            // Existing code
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
