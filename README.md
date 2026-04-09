@@ -1,140 +1,100 @@
-# ⚡ PROMPT ELITE MASTERY
-> **Guía Definitiva 5-en-1** | TokenDensity × PromptElite × PromptCraft × Kimi Elite × Prompt Mastery  
-> `Cada token tiene un costo. Cada instrucción tiene un impacto.`
+# Aurenox-AI
 
-[![Version](https://img.shields.io/badge/Version-2026.1-0ea5e9?style=flat-square)](#)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
-[![Tokens Ahorrados](https://img.shields.io/badge/Eficiencia-73%25-10b981?style=flat-square)](#)
-[![Compatibilidad](https://img.shields.io/badge/IA-Todas%20las%20versiones-purple?style=flat-square)](#)
-[![Deploy](https://img.shields.io/badge/Deploy-1%20Archivo-orange?style=flat-square)](#)
+Landing web premium para servicios de consultoria, desarrollo y formacion en Inteligencia Artificial.
 
----
+![HTML5](https://img.shields.io/badge/HTML5-Ready-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![TailwindCSS CDN](https://img.shields.io/badge/TailwindCSS-CDN-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
+![GSAP](https://img.shields.io/badge/GSAP-Animations-88CE02?style=for-the-badge&logo=greensock&logoColor=white)
+![Responsive](https://img.shields.io/badge/Responsive-Desktop%20%26%20Mobile-111827?style=for-the-badge)
 
-## 🌐 Vista Previa
-![PROMPT ELITE MASTERY Preview](https://via.placeholder.com/1200x630/0f172a/38bdf8?text=PROMPT+ELITE+MASTERY+%7C+Gu%C3%ADa+Definitiva)
+## Vision
 
-> 🖥️ **Versión Web Interactiva**: Abre [`index.html`](index.html) en cualquier navegador moderno. Cero dependencias externas. Carga instantánea. Diseño responsive con glassmorphism y animaciones optimizadas.
+Este proyecto representa una experiencia web de alto impacto para una marca de IA orientada a negocio.
+Combina storytelling comercial, animaciones avanzadas y una estructura de conversion pensada para:
 
----
+- Captar leads de consultoria y auditoria IA
+- Presentar servicios y especialidades de forma clara
+- Mostrar prueba social con casos de exito y resultados
+- Guiar al usuario con CTAs y modales de accion directa
 
-## 📊 Métricas de Impacto
-| Indicador | Valor | Impacto Real |
-|:---|:---:|:---|
-| 💾 Tokens Ahorrados | `73%` | Menos latencia, menos costo, más precisión |
-| 📜 Reglas de Oro | `12` | Framework probado en producción |
-| ⚡ Eficiencia Output | `400%` | Respuestas usables en 1 intento |
-| 🌍 Compatibilidad | `∞` | GPT, Claude, Gemini, Llama, Mistral, etc. |
+## Que Incluye
 
----
+- Hero cinematografico con particulas, tipografia dinamica y KPIs animados
+- Secciones de servicios, especialidades, proyectos y planes de inversion
+- Modales completos para consultoria, auditoria, implementacion y enterprise
+- Chat asistente embebido con respuestas rapidas
+- Ventanas flotantes informativas por tarjeta (card info modal)
+- Navegacion mobile con menu fullscreen
+- Diseno visual glassmorphism + gradientes + microinteracciones
 
-## 🚀 Quick Start
-```bash
-# 1. Clona o descarga el archivo
-git clone https://github.com/tu-usuario/prompt-elite-mastery.git
-cd prompt-elite-mastery
+## Stack Tecnologico
 
-# 2. Abre directamente en tu navegador
-open index.html   # macOS
-xdg-open index.html # Linux
-start index.html    # Windows
-```
-✅ **No requiere build, server, ni dependencias.**  
-✅ **Funciona offline.**  
-✅ **Optimizado para lectura y copia rápida de prompts.**
+- HTML5
+- TailwindCSS via CDN
+- CSS custom para identidad visual y animaciones
+- JavaScript vanilla
+- GSAP + ScrollTrigger (con fallback de seguridad)
+- Font Awesome para iconografia
 
----
+## Estructura del Proyecto
 
-## 🧠 Los 6 Principios Fundamentales
-> Antes de escribir cualquier prompt, estos principios deben estar integrados en tu forma de pensar.
-
-| # | Principio | Impacto | Clave |
-|:-:|:---|:---:|:---|
-| 1️⃣ | **Contexto**: Rol + Tarea + Formato | `+100%` control | Sin estos 3, la IA adivina |
-| 2️⃣ | **Densidad**: Máxima información, cero relleno | `-70%` tokens basura | "Dame..." ≠ "Por favor, podrías..." |
-| 3️⃣ | **Límites Negativos**: Di qué NO quieres | `-30%` correcciones | "Sin intro, sin emojis, sin disculpas" |
-| 4️⃣ | **Especificidad Numérica**: "Breve" → "Máx 50 palabras" | `+85%` precisión | Elimina ambigüedad estructural |
-| 5️⃣ | **Encadenamiento**: Divide tareas complejas | `×5` calidad | Chain-of-thought atómico |
-| 6️⃣ | **Feedback Loop**: Itera, no reescribas | `-3` ciclos | "Añade manejo de errores al bloque anterior" |
-
----
-
-## 🔍 Anatomía del Token Perfecto
-```diff
-- ❌ INSTRUCCIÓN BASURA (147 tokens)
-- "Hola, espero que estés bien. Quería saber si podrías ayudarme con una pequeña tarea. 
-- Necesito que me hagas un resumen de las ventajas del teletrabajo, pero que sea breve 
-- y con puntos clave. Muchas gracias de antemario."
-
-+ ✅ INSTRUCCIÓN ÓPTIMA (22 tokens)
-+ "Resume ventajas del teletrabajo. 5 viñetas. Tono profesional. Solo puntos clave."
-```
-**🔹 Fórmula:** `ROL específico + TAREA clara + FORMATO exacto + RESTRICCIONES + EJEMPLO = Respuesta usable en 1 intento`
-
----
-
-## 🛠️ Estructura de la Guía
-| Sección | Contenido | Utilidad |
-|:---|:---|:---|
-| `§ 01` Fundamentos | 6 principios irrompibles | Base mental del prompt engineering |
-| `§ 02` Anatomía | Token perfecto vs basura | Reduce iteraciones en `3x` |
-| `§ 03` Patrones | Delimitadores, Few-Shot, JSON, Anti-Hallucination, CoT, Chaining | Técnicas de producción |
-| `§ 04` Código | Python, React/TS, SQL, Video Pipeline | Prompts para devs senior |
-| `§ 05` Texto | Control de voz, Email, Resumen, Landing | Copy predecible y denso |
-| `§ 06` Plantillas | `T-01` a `T-06` listas para copiar/pegar | Ahorro de `10-30 min` por tarea |
-| `§ 07` Checklist | 8 puntos pre-envío | Garante de calidad `>95%` |
-| `§ 08` Errores | 6 antipatrones que queman tokens | Evita `~200-800` tokens desperdiciados |
-
----
-
-## 💡 Ejemplo Rápido: Plantilla `T-01` Code Review
 ```text
-Eres: senior dev especialista en [LENGUAJE/FRAMEWORK].
-
-Código a revisar:
-`[CÓDIGO]`
-
-Revisa en este orden:
-1. Bugs potenciales o race conditions
-2. Security issues (injection, auth, etc.)
-3. Performance (O(n²) o peor, I/O innecesario)
-4. Legibilidad (naming, complejidad ciclomática)
-
-Formato por cada issue:
-- Línea: [número]
-- Severidad: [CRÍTICO | ADVERTENCIA | ESTILO]
-- Problema: [1 línea]
-- Fix sugerido: [código mínimo]
-
-Si no hay issues: escribe "✓ OK".
+.
+|- Aurenox-Global.html   # Version principal premium
+|- index.html            # Variante/landing alterna
+|- README.md
+|- kd                    # Archivo reservado
 ```
-📌 *Copia, reemplaza `[CÓDIGO]`, ejecuta. Output estructurado listo para PR.*
 
----
+## Ejecucion Local
 
-## 🧰 Stack Tecnológico
-- 🎨 **Tailwind CSS** (CDN) → Diseño utility-first, responsive, dark-mode nativo
-- ⚡ **Vanilla JavaScript** → Interactividad ligera, 0 frameworks
-- 🔤 **Google Fonts** → `Inter` + `JetBrains Mono` para legibilidad técnica
-- 🖼️ **Font Awesome 6** → Iconografía semántica
-- 🌌 **Glassmorphism + Mesh Gradients** → UI moderna sin sobrecarga
-- 📦 **Arquitectura Single-File** → `index.html` autocontenido, portable, offline-first
+No requiere build ni dependencias.
 
----
+1. Clona el repositorio
+2. Abre `Aurenox-Global.html` directamente en tu navegador
 
-## 🤝 Contribuir
-Las mejoras son bienvenidas. Sigue este flujo:
+Para una experiencia mas estable (recomendado):
+
 ```bash
-git checkout -b feat/nueva-plantilla
-git commit -m "✨ añade T-07: prompt para testing E2E"
-git push origin feat/nueva-plantilla
+# Opcion 1: Python
+python3 -m http.server 8080
+
+# Opcion 2: Node (si tienes npx)
+npx serve .
 ```
-📜 **Guía de contribución**: Mantén la densidad. Elimina relleno. Respeta la estructura `§ 01-08`.
 
----
+Luego entra a `http://localhost:8080`.
 
-## 📄 Licencia
-[MIT](LICENSE) © 2026 — Creado con precisión. Sin tokens desperdiciados.
+## Personalizacion Rapida
 
----
-> 🔗 **Úsalo en**: ChatGPT, Claude, Gemini, Copilot, Llama, Mistral, Ollama, o cualquier LLM.  
-> 📌 **Star este repo** si te ahorra tokens. ⭐
+- Contenido comercial: editar textos en secciones `Servicios`, `Especialidades`, `Proyectos` y `Precios`
+- Branding: ajustar paleta en `tailwind.config` dentro del `<head>`
+- Interacciones: modificar catalogo `cardInfoCatalog` en el script final
+- Contacto: actualizar email, WhatsApp y redes sociales
+- Conversion: adaptar textos y CTA en modales
+
+## Objetivo de Producto
+
+Este sitio esta optimizado para funcionar como:
+
+- Web corporativa de marca IA
+- Landing de captacion de auditorias IA
+- Presentacion comercial para clientes B2B
+- Base para escalar a sitio multi-idioma y multi-servicio
+
+## Roadmap Sugerido
+
+- Integrar backend de formularios con validacion real
+- Conectar CRM para seguimiento de leads
+- Implementar analitica de conversion por evento
+- Añadir CMS para edicion sin tocar codigo
+- Version PWA optimizada para mobile sales
+
+## Contacto
+
+- Email: aurenox-ai@proton.me
+- Marca: Aurenox-AI
+
+## Licencia
+
+Uso interno/comercial segun politicas del propietario del proyecto.
